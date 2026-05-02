@@ -1,0 +1,12 @@
+{
+  "seed_42_phase3_molm_cv": 1402.467556476593,
+  "seed_42_phase5_generalization": 523.688643693924,
+  "seed_123_phase3_molm_cv": 1913.6166336536407,
+  "seed_123_phase5_generalization": 525.6559720039368,
+  "seed_456_phase3_molm_cv": 1900.3987305164337,
+  "seed_456_phase5_generalization": 526.2086379528046,
+  "seed_789_phase3_molm_cv": 1898.894957780838,
+  "seed_789_phase5_generalization": 539.4177439212799,
+  "seed_2024_phase3_molm_cv": 1904.688287973404,
+  "seed_2024_phase5_generalization": 529.604229927063
+}

@@ -1,0 +1,10 @@
+outputs/seeds/ 
+outputs/seeds_pareto_on/ 
+outputs/phase1/ 
+outputs/pareto_on_logs/ 
+*.pkl 
+*.h5 
+__pycache__/ 
+.ipynb_checkpoints/ 
+esm_cache/ 
+AL_active_query_pool_reps.csv

@@ -1,0 +1,84 @@
+# SEED 456 | PHASE 2: phase2_baselines.py
+# started: 2026-04-27T23:07:04.152770
+
+✓ Phase 0 loaded: Config, models, utilities ready
+  OUTPUT_DIR: C:\Users\dd7726\MOLM\outputs\seeds\seed_456
+  FEATURE_TYPES: ['onehot', 'esm2', 'fusion_esm2']
+  GPU: 1 available
+============================================================
+PHASE 2: LDA + NN Baselines
+============================================================
+  ✓ Loaded: C:\Users\dd7726\MOLM\outputs\phase1\features.pkl
+
+  LDA on OneHot (5-fold CV)...
+    Aff: 0.9207±0.0111 MCC:0.836 AUC:0.9733
+    Spec: 0.9227±0.0096 MCC:0.846 AUC:0.9755
+
+  LDA on ESM2 (5-fold CV)...
+    Aff: 0.9332±0.0061 MCC:0.859 AUC:0.9758
+    Spec: 0.9297±0.0079 MCC:0.860 AUC:0.9776
+
+  LDA on Fusion-ESM2 (5-fold CV)...
+    Aff: 0.9323±0.0075 MCC:0.858 AUC:0.9732
+    Spec: 0.9310±0.0066 MCC:0.862 AUC:0.9747
+
+  NN on OneHot (2300D)...
+[23:12:46] 🔄 RNG Reset: seed=456 (NN fold 0)
+[23:13:00] 🔄 RNG Reset: seed=457 (NN fold 1)
+[23:13:13] 🔄 RNG Reset: seed=458 (NN fold 2)
+[23:13:26] 🔄 RNG Reset: seed=459 (NN fold 3)
+[23:13:40] 🔄 RNG Reset: seed=460 (NN fold 4)
+[23:13:53] 🔄 RNG Reset: seed=1455 (NN final)
+[23:14:17] 🔄 RNG Reset: seed=456 (NN fold 0)
+[23:14:30] 🔄 RNG Reset: seed=457 (NN fold 1)
+[23:14:43] 🔄 RNG Reset: seed=458 (NN fold 2)
+[23:14:56] 🔄 RNG Reset: seed=459 (NN fold 3)
+[23:15:09] 🔄 RNG Reset: seed=460 (NN fold 4)
+[23:15:22] 🔄 RNG Reset: seed=1455 (NN final)
+    Aff: 0.9327±0.0097 MCC:0.858 AUC:0.9756
+    Spec: 0.9265±0.0051 MCC:0.853 AUC:0.9774
+
+  NN on ESM2 (320D)...
+[23:15:46] 🔄 RNG Reset: seed=456 (NN fold 0)
+[23:15:56] 🔄 RNG Reset: seed=457 (NN fold 1)
+[23:16:06] 🔄 RNG Reset: seed=458 (NN fold 2)
+[23:16:16] 🔄 RNG Reset: seed=459 (NN fold 3)
+[23:16:27] 🔄 RNG Reset: seed=460 (NN fold 4)
+[23:16:38] 🔄 RNG Reset: seed=1455 (NN final)
+[23:16:51] 🔄 RNG Reset: seed=456 (NN fold 0)
+[23:17:01] 🔄 RNG Reset: seed=457 (NN fold 1)
+[23:17:12] 🔄 RNG Reset: seed=458 (NN fold 2)
+[23:17:22] 🔄 RNG Reset: seed=459 (NN fold 3)
+[23:17:32] 🔄 RNG Reset: seed=460 (NN fold 4)
+[23:17:42] 🔄 RNG Reset: seed=1455 (NN final)
+    Aff: 0.8938±0.0092 MCC:0.774 AUC:0.9549
+    Spec: 0.8988±0.0116 MCC:0.799 AUC:0.9614
+
+  NN on Fusion-ESM2 (2620D)...
+[23:17:56] 🔄 RNG Reset: seed=456 (NN fold 0)
+[23:18:09] 🔄 RNG Reset: seed=457 (NN fold 1)
+[23:18:23] 🔄 RNG Reset: seed=458 (NN fold 2)
+[23:18:36] 🔄 RNG Reset: seed=459 (NN fold 3)
+[23:18:50] 🔄 RNG Reset: seed=460 (NN fold 4)
+[23:19:04] 🔄 RNG Reset: seed=1455 (NN final)
+[23:19:29] 🔄 RNG Reset: seed=456 (NN fold 0)
+[23:19:42] 🔄 RNG Reset: seed=457 (NN fold 1)
+[23:19:56] 🔄 RNG Reset: seed=458 (NN fold 2)
+[23:20:10] 🔄 RNG Reset: seed=459 (NN fold 3)
+[23:20:24] 🔄 RNG Reset: seed=460 (NN fold 4)
+[23:20:37] 🔄 RNG Reset: seed=1455 (NN final)
+    Aff: 0.9345±0.0115 MCC:0.863 AUC:0.9764
+    Spec: 0.9275±0.0046 MCC:0.856 AUC:0.9776
+  ✓ Saved: C:\Users\dd7726\MOLM\outputs\seeds\seed_456\phase2\baselines.pkl
+
+=================================================================
+Model                     Features               Aff       Spec
+-----------------------------------------------------------------
+LDA (OneHot)                              0.9207±0.0111 0.9227±0.0096
+LDA (ESM2)                                0.9332±0.0061 0.9297±0.0079
+LDA (Fusion-ESM2)                         0.9323±0.0075 0.9310±0.0066
+NN                        OneHot          0.9327±0.0097 0.9265±0.0051
+NN                        ESM2            0.8938±0.0092 0.8988±0.0116
+NN                        Fusion-ESM2     0.9345±0.0115 0.9275±0.0046
+
+✓ Phase 2 complete in 832s

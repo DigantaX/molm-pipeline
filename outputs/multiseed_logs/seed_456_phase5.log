@@ -1,0 +1,149 @@
+# SEED 456 | PHASE 5: phase5_generalization.py
+# started: 2026-04-28T16:59:32.012838
+
+✓ Phase 0 loaded: Config, models, utilities ready
+  OUTPUT_DIR: C:\Users\dd7726\MOLM\outputs\seeds\seed_456
+  FEATURE_TYPES: ['onehot', 'esm2', 'fusion_esm2']
+  GPU: 1 available
+============================================================
+PHASE 5: Generalization & Pareto Front
+============================================================
+  ✓ Loaded: C:\Users\dd7726\MOLM\outputs\phase1\features.pkl
+  ✓ Loaded: C:\Users\dd7726\MOLM\outputs\seeds\seed_456\phase2\baselines.pkl
+
+🏋️  Final MOLM (OneHot)...
+[16:59:38] 🔄 RNG Reset: seed=456 (Final MOLM OneHot)
+
+  📈 Generalization (molm, OneHot)...
+    ISO: Aff ρ=0.8848 (np.float64(0.8417256753509739), np.float64(0.914123239717599)), Spec ρ=0.6739 (np.float64(0.5565877701065542), np.float64(0.7654490028691261))
+    IgG: Aff ρ=0.5634 (np.float64(0.27676586384663754), np.float64(0.7859646215222406)), Spec ρ=0.7254 (np.float64(0.5076553362038159), np.float64(0.862600444964365))
+  Final MOLM-ST (OneHot)...
+[17:00:26] 🔄 RNG Reset: seed=956 (MOLM-ST affinity)
+[17:00:55] 🔄 RNG Reset: seed=1056 (MOLM-ST specificity)
+
+  📈 Generalization (molm_st, OneHot)...
+    ISO: Aff ρ=0.8395 (np.float64(0.7916411868298737), np.float64(0.8729019468919085)), Spec ρ=0.6533 (np.float64(0.5144986840025614), np.float64(0.7596983578661507))
+    IgG: Aff ρ=0.5112 (np.float64(0.24299358885887265), np.float64(0.7160325685750789)), Spec ρ=0.4994 (np.float64(0.24132822873616744), np.float64(0.7008466405231328))
+
+🏋️  Final MOLM (ESM2)...
+[17:01:24] 🔄 RNG Reset: seed=456 (Final MOLM ESM2)
+
+  📈 Generalization (molm, ESM2)...
+    ISO: Aff ρ=0.8803 (np.float64(0.8247451422020414), np.float64(0.9142760930600051)), Spec ρ=0.6295 (np.float64(0.49937671750637563), np.float64(0.7386602875566277))
+    IgG: Aff ρ=0.5494 (np.float64(0.281657918547143), np.float64(0.7478411625651464)), Spec ρ=0.5776 (np.float64(0.34171481153402755), np.float64(0.7262071407073958))
+  Final MOLM-ST (ESM2)...
+[17:02:06] 🔄 RNG Reset: seed=956 (MOLM-ST affinity)
+[17:02:27] 🔄 RNG Reset: seed=1056 (MOLM-ST specificity)
+
+  📈 Generalization (molm_st, ESM2)...
+    ISO: Aff ρ=0.8726 (np.float64(0.8142567100749013), np.float64(0.9070344625429568)), Spec ρ=0.6475 (np.float64(0.5235998458247788), np.float64(0.7475937590547399))
+    IgG: Aff ρ=0.6878 (np.float64(0.5003379878081444), np.float64(0.8156777688950811)), Spec ρ=0.6545 (np.float64(0.4530598930123285), np.float64(0.7788995610648198))
+
+🏋️  Final MOLM (Fusion-ESM2)...
+[17:02:49] 🔄 RNG Reset: seed=456 (Final MOLM Fusion-ESM2)
+  Ep  1/25 | Acc: 0.573/0.617 | Gap: +0.17/+0.29 | GradCos: +0.038
+  Ep  5/25 | Acc: 0.873/0.884 | Gap: +1.45/+1.46 | GradCos: +0.055
+  Ep 10/25 | Acc: 0.906/0.909 | Gap: +1.83/+1.79 | GradCos: +0.036
+  Ep 15/25 | Acc: 0.924/0.915 | Gap: +2.02/+1.94 | GradCos: +0.015
+  Ep 20/25 | Acc: 0.915/0.921 | Gap: +2.02/+2.08 | GradCos: +0.042
+  Ep 25/25 | Acc: 0.926/0.925 | Gap: +2.08/+2.19 | GradCos: +0.071
+
+  📈 Generalization (molm, Fusion-ESM2)...
+    ISO: Aff ρ=0.8895 (np.float64(0.8463434920400038), np.float64(0.9182644173760134)), Spec ρ=0.6810 (np.float64(0.5613915401074266), np.float64(0.7738977508411786))
+    IgG: Aff ρ=0.7603 (np.float64(0.5691963490528578), np.float64(0.8720052641810371)), Spec ρ=0.6147 (np.float64(0.37924225308303894), np.float64(0.7737380489895275))
+  Final MOLM-ST (Fusion-ESM2)...
+[17:03:37] 🔄 RNG Reset: seed=956 (MOLM-ST affinity)
+[17:04:05] 🔄 RNG Reset: seed=1056 (MOLM-ST specificity)
+
+  📈 Generalization (molm_st, Fusion-ESM2)...
+    ISO: Aff ρ=0.8684 (np.float64(0.8226442068085816), np.float64(0.9000736769042185)), Spec ρ=0.6746 (np.float64(0.5554353219215648), np.float64(0.7699901309765382))
+    IgG: Aff ρ=0.6223 (np.float64(0.35650484965841983), np.float64(0.8203641958472524)), Spec ρ=0.7203 (np.float64(0.5160461301427053), np.float64(0.8269413871596057))
+
+  📈 Generalization (lda, OneHot)...
+    ISO: Aff ρ=0.8687 (np.float64(0.8271293946666547), np.float64(0.8991355490613436)), Spec ρ=0.6695 (np.float64(0.5424879515247928), np.float64(0.7638889465412145))
+    IgG: Aff ρ=0.7191 (np.float64(0.5128155830800148), np.float64(0.8622631704478273)), Spec ρ=0.7695 (np.float64(0.5889046690115373), np.float64(0.8661393682460803))
+
+  📈 Generalization (lda, ESM2)...
+    ISO: Aff ρ=0.8405 (np.float64(0.7919767660997975), np.float64(0.8786404064196524)), Spec ρ=0.7184 (np.float64(0.6076375220837728), np.float64(0.7967926199754026))
+    IgG: Aff ρ=0.6750 (np.float64(0.4203049347061134), np.float64(0.8422483121486795)), Spec ρ=0.6210 (np.float64(0.3700984968260419), np.float64(0.7990939358363901))
+
+  📈 Generalization (lda, Fusion-ESM2)...
+    ISO: Aff ρ=0.8384 (np.float64(0.7871122990731506), np.float64(0.8769823306291304)), Spec ρ=0.6922 (np.float64(0.5733495169011821), np.float64(0.7780374088813049))
+    IgG: Aff ρ=0.6057 (np.float64(0.31963657299849924), np.float64(0.7929896536299949)), Spec ρ=0.5612 (np.float64(0.30857083303315924), np.float64(0.7595098907269855))
+
+  📈 NN Generalization (OneHot)...
+
+  📈 Generalization (nn, OneHot)...
+    ISO: Aff ρ=0.8579 (np.float64(0.8121804862692685), np.float64(0.8921955396864543)), Spec ρ=0.6799 (np.float64(0.5577362856103341), np.float64(0.7685782522861742))
+    IgG: Aff ρ=0.6893 (np.float64(0.5307303336776958), np.float64(0.7903417926955496)), Spec ρ=0.6877 (np.float64(0.4725453299126193), np.float64(0.8257527280264878))
+
+  📈 NN Generalization (ESM2)...
+
+  📈 Generalization (nn, ESM2)...
+    ISO: Aff ρ=0.8795 (np.float64(0.8310278029550447), np.float64(0.9092768720579331)), Spec ρ=0.6396 (np.float64(0.5159678337968652), np.float64(0.7416120405177258))
+    IgG: Aff ρ=0.7204 (np.float64(0.5116647771719666), np.float64(0.8586041564832261)), Spec ρ=0.6174 (np.float64(0.3798198351204811), np.float64(0.7806492773115893))
+
+  📈 NN Generalization (Fusion-ESM2)...
+
+  📈 Generalization (nn, Fusion-ESM2)...
+    ISO: Aff ρ=0.8593 (np.float64(0.812617125349568), np.float64(0.8941464491824039)), Spec ρ=0.6852 (np.float64(0.5667107828685735), np.float64(0.7710550431460111))
+    IgG: Aff ρ=0.6955 (np.float64(0.5287339263294213), np.float64(0.8116360851745091)), Spec ρ=0.6542 (np.float64(0.42050418278904417), np.float64(0.8149946725127))
+
+============================================================
+PARETO FRONT ANALYSIS
+  Score types: ['logits', 'probs', 'latent_pca']
+  Pareto loss: OFF
+============================================================
+  ✓ PCA fit on EMI training latents (MOLM, n=4000)
+  ✓ PCA fit on EMI training latents (MOLM-ST, n=4000)
+
+  📊 Pareto (ISO, n=126): 15 true Pareto-optimal
+    MOLM                          : 3 pred, 2 overlap (P=0.67, R=0.13)
+    MOLM_probs                    : 3 pred, 2 overlap (P=0.67, R=0.13)
+    MOLM_latent_pca               : 20 pred, 4 overlap (P=0.20, R=0.27)
+    MOLM-ST                       : 8 pred, 5 overlap (P=0.62, R=0.33)
+    MOLM-ST_probs                 : 8 pred, 5 overlap (P=0.62, R=0.33)
+    MOLM-ST_latent_pca            : 16 pred, 5 overlap (P=0.31, R=0.33)
+    LDA                           : 2 pred, 1 overlap (P=0.50, R=0.07)
+    NN (OneHot)                   : 9 pred, 2 overlap (P=0.22, R=0.13)
+    NN (Fusion-ESM2)              : 7 pred, 2 overlap (P=0.29, R=0.13)
+
+  📊 Pareto (IgG, n=42): 5 true Pareto-optimal
+    MOLM                          : 1 pred, 0 overlap (P=0.00, R=0.00)
+    MOLM_probs                    : 1 pred, 0 overlap (P=0.00, R=0.00)
+    MOLM_latent_pca               : 8 pred, 0 overlap (P=0.00, R=0.00)
+    MOLM-ST                       : 7 pred, 1 overlap (P=0.14, R=0.20)
+    MOLM-ST_probs                 : 7 pred, 1 overlap (P=0.14, R=0.20)
+    MOLM-ST_latent_pca            : 7 pred, 0 overlap (P=0.00, R=0.00)
+    LDA                           : 3 pred, 0 overlap (P=0.00, R=0.00)
+    NN (OneHot)                   : 15 pred, 1 overlap (P=0.07, R=0.20)
+    NN (Fusion-ESM2)              : 13 pred, 1 overlap (P=0.08, R=0.20)
+
+============================================================
+PARETO DIAGNOSTIC PLOTS
+============================================================
+  ✓ PCA (2D viz) fit on EMI training latents (n=4000)
+  ✓ Saved: C:\Users\dd7726\MOLM\outputs\seeds\seed_456\phase5\pareto_diagnostics_iso.png
+  ✓ Saved: C:\Users\dd7726\MOLM\outputs\seeds\seed_456\phase5\pareto_diagnostics_igg.png
+  ✓ Saved: C:\Users\dd7726\MOLM\outputs\seeds\seed_456\phase5\pareto_molm_vs_st.png
+  ✓ Saved: C:\Users\dd7726\MOLM\outputs\seeds\seed_456\phase5\generalization.pkl
+
+=====================================================================================
+GENERALIZATION GRID (Spearman ρ)
+=====================================================================================
+Model                             ISO Aff   ISO Spec    IgG Aff   IgG Spec
+-------------------------------------------------------------------------------------
+MOLM (OneHot)                      0.8848     0.6739     0.5634     0.7254
+MOLM-ST (OneHot)                   0.8395     0.6533     0.5112     0.4994
+MOLM (ESM2)                        0.8803     0.6295     0.5494     0.5776
+MOLM-ST (ESM2)                     0.8726     0.6475     0.6878     0.6545
+MOLM (Fusion-ESM2)                 0.8895     0.6810     0.7603     0.6147
+MOLM-ST (Fusion-ESM2)              0.8684     0.6746     0.6223     0.7203
+LDA (OneHot)                       0.8687     0.6695     0.7191     0.7695
+LDA (ESM2)                         0.8405     0.7184     0.6750     0.6210
+LDA (Fusion-ESM2)                  0.8384     0.6922     0.6057     0.5612
+NN (OneHot)                        0.8579     0.6799     0.6893     0.6877
+NN (ESM2)                          0.8795     0.6396     0.7204     0.6174
+NN (Fusion-ESM2)                   0.8593     0.6852     0.6955     0.6542
+
+✓ Phase 5 complete in 308s (5.1 min)

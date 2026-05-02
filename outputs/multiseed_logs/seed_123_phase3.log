@@ -1,0 +1,566 @@
+# SEED 123 | PHASE 3: phase3_molm_cv.py
+# started: 2026-04-27T21:46:44.860893
+
+✓ Phase 0 loaded: Config, models, utilities ready
+  OUTPUT_DIR: C:\Users\dd7726\MOLM\outputs\seeds\seed_123
+  FEATURE_TYPES: ['onehot', 'esm2', 'fusion_esm2']
+  GPU: 1 available
+============================================================
+PHASE 3: MOLM + MOLM-ST Cross-Validation (Full Grid)
+============================================================
+  ✓ Loaded: C:\Users\dd7726\MOLM\outputs\phase1\features.pkl
+[21:46:51] Planned work: 3 feature types, 45 training jobs, 5 folds, 25 epochs/job
+[21:46:51] Feature 1/3 start: OneHot (X=(4000, 2300), aff_pos=1516/4000, spec_pos=2000/4000)
+
+🔄 MOLM CV [OneHot] (5-fold)...
+[21:46:51] Job 1/45 | MOLM OneHot fold 1/5 start (train=3200, val=800, dim=2300)
+[21:46:51] 🔄 RNG Reset: seed=123 (MOLM CV OneHot fold 0)
+[21:46:51] MOLM OneHot fold 1/5: training 25 epochs
+  Ep  1/25 | Acc: 0.567/0.571 | Gap: +0.10/+0.12 | GradCos: -0.038
+  Ep  5/25 | Acc: 0.881/0.877 | Gap: +1.46/+0.95 | GradCos: +0.052
+  Ep 10/25 | Acc: 0.895/0.907 | Gap: +1.77/+1.35 | GradCos: +0.097
+  Ep 15/25 | Acc: 0.911/0.909 | Gap: +1.97/+1.55 | GradCos: +0.002
+  Ep 20/25 | Acc: 0.916/0.917 | Gap: +2.06/+1.81 | GradCos: -0.012
+  Ep 25/25 | Acc: 0.926/0.922 | Gap: +2.19/+1.92 | GradCos: +0.022
+[21:47:24] Saved diagnostics CSV: epoch_diag_fold_1_OneHot.csv
+[21:47:25] Saved diagnostics figure: paper_diag_fold_1_OneHot.png
+[21:47:25] MOLM OneHot fold 1/5: evaluating validation fold
+    Aff: 0.9375 AUC:0.9809 MCC:0.870
+    Spec: 0.9375 AUC:0.9842 MCC:0.876
+[21:47:25] Job 1/45 | MOLM OneHot fold 1/5 done in 35s
+[21:47:25] Job 2/45 | MOLM OneHot fold 2/5 start (train=3200, val=800, dim=2300)
+[21:47:25] 🔄 RNG Reset: seed=124 (MOLM CV OneHot fold 1)
+[21:47:25] MOLM OneHot fold 2/5: training 25 epochs
+  Ep  1/25 | Acc: 0.579/0.597 | Gap: +0.17/+0.21 | GradCos: -0.011
+  Ep  5/25 | Acc: 0.879/0.884 | Gap: +1.43/+1.48 | GradCos: -0.011
+  Ep 10/25 | Acc: 0.899/0.905 | Gap: +1.66/+1.78 | GradCos: +0.043
+  Ep 15/25 | Acc: 0.915/0.907 | Gap: +1.84/+1.91 | GradCos: +0.061
+  Ep 20/25 | Acc: 0.929/0.930 | Gap: +1.97/+2.10 | GradCos: +0.036
+  Ep 25/25 | Acc: 0.931/0.921 | Gap: +2.07/+2.16 | GradCos: +0.037
+[21:47:58] Saved diagnostics CSV: epoch_diag_fold_2_OneHot.csv
+[21:47:59] Saved diagnostics figure: paper_diag_fold_2_OneHot.png
+[21:47:59] MOLM OneHot fold 2/5: evaluating validation fold
+    Aff: 0.9425 AUC:0.9840 MCC:0.879
+    Spec: 0.9263 AUC:0.9804 MCC:0.853
+[21:47:59] Job 2/45 | MOLM OneHot fold 2/5 done in 34s
+[21:47:59] Job 3/45 | MOLM OneHot fold 3/5 start (train=3200, val=800, dim=2300)
+[21:47:59] 🔄 RNG Reset: seed=125 (MOLM CV OneHot fold 2)
+[21:47:59] MOLM OneHot fold 3/5: training 25 epochs
+  Ep  1/25 | Acc: 0.501/0.573 | Gap: +0.08/+0.17 | GradCos: -0.018
+  Ep  5/25 | Acc: 0.881/0.872 | Gap: +1.35/+1.27 | GradCos: +0.073
+  Ep 10/25 | Acc: 0.907/0.905 | Gap: +1.69/+1.66 | GradCos: +0.009
+  Ep 15/25 | Acc: 0.915/0.912 | Gap: +1.89/+1.85 | GradCos: +0.037
+  Ep 20/25 | Acc: 0.922/0.918 | Gap: +1.96/+2.05 | GradCos: +0.041
+  Ep 25/25 | Acc: 0.925/0.923 | Gap: +2.02/+2.08 | GradCos: +0.021
+[21:48:32] Saved diagnostics CSV: epoch_diag_fold_3_OneHot.csv
+[21:48:33] Saved diagnostics figure: paper_diag_fold_3_OneHot.png
+[21:48:33] MOLM OneHot fold 3/5: evaluating validation fold
+    Aff: 0.9387 AUC:0.9743 MCC:0.869
+    Spec: 0.9237 AUC:0.9778 MCC:0.848
+[21:48:33] Job 3/45 | MOLM OneHot fold 3/5 done in 34s
+[21:48:33] Job 4/45 | MOLM OneHot fold 4/5 start (train=3200, val=800, dim=2300)
+[21:48:33] 🔄 RNG Reset: seed=126 (MOLM CV OneHot fold 3)
+[21:48:33] MOLM OneHot fold 4/5: training 25 epochs
+  Ep  1/25 | Acc: 0.469/0.596 | Gap: +0.05/+0.16 | GradCos: +0.029
+  Ep  5/25 | Acc: 0.869/0.873 | Gap: +1.21/+1.04 | GradCos: +0.054
+  Ep 10/25 | Acc: 0.900/0.901 | Gap: +1.56/+1.49 | GradCos: +0.009
+  Ep 15/25 | Acc: 0.919/0.907 | Gap: +1.79/+1.76 | GradCos: +0.035
+  Ep 20/25 | Acc: 0.925/0.917 | Gap: +1.89/+1.91 | GradCos: +0.055
+  Ep 25/25 | Acc: 0.922/0.926 | Gap: +1.99/+2.12 | GradCos: +0.030
+[21:49:05] Saved diagnostics CSV: epoch_diag_fold_4_OneHot.csv
+[21:49:06] Saved diagnostics figure: paper_diag_fold_4_OneHot.png
+[21:49:06] MOLM OneHot fold 4/5: evaluating validation fold
+    Aff: 0.9337 AUC:0.9739 MCC:0.859
+    Spec: 0.9387 AUC:0.9756 MCC:0.878
+[21:49:06] Job 4/45 | MOLM OneHot fold 4/5 done in 33s
+[21:49:06] Job 5/45 | MOLM OneHot fold 5/5 start (train=3200, val=800, dim=2300)
+[21:49:06] 🔄 RNG Reset: seed=127 (MOLM CV OneHot fold 4)
+[21:49:06] MOLM OneHot fold 5/5: training 25 epochs
+  Ep  1/25 | Acc: 0.491/0.564 | Gap: +0.01/+0.13 | GradCos: -0.078
+  Ep  5/25 | Acc: 0.861/0.873 | Gap: +1.26/+1.33 | GradCos: +0.094
+  Ep 10/25 | Acc: 0.907/0.905 | Gap: +1.79/+1.72 | GradCos: +0.018
+  Ep 15/25 | Acc: 0.917/0.915 | Gap: +1.92/+1.91 | GradCos: +0.029
+  Ep 20/25 | Acc: 0.914/0.918 | Gap: +2.00/+1.96 | GradCos: +0.034
+  Ep 25/25 | Acc: 0.932/0.924 | Gap: +2.17/+2.15 | GradCos: +0.001
+[21:49:39] Saved diagnostics CSV: epoch_diag_fold_5_OneHot.csv
+[21:49:40] Saved diagnostics figure: paper_diag_fold_5_OneHot.png
+[21:49:40] MOLM OneHot fold 5/5: evaluating validation fold
+    Aff: 0.9125 AUC:0.9677 MCC:0.821
+    Spec: 0.9163 AUC:0.9730 MCC:0.835
+[21:49:40] Job 5/45 | MOLM OneHot fold 5/5 done in 34s
+  📊 Aff: 0.9330±0.0106 AUC:0.9762 MCC:0.860
+  📊 Spec: 0.9285±0.0085 AUC:0.9782 MCC:0.858
+
+🔄 MOLM-ST CV [OneHot] (5-fold)...
+[21:49:40] Job 6/45 | MOLM-ST OneHot fold 1/5 affinity start (train=3200, val=800, dim=2300)
+[21:49:40] 🔄 RNG Reset: seed=623 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.3197
+  ST affinity Ep  5/25 | Loss: 0.1163
+  ST affinity Ep 10/25 | Loss: 0.0943
+  ST affinity Ep 15/25 | Loss: 0.0831
+  ST affinity Ep 20/25 | Loss: 0.0825
+  ST affinity Ep 25/25 | Loss: 0.0730
+[21:49:57] Job 6/45 | MOLM-ST OneHot fold 1/5 affinity done in 17s
+[21:49:57] Job 7/45 | MOLM-ST OneHot fold 1/5 specificity start
+[21:49:58] 🔄 RNG Reset: seed=723 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.3272
+  ST specificity Ep  5/25 | Loss: 0.1082
+  ST specificity Ep 10/25 | Loss: 0.0920
+  ST specificity Ep 15/25 | Loss: 0.0805
+  ST specificity Ep 20/25 | Loss: 0.0772
+  ST specificity Ep 25/25 | Loss: 0.0706
+[21:50:15] Job 7/45 | MOLM-ST OneHot fold 1/5 specificity done in 17s
+  Fold 1: Aff 0.9387 MCC:0.874 AUC:0.9793 | Spec 0.9350 MCC:0.873 AUC:0.9818
+[21:50:15] Job 8/45 | MOLM-ST OneHot fold 2/5 affinity start (train=3200, val=800, dim=2300)
+[21:50:15] 🔄 RNG Reset: seed=624 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.3087
+  ST affinity Ep  5/25 | Loss: 0.1181
+  ST affinity Ep 10/25 | Loss: 0.0951
+  ST affinity Ep 15/25 | Loss: 0.0865
+  ST affinity Ep 20/25 | Loss: 0.0824
+  ST affinity Ep 25/25 | Loss: 0.0792
+[21:50:33] Job 8/45 | MOLM-ST OneHot fold 2/5 affinity done in 18s
+[21:50:33] Job 9/45 | MOLM-ST OneHot fold 2/5 specificity start
+[21:50:33] 🔄 RNG Reset: seed=724 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.3866
+  ST specificity Ep  5/25 | Loss: 0.1034
+  ST specificity Ep 10/25 | Loss: 0.0835
+  ST specificity Ep 15/25 | Loss: 0.0738
+  ST specificity Ep 20/25 | Loss: 0.0701
+  ST specificity Ep 25/25 | Loss: 0.0681
+[21:50:50] Job 9/45 | MOLM-ST OneHot fold 2/5 specificity done in 18s
+  Fold 2: Aff 0.9463 MCC:0.886 AUC:0.9739 | Spec 0.9275 MCC:0.855 AUC:0.9809
+[21:50:50] Job 10/45 | MOLM-ST OneHot fold 3/5 affinity start (train=3200, val=800, dim=2300)
+[21:50:51] 🔄 RNG Reset: seed=625 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.4098
+  ST affinity Ep  5/25 | Loss: 0.1157
+  ST affinity Ep 10/25 | Loss: 0.0869
+  ST affinity Ep 15/25 | Loss: 0.0790
+  ST affinity Ep 20/25 | Loss: 0.0816
+  ST affinity Ep 25/25 | Loss: 0.0724
+[21:51:08] Job 10/45 | MOLM-ST OneHot fold 3/5 affinity done in 18s
+[21:51:08] Job 11/45 | MOLM-ST OneHot fold 3/5 specificity start
+[21:51:08] 🔄 RNG Reset: seed=725 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.3480
+  ST specificity Ep  5/25 | Loss: 0.1043
+  ST specificity Ep 10/25 | Loss: 0.0837
+  ST specificity Ep 15/25 | Loss: 0.0808
+  ST specificity Ep 20/25 | Loss: 0.0703
+  ST specificity Ep 25/25 | Loss: 0.0646
+[21:51:26] Job 11/45 | MOLM-ST OneHot fold 3/5 specificity done in 18s
+  Fold 3: Aff 0.9463 MCC:0.886 AUC:0.9791 | Spec 0.9038 MCC:0.814 AUC:0.9754
+[21:51:26] Job 12/45 | MOLM-ST OneHot fold 4/5 affinity start (train=3200, val=800, dim=2300)
+[21:51:26] 🔄 RNG Reset: seed=626 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.3280
+  ST affinity Ep  5/25 | Loss: 0.1147
+  ST affinity Ep 10/25 | Loss: 0.0935
+  ST affinity Ep 15/25 | Loss: 0.0838
+  ST affinity Ep 20/25 | Loss: 0.0753
+  ST affinity Ep 25/25 | Loss: 0.0736
+[21:51:44] Job 12/45 | MOLM-ST OneHot fold 4/5 affinity done in 18s
+[21:51:44] Job 13/45 | MOLM-ST OneHot fold 4/5 specificity start
+[21:51:44] 🔄 RNG Reset: seed=726 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.4343
+  ST specificity Ep  5/25 | Loss: 0.1061
+  ST specificity Ep 10/25 | Loss: 0.0876
+  ST specificity Ep 15/25 | Loss: 0.0824
+  ST specificity Ep 20/25 | Loss: 0.0772
+  ST specificity Ep 25/25 | Loss: 0.0690
+[21:52:01] Job 13/45 | MOLM-ST OneHot fold 4/5 specificity done in 17s
+  Fold 4: Aff 0.9237 MCC:0.839 AUC:0.9762 | Spec 0.9400 MCC:0.880 AUC:0.9780
+[21:52:01] Job 14/45 | MOLM-ST OneHot fold 5/5 affinity start (train=3200, val=800, dim=2300)
+[21:52:01] 🔄 RNG Reset: seed=627 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.3413
+  ST affinity Ep  5/25 | Loss: 0.1118
+  ST affinity Ep 10/25 | Loss: 0.0888
+  ST affinity Ep 15/25 | Loss: 0.0806
+  ST affinity Ep 20/25 | Loss: 0.0754
+  ST affinity Ep 25/25 | Loss: 0.0768
+[21:52:19] Job 14/45 | MOLM-ST OneHot fold 5/5 affinity done in 18s
+[21:52:19] Job 15/45 | MOLM-ST OneHot fold 5/5 specificity start
+[21:52:19] 🔄 RNG Reset: seed=727 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.3906
+  ST specificity Ep  5/25 | Loss: 0.1092
+  ST specificity Ep 10/25 | Loss: 0.0837
+  ST specificity Ep 15/25 | Loss: 0.0744
+  ST specificity Ep 20/25 | Loss: 0.0748
+  ST specificity Ep 25/25 | Loss: 0.0656
+[21:52:37] Job 15/45 | MOLM-ST OneHot fold 5/5 specificity done in 18s
+  Fold 5: Aff 0.9313 MCC:0.854 AUC:0.9731 | Spec 0.9225 MCC:0.845 AUC:0.9748
+  📊 MOLM-ST [OneHot]: Aff 0.9373±0.0087 MCC:0.868 AUC:0.9763
+                           Spec 0.9258±0.0125 MCC:0.853 AUC:0.9782
+[21:52:37] Feature 1/3 done: OneHot in 5.8m
+[21:52:37] Feature 2/3 start: ESM2 (X=(4000, 320), aff_pos=1516/4000, spec_pos=2000/4000)
+
+🔄 MOLM CV [ESM2] (5-fold)...
+[21:52:37] Job 16/45 | MOLM ESM2 fold 1/5 start (train=3200, val=800, dim=320)
+[21:52:37] 🔄 RNG Reset: seed=123 (MOLM CV ESM2 fold 0)
+[21:52:37] MOLM ESM2 fold 1/5: training 25 epochs
+  Ep  1/25 | Acc: 0.530/0.503 | Gap: -0.04/+0.00 | GradCos: -0.016
+  Ep  5/25 | Acc: 0.737/0.768 | Gap: +0.49/+0.52 | GradCos: +0.149
+  Ep 10/25 | Acc: 0.809/0.863 | Gap: +0.94/+1.06 | GradCos: +0.082
+  Ep 15/25 | Acc: 0.838/0.877 | Gap: +1.20/+1.27 | GradCos: +0.124
+  Ep 20/25 | Acc: 0.848/0.884 | Gap: +1.24/+1.38 | GradCos: +0.156
+  Ep 25/25 | Acc: 0.870/0.891 | Gap: +1.43/+1.50 | GradCos: +0.051
+[21:53:08] Saved diagnostics CSV: epoch_diag_fold_1_ESM2.csv
+[21:53:08] Saved diagnostics figure: paper_diag_fold_1_ESM2.png
+[21:53:08] MOLM ESM2 fold 1/5: evaluating validation fold
+    Aff: 0.8988 AUC:0.9654 MCC:0.796
+    Spec: 0.9175 AUC:0.9645 MCC:0.836
+[21:53:08] Job 16/45 | MOLM ESM2 fold 1/5 done in 32s
+[21:53:09] Job 17/45 | MOLM ESM2 fold 2/5 start (train=3200, val=800, dim=320)
+[21:53:09] 🔄 RNG Reset: seed=124 (MOLM CV ESM2 fold 1)
+[21:53:09] MOLM ESM2 fold 2/5: training 25 epochs
+  Ep  1/25 | Acc: 0.540/0.502 | Gap: +0.03/-0.01 | GradCos: -0.076
+  Ep  5/25 | Acc: 0.683/0.717 | Gap: +0.28/+0.38 | GradCos: +0.114
+  Ep 10/25 | Acc: 0.809/0.866 | Gap: +0.89/+0.97 | GradCos: +0.093
+  Ep 15/25 | Acc: 0.827/0.875 | Gap: +0.99/+1.14 | GradCos: +0.156
+  Ep 20/25 | Acc: 0.847/0.891 | Gap: +1.15/+1.34 | GradCos: +0.191
+  Ep 25/25 | Acc: 0.860/0.894 | Gap: +1.30/+1.44 | GradCos: +0.089
+[21:53:40] Saved diagnostics CSV: epoch_diag_fold_2_ESM2.csv
+[21:53:41] Saved diagnostics figure: paper_diag_fold_2_ESM2.png
+[21:53:41] MOLM ESM2 fold 2/5: evaluating validation fold
+    Aff: 0.8700 AUC:0.9511 MCC:0.721
+    Spec: 0.8962 AUC:0.9662 MCC:0.798
+[21:53:41] Job 17/45 | MOLM ESM2 fold 2/5 done in 32s
+[21:53:41] Job 18/45 | MOLM ESM2 fold 3/5 start (train=3200, val=800, dim=320)
+[21:53:41] 🔄 RNG Reset: seed=125 (MOLM CV ESM2 fold 2)
+[21:53:41] MOLM ESM2 fold 3/5: training 25 epochs
+  Ep  1/25 | Acc: 0.601/0.529 | Gap: +0.02/+0.06 | GradCos: -0.040
+  Ep  5/25 | Acc: 0.721/0.792 | Gap: +0.42/+0.75 | GradCos: +0.163
+  Ep 10/25 | Acc: 0.810/0.870 | Gap: +0.87/+1.34 | GradCos: +0.118
+  Ep 15/25 | Acc: 0.824/0.884 | Gap: +1.05/+1.43 | GradCos: +0.099
+  Ep 20/25 | Acc: 0.842/0.890 | Gap: +1.23/+1.58 | GradCos: +0.100
+  Ep 25/25 | Acc: 0.866/0.899 | Gap: +1.30/+1.64 | GradCos: +0.030
+[21:54:12] Saved diagnostics CSV: epoch_diag_fold_3_ESM2.csv
+[21:54:13] Saved diagnostics figure: paper_diag_fold_3_ESM2.png
+[21:54:13] MOLM ESM2 fold 3/5: evaluating validation fold
+    Aff: 0.8638 AUC:0.9501 MCC:0.725
+    Spec: 0.8950 AUC:0.9629 MCC:0.790
+[21:54:13] Job 18/45 | MOLM ESM2 fold 3/5 done in 32s
+[21:54:13] Job 19/45 | MOLM ESM2 fold 4/5 start (train=3200, val=800, dim=320)
+[21:54:13] 🔄 RNG Reset: seed=126 (MOLM CV ESM2 fold 3)
+[21:54:13] MOLM ESM2 fold 4/5: training 25 epochs
+  Ep  1/25 | Acc: 0.583/0.498 | Gap: -0.01/-0.00 | GradCos: -0.023
+  Ep  5/25 | Acc: 0.693/0.756 | Gap: +0.38/+0.54 | GradCos: +0.243
+  Ep 10/25 | Acc: 0.819/0.863 | Gap: +0.97/+1.17 | GradCos: +0.064
+  Ep 15/25 | Acc: 0.842/0.881 | Gap: +1.17/+1.37 | GradCos: +0.123
+  Ep 20/25 | Acc: 0.851/0.886 | Gap: +1.26/+1.43 | GradCos: +0.180
+  Ep 25/25 | Acc: 0.868/0.886 | Gap: +1.37/+1.53 | GradCos: +0.098
+[21:54:45] Saved diagnostics CSV: epoch_diag_fold_4_ESM2.csv
+[21:54:45] Saved diagnostics figure: paper_diag_fold_4_ESM2.png
+[21:54:45] MOLM ESM2 fold 4/5: evaluating validation fold
+    Aff: 0.8925 AUC:0.9513 MCC:0.780
+    Spec: 0.9100 AUC:0.9665 MCC:0.821
+[21:54:45] Job 19/45 | MOLM ESM2 fold 4/5 done in 32s
+[21:54:45] Job 20/45 | MOLM ESM2 fold 5/5 start (train=3200, val=800, dim=320)
+[21:54:46] 🔄 RNG Reset: seed=127 (MOLM CV ESM2 fold 4)
+[21:54:46] MOLM ESM2 fold 5/5: training 25 epochs
+  Ep  1/25 | Acc: 0.496/0.505 | Gap: +0.01/+0.01 | GradCos: -0.030
+  Ep  5/25 | Acc: 0.659/0.751 | Gap: +0.32/+0.53 | GradCos: +0.130
+  Ep 10/25 | Acc: 0.792/0.871 | Gap: +0.94/+1.22 | GradCos: +0.123
+  Ep 15/25 | Acc: 0.819/0.877 | Gap: +1.10/+1.33 | GradCos: +0.143
+  Ep 20/25 | Acc: 0.841/0.892 | Gap: +1.30/+1.49 | GradCos: +0.135
+  Ep 25/25 | Acc: 0.848/0.893 | Gap: +1.34/+1.51 | GradCos: +0.046
+[21:55:17] Saved diagnostics CSV: epoch_diag_fold_5_ESM2.csv
+[21:55:18] Saved diagnostics figure: paper_diag_fold_5_ESM2.png
+[21:55:18] MOLM ESM2 fold 5/5: evaluating validation fold
+    Aff: 0.8812 AUC:0.9437 MCC:0.750
+    Spec: 0.9062 AUC:0.9594 MCC:0.813
+[21:55:18] Job 20/45 | MOLM ESM2 fold 5/5 done in 33s
+  📊 Aff: 0.8812±0.0132 AUC:0.9523 MCC:0.754
+  📊 Spec: 0.9050±0.0085 AUC:0.9639 MCC:0.811
+
+🔄 MOLM-ST CV [ESM2] (5-fold)...
+[21:55:18] Job 21/45 | MOLM-ST ESM2 fold 1/5 affinity start (train=3200, val=800, dim=320)
+[21:55:18] 🔄 RNG Reset: seed=623 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.3632
+  ST affinity Ep  5/25 | Loss: 0.2188
+  ST affinity Ep 10/25 | Loss: 0.1654
+  ST affinity Ep 15/25 | Loss: 0.1443
+  ST affinity Ep 20/25 | Loss: 0.1292
+  ST affinity Ep 25/25 | Loss: 0.1205
+[21:55:34] Job 21/45 | MOLM-ST ESM2 fold 1/5 affinity done in 16s
+[21:55:34] Job 22/45 | MOLM-ST ESM2 fold 1/5 specificity start
+[21:55:34] 🔄 RNG Reset: seed=723 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.5538
+  ST specificity Ep  5/25 | Loss: 0.2187
+  ST specificity Ep 10/25 | Loss: 0.1284
+  ST specificity Ep 15/25 | Loss: 0.1227
+  ST specificity Ep 20/25 | Loss: 0.1050
+  ST specificity Ep 25/25 | Loss: 0.1092
+[21:55:50] Job 22/45 | MOLM-ST ESM2 fold 1/5 specificity done in 16s
+  Fold 1: Aff 0.9137 MCC:0.822 AUC:0.9670 | Spec 0.8925 MCC:0.793 AUC:0.9643
+[21:55:50] Job 23/45 | MOLM-ST ESM2 fold 2/5 affinity start (train=3200, val=800, dim=320)
+[21:55:50] 🔄 RNG Reset: seed=624 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.3796
+  ST affinity Ep  5/25 | Loss: 0.2633
+  ST affinity Ep 10/25 | Loss: 0.1792
+  ST affinity Ep 15/25 | Loss: 0.1469
+  ST affinity Ep 20/25 | Loss: 0.1359
+  ST affinity Ep 25/25 | Loss: 0.1277
+[21:56:06] Job 23/45 | MOLM-ST ESM2 fold 2/5 affinity done in 16s
+[21:56:06] Job 24/45 | MOLM-ST ESM2 fold 2/5 specificity start
+[21:56:06] 🔄 RNG Reset: seed=724 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.5048
+  ST specificity Ep  5/25 | Loss: 0.2012
+  ST specificity Ep 10/25 | Loss: 0.1316
+  ST specificity Ep 15/25 | Loss: 0.1164
+  ST specificity Ep 20/25 | Loss: 0.1045
+  ST specificity Ep 25/25 | Loss: 0.1015
+[21:56:22] Job 24/45 | MOLM-ST ESM2 fold 2/5 specificity done in 16s
+  Fold 2: Aff 0.8775 MCC:0.750 AUC:0.9555 | Spec 0.8938 MCC:0.789 AUC:0.9668
+[21:56:22] Job 25/45 | MOLM-ST ESM2 fold 3/5 affinity start (train=3200, val=800, dim=320)
+[21:56:22] 🔄 RNG Reset: seed=625 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.3820
+  ST affinity Ep  5/25 | Loss: 0.2487
+  ST affinity Ep 10/25 | Loss: 0.1767
+  ST affinity Ep 15/25 | Loss: 0.1472
+  ST affinity Ep 20/25 | Loss: 0.1395
+  ST affinity Ep 25/25 | Loss: 0.1236
+[21:56:38] Job 25/45 | MOLM-ST ESM2 fold 3/5 affinity done in 16s
+[21:56:38] Job 26/45 | MOLM-ST ESM2 fold 3/5 specificity start
+[21:56:38] 🔄 RNG Reset: seed=725 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.5087
+  ST specificity Ep  5/25 | Loss: 0.1899
+  ST specificity Ep 10/25 | Loss: 0.1285
+  ST specificity Ep 15/25 | Loss: 0.1156
+  ST specificity Ep 20/25 | Loss: 0.1122
+  ST specificity Ep 25/25 | Loss: 0.1037
+[21:56:54] Job 26/45 | MOLM-ST ESM2 fold 3/5 specificity done in 16s
+  Fold 3: Aff 0.8838 MCC:0.759 AUC:0.9556 | Spec 0.8775 MCC:0.762 AUC:0.9616
+[21:56:54] Job 27/45 | MOLM-ST ESM2 fold 4/5 affinity start (train=3200, val=800, dim=320)
+[21:56:54] 🔄 RNG Reset: seed=626 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.3670
+  ST affinity Ep  5/25 | Loss: 0.2404
+  ST affinity Ep 10/25 | Loss: 0.1608
+  ST affinity Ep 15/25 | Loss: 0.1383
+  ST affinity Ep 20/25 | Loss: 0.1388
+  ST affinity Ep 25/25 | Loss: 0.1225
+[21:57:10] Job 27/45 | MOLM-ST ESM2 fold 4/5 affinity done in 16s
+[21:57:10] Job 28/45 | MOLM-ST ESM2 fold 4/5 specificity start
+[21:57:10] 🔄 RNG Reset: seed=726 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.5617
+  ST specificity Ep  5/25 | Loss: 0.2193
+  ST specificity Ep 10/25 | Loss: 0.1322
+  ST specificity Ep 15/25 | Loss: 0.1194
+  ST specificity Ep 20/25 | Loss: 0.1102
+  ST specificity Ep 25/25 | Loss: 0.1047
+[21:57:26] Job 28/45 | MOLM-ST ESM2 fold 4/5 specificity done in 16s
+  Fold 4: Aff 0.8762 MCC:0.735 AUC:0.9503 | Spec 0.9113 MCC:0.823 AUC:0.9676
+[21:57:26] Job 29/45 | MOLM-ST ESM2 fold 5/5 affinity start (train=3200, val=800, dim=320)
+[21:57:26] 🔄 RNG Reset: seed=627 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.3756
+  ST affinity Ep  5/25 | Loss: 0.2312
+  ST affinity Ep 10/25 | Loss: 0.1730
+  ST affinity Ep 15/25 | Loss: 0.1480
+  ST affinity Ep 20/25 | Loss: 0.1348
+  ST affinity Ep 25/25 | Loss: 0.1212
+[21:57:41] Job 29/45 | MOLM-ST ESM2 fold 5/5 affinity done in 16s
+[21:57:42] Job 30/45 | MOLM-ST ESM2 fold 5/5 specificity start
+[21:57:42] 🔄 RNG Reset: seed=727 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.5711
+  ST specificity Ep  5/25 | Loss: 0.2158
+  ST specificity Ep 10/25 | Loss: 0.1303
+  ST specificity Ep 15/25 | Loss: 0.1162
+  ST specificity Ep 20/25 | Loss: 0.1057
+  ST specificity Ep 25/25 | Loss: 0.0995
+[21:57:57] Job 30/45 | MOLM-ST ESM2 fold 5/5 specificity done in 16s
+  Fold 5: Aff 0.8812 MCC:0.758 AUC:0.9508 | Spec 0.9087 MCC:0.818 AUC:0.9610
+  📊 MOLM-ST [ESM2]: Aff 0.8865±0.0139 MCC:0.765 AUC:0.9558
+                           Spec 0.8967±0.0123 MCC:0.797 AUC:0.9643
+[21:57:57] Feature 2/3 done: ESM2 in 5.3m
+[21:57:57] Feature 3/3 start: Fusion-ESM2 (X=(4000, 2620), aff_pos=1516/4000, spec_pos=2000/4000)
+
+🔄 MOLM CV [Fusion-ESM2] (5-fold)...
+[21:57:57] Job 31/45 | MOLM Fusion-ESM2 fold 1/5 start (train=3200, val=800, dim=2620)
+[21:57:58] 🔄 RNG Reset: seed=123 (MOLM CV Fusion-ESM2 fold 0)
+[21:57:58] MOLM Fusion-ESM2 fold 1/5: training 25 epochs
+  Ep  1/25 | Acc: 0.551/0.545 | Gap: +0.05/+0.13 | GradCos: -0.028
+  Ep  5/25 | Acc: 0.856/0.868 | Gap: +1.13/+1.42 | GradCos: +0.002
+  Ep 10/25 | Acc: 0.890/0.890 | Gap: +1.55/+1.81 | GradCos: +0.063
+  Ep 15/25 | Acc: 0.907/0.910 | Gap: +1.78/+1.96 | GradCos: +0.077
+  Ep 20/25 | Acc: 0.917/0.918 | Gap: +1.92/+2.07 | GradCos: +0.017
+  Ep 25/25 | Acc: 0.920/0.917 | Gap: +2.06/+2.26 | GradCos: +0.027
+[21:58:31] Saved diagnostics CSV: epoch_diag_fold_1_Fusion-ESM2.csv
+[21:58:31] Saved diagnostics figure: paper_diag_fold_1_Fusion-ESM2.png
+[21:58:31] MOLM Fusion-ESM2 fold 1/5: evaluating validation fold
+    Aff: 0.9300 AUC:0.9804 MCC:0.857
+    Spec: 0.9437 AUC:0.9821 MCC:0.888
+[21:58:31] Job 31/45 | MOLM Fusion-ESM2 fold 1/5 done in 34s
+[21:58:31] Job 32/45 | MOLM Fusion-ESM2 fold 2/5 start (train=3200, val=800, dim=2620)
+[21:58:31] 🔄 RNG Reset: seed=124 (MOLM CV Fusion-ESM2 fold 1)
+[21:58:31] MOLM Fusion-ESM2 fold 2/5: training 25 epochs
+  Ep  1/25 | Acc: 0.602/0.557 | Gap: +0.07/+0.13 | GradCos: +0.022
+  Ep  5/25 | Acc: 0.853/0.882 | Gap: +1.26/+1.12 | GradCos: +0.028
+  Ep 10/25 | Acc: 0.890/0.893 | Gap: +1.68/+1.49 | GradCos: +0.054
+  Ep 15/25 | Acc: 0.900/0.905 | Gap: +1.84/+1.70 | GradCos: +0.045
+  Ep 20/25 | Acc: 0.921/0.920 | Gap: +1.99/+1.91 | GradCos: +0.007
+  Ep 25/25 | Acc: 0.930/0.924 | Gap: +2.04/+2.07 | GradCos: +0.031
+[21:59:05] Saved diagnostics CSV: epoch_diag_fold_2_Fusion-ESM2.csv
+[21:59:05] Saved diagnostics figure: paper_diag_fold_2_Fusion-ESM2.png
+[21:59:05] MOLM Fusion-ESM2 fold 2/5: evaluating validation fold
+    Aff: 0.9375 AUC:0.9850 MCC:0.869
+    Spec: 0.9125 AUC:0.9789 MCC:0.830
+[21:59:05] Job 32/45 | MOLM Fusion-ESM2 fold 2/5 done in 34s
+[21:59:05] Job 33/45 | MOLM Fusion-ESM2 fold 3/5 start (train=3200, val=800, dim=2620)
+[21:59:05] 🔄 RNG Reset: seed=125 (MOLM CV Fusion-ESM2 fold 2)
+[21:59:05] MOLM Fusion-ESM2 fold 3/5: training 25 epochs
+  Ep  1/25 | Acc: 0.542/0.568 | Gap: +0.09/+0.13 | GradCos: +0.020
+  Ep  5/25 | Acc: 0.873/0.868 | Gap: +1.21/+1.30 | GradCos: +0.078
+  Ep 10/25 | Acc: 0.897/0.908 | Gap: +1.63/+1.74 | GradCos: +0.030
+  Ep 15/25 | Acc: 0.911/0.907 | Gap: +1.78/+1.78 | GradCos: +0.053
+  Ep 20/25 | Acc: 0.917/0.911 | Gap: +1.96/+2.00 | GradCos: +0.009
+  Ep 25/25 | Acc: 0.922/0.916 | Gap: +1.99/+2.08 | GradCos: -0.006
+[21:59:39] Saved diagnostics CSV: epoch_diag_fold_3_Fusion-ESM2.csv
+[21:59:39] Saved diagnostics figure: paper_diag_fold_3_Fusion-ESM2.png
+[21:59:39] MOLM Fusion-ESM2 fold 3/5: evaluating validation fold
+    Aff: 0.9363 AUC:0.9762 MCC:0.864
+    Spec: 0.9237 AUC:0.9766 MCC:0.848
+[21:59:39] Job 33/45 | MOLM Fusion-ESM2 fold 3/5 done in 34s
+[21:59:39] Job 34/45 | MOLM Fusion-ESM2 fold 4/5 start (train=3200, val=800, dim=2620)
+[21:59:39] 🔄 RNG Reset: seed=126 (MOLM CV Fusion-ESM2 fold 3)
+[21:59:39] MOLM Fusion-ESM2 fold 4/5: training 25 epochs
+  Ep  1/25 | Acc: 0.485/0.578 | Gap: +0.09/+0.17 | GradCos: +0.044
+  Ep  5/25 | Acc: 0.852/0.883 | Gap: +1.31/+1.36 | GradCos: +0.096
+  Ep 10/25 | Acc: 0.904/0.896 | Gap: +1.74/+1.60 | GradCos: +0.030
+  Ep 15/25 | Acc: 0.915/0.907 | Gap: +1.97/+1.82 | GradCos: +0.045
+  Ep 20/25 | Acc: 0.920/0.921 | Gap: +2.04/+1.93 | GradCos: +0.015
+  Ep 25/25 | Acc: 0.927/0.919 | Gap: +2.13/+2.02 | GradCos: +0.032
+[22:00:13] Saved diagnostics CSV: epoch_diag_fold_4_Fusion-ESM2.csv
+[22:00:13] Saved diagnostics figure: paper_diag_fold_4_Fusion-ESM2.png
+[22:00:13] MOLM Fusion-ESM2 fold 4/5: evaluating validation fold
+    Aff: 0.9075 AUC:0.9749 MCC:0.805
+    Spec: 0.9387 AUC:0.9797 MCC:0.878
+[22:00:13] Job 34/45 | MOLM Fusion-ESM2 fold 4/5 done in 34s
+[22:00:13] Job 35/45 | MOLM Fusion-ESM2 fold 5/5 start (train=3200, val=800, dim=2620)
+[22:00:13] 🔄 RNG Reset: seed=127 (MOLM CV Fusion-ESM2 fold 4)
+[22:00:14] MOLM Fusion-ESM2 fold 5/5: training 25 epochs
+  Ep  1/25 | Acc: 0.463/0.573 | Gap: +0.03/+0.14 | GradCos: +0.030
+  Ep  5/25 | Acc: 0.875/0.879 | Gap: +1.17/+1.22 | GradCos: +0.107
+  Ep 10/25 | Acc: 0.904/0.915 | Gap: +1.57/+1.64 | GradCos: +0.078
+  Ep 15/25 | Acc: 0.915/0.911 | Gap: +1.75/+1.87 | GradCos: +0.088
+  Ep 20/25 | Acc: 0.915/0.915 | Gap: +1.93/+1.97 | GradCos: +0.030
+  Ep 25/25 | Acc: 0.926/0.926 | Gap: +2.03/+2.03 | GradCos: +0.014
+[22:00:48] Saved diagnostics CSV: epoch_diag_fold_5_Fusion-ESM2.csv
+[22:00:48] Saved diagnostics figure: paper_diag_fold_5_Fusion-ESM2.png
+[22:00:48] MOLM Fusion-ESM2 fold 5/5: evaluating validation fold
+    Aff: 0.9150 AUC:0.9735 MCC:0.820
+    Spec: 0.9287 AUC:0.9763 MCC:0.858
+[22:00:48] Job 35/45 | MOLM Fusion-ESM2 fold 5/5 done in 35s
+  📊 Aff: 0.9252±0.0119 AUC:0.9780 MCC:0.843
+  📊 Spec: 0.9295±0.0111 AUC:0.9787 MCC:0.860
+
+🔄 MOLM-ST CV [Fusion-ESM2] (5-fold)...
+[22:00:48] Job 36/45 | MOLM-ST Fusion-ESM2 fold 1/5 affinity start (train=3200, val=800, dim=2620)
+[22:00:48] 🔄 RNG Reset: seed=623 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.3587
+  ST affinity Ep  5/25 | Loss: 0.1218
+  ST affinity Ep 10/25 | Loss: 0.1003
+  ST affinity Ep 15/25 | Loss: 0.0925
+  ST affinity Ep 20/25 | Loss: 0.0942
+  ST affinity Ep 25/25 | Loss: 0.0846
+[22:01:06] Job 36/45 | MOLM-ST Fusion-ESM2 fold 1/5 affinity done in 18s
+[22:01:07] Job 37/45 | MOLM-ST Fusion-ESM2 fold 1/5 specificity start
+[22:01:07] 🔄 RNG Reset: seed=723 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.4083
+  ST specificity Ep  5/25 | Loss: 0.1122
+  ST specificity Ep 10/25 | Loss: 0.0992
+  ST specificity Ep 15/25 | Loss: 0.0815
+  ST specificity Ep 20/25 | Loss: 0.0766
+  ST specificity Ep 25/25 | Loss: 0.0741
+[22:01:26] Job 37/45 | MOLM-ST Fusion-ESM2 fold 1/5 specificity done in 19s
+  Fold 1: Aff 0.9200 MCC:0.839 AUC:0.9781 | Spec 0.9350 MCC:0.870 AUC:0.9831
+[22:01:26] Job 38/45 | MOLM-ST Fusion-ESM2 fold 2/5 affinity start (train=3200, val=800, dim=2620)
+[22:01:26] 🔄 RNG Reset: seed=624 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.3214
+  ST affinity Ep  5/25 | Loss: 0.1137
+  ST affinity Ep 10/25 | Loss: 0.0976
+  ST affinity Ep 15/25 | Loss: 0.0853
+  ST affinity Ep 20/25 | Loss: 0.0858
+  ST affinity Ep 25/25 | Loss: 0.0755
+[22:01:53] Job 38/45 | MOLM-ST Fusion-ESM2 fold 2/5 affinity done in 27s
+[22:01:53] Job 39/45 | MOLM-ST Fusion-ESM2 fold 2/5 specificity start
+[22:01:53] 🔄 RNG Reset: seed=724 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.3403
+  ST specificity Ep  5/25 | Loss: 0.1114
+  ST specificity Ep 10/25 | Loss: 0.0901
+  ST specificity Ep 15/25 | Loss: 0.0817
+  ST specificity Ep 20/25 | Loss: 0.0723
+  ST specificity Ep 25/25 | Loss: 0.0766
+[22:02:31] Job 39/45 | MOLM-ST Fusion-ESM2 fold 2/5 specificity done in 38s
+  Fold 2: Aff 0.9213 MCC:0.841 AUC:0.9814 | Spec 0.9175 MCC:0.836 AUC:0.9758
+[22:02:31] Job 40/45 | MOLM-ST Fusion-ESM2 fold 3/5 affinity start (train=3200, val=800, dim=2620)
+[22:02:31] 🔄 RNG Reset: seed=625 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.2923
+  ST affinity Ep  5/25 | Loss: 0.1105
+  ST affinity Ep 10/25 | Loss: 0.0950
+  ST affinity Ep 15/25 | Loss: 0.0901
+  ST affinity Ep 20/25 | Loss: 0.0892
+  ST affinity Ep 25/25 | Loss: 0.0785
+[22:03:08] Job 40/45 | MOLM-ST Fusion-ESM2 fold 3/5 affinity done in 38s
+[22:03:09] Job 41/45 | MOLM-ST Fusion-ESM2 fold 3/5 specificity start
+[22:03:09] 🔄 RNG Reset: seed=725 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.3439
+  ST specificity Ep  5/25 | Loss: 0.1006
+  ST specificity Ep 10/25 | Loss: 0.0862
+  ST specificity Ep 15/25 | Loss: 0.0775
+  ST specificity Ep 20/25 | Loss: 0.0728
+  ST specificity Ep 25/25 | Loss: 0.0734
+[22:03:46] Job 41/45 | MOLM-ST Fusion-ESM2 fold 3/5 specificity done in 37s
+  Fold 3: Aff 0.9413 MCC:0.875 AUC:0.9791 | Spec 0.9175 MCC:0.837 AUC:0.9777
+[22:03:46] Job 42/45 | MOLM-ST Fusion-ESM2 fold 4/5 affinity start (train=3200, val=800, dim=2620)
+[22:03:46] 🔄 RNG Reset: seed=626 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.3131
+  ST affinity Ep  5/25 | Loss: 0.1071
+  ST affinity Ep 10/25 | Loss: 0.0972
+  ST affinity Ep 15/25 | Loss: 0.0864
+  ST affinity Ep 20/25 | Loss: 0.0830
+  ST affinity Ep 25/25 | Loss: 0.0790
+[22:04:22] Job 42/45 | MOLM-ST Fusion-ESM2 fold 4/5 affinity done in 36s
+[22:04:22] Job 43/45 | MOLM-ST Fusion-ESM2 fold 4/5 specificity start
+[22:04:22] 🔄 RNG Reset: seed=726 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.3898
+  ST specificity Ep  5/25 | Loss: 0.1134
+  ST specificity Ep 10/25 | Loss: 0.0945
+  ST specificity Ep 15/25 | Loss: 0.0841
+  ST specificity Ep 20/25 | Loss: 0.0761
+  ST specificity Ep 25/25 | Loss: 0.0726
+[22:04:59] Job 43/45 | MOLM-ST Fusion-ESM2 fold 4/5 specificity done in 37s
+  Fold 4: Aff 0.9237 MCC:0.837 AUC:0.9771 | Spec 0.9400 MCC:0.880 AUC:0.9797
+[22:04:59] Job 44/45 | MOLM-ST Fusion-ESM2 fold 5/5 affinity start (train=3200, val=800, dim=2620)
+[22:04:59] 🔄 RNG Reset: seed=627 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.3281
+  ST affinity Ep  5/25 | Loss: 0.1075
+  ST affinity Ep 10/25 | Loss: 0.0941
+  ST affinity Ep 15/25 | Loss: 0.0874
+  ST affinity Ep 20/25 | Loss: 0.0834
+  ST affinity Ep 25/25 | Loss: 0.0780
+[22:05:35] Job 44/45 | MOLM-ST Fusion-ESM2 fold 5/5 affinity done in 36s
+[22:05:35] Job 45/45 | MOLM-ST Fusion-ESM2 fold 5/5 specificity start
+[22:05:35] 🔄 RNG Reset: seed=727 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.3214
+  ST specificity Ep  5/25 | Loss: 0.1031
+  ST specificity Ep 10/25 | Loss: 0.0814
+  ST specificity Ep 15/25 | Loss: 0.0805
+  ST specificity Ep 20/25 | Loss: 0.0699
+  ST specificity Ep 25/25 | Loss: 0.0686
+[22:06:09] Job 45/45 | MOLM-ST Fusion-ESM2 fold 5/5 specificity done in 34s
+  Fold 5: Aff 0.9137 MCC:0.824 AUC:0.9697 | Spec 0.9275 MCC:0.855 AUC:0.9769
+  📊 MOLM-ST [Fusion-ESM2]: Aff 0.9240±0.0092 MCC:0.843 AUC:0.9771
+                           Spec 0.9275±0.0091 MCC:0.856 AUC:0.9786
+[22:06:09] Feature 3/3 done: Fusion-ESM2 in 8.2m
+[22:06:09] Saving Phase 3 aggregate results
+  ✓ Saved: C:\Users\dd7726\MOLM\outputs\seeds\seed_123\phase3\molm_cv.pkl
+
+=================================================================
+CV GRID — MOLM + MOLM-ST
+=================================================================
+  MOLM (OneHot      ): Aff 0.9330±0.0106, Spec 0.9285±0.0085
+  MOLM-ST (OneHot      ): Aff 0.9373±0.0087, Spec 0.9258±0.0125
+  MOLM (ESM2        ): Aff 0.8812±0.0132, Spec 0.9050±0.0085
+  MOLM-ST (ESM2        ): Aff 0.8865±0.0139, Spec 0.8967±0.0123
+  MOLM (Fusion-ESM2 ): Aff 0.9252±0.0119, Spec 0.9295±0.0111
+  MOLM-ST (Fusion-ESM2 ): Aff 0.9240±0.0092, Spec 0.9275±0.0091
+
+✓ Phase 3 complete in 1159s (19.3 min)

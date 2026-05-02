@@ -1,0 +1,1993 @@
+# SEED 2024 | PHASE 4: phase4_holdout.py
+# started: 2026-04-28T02:33:59.617060
+
+✓ Phase 0 loaded: Config, models, utilities ready
+  OUTPUT_DIR: C:\Users\dd7726\MOLM\outputs\seeds\seed_2024
+  FEATURE_TYPES: ['onehot', 'esm2', 'fusion_esm2']
+  GPU: 1 available
+============================================================
+PHASE 4: Held-Out Mutation Site Evaluation
+============================================================
+  ✓ Loaded: C:\Users\dd7726\MOLM\outputs\phase1\features.pkl
+[02:34:06] Planned work: 2 modes, 8 sites/mode, 21 jobs/site, 336 total jobs
+
+🧬 Held-out evaluation (TOP-PERFORMING)...
+  Sites: [33, 50, 54, 55, 56, 95, 97, 102], Primary: Fusion-ESM2
+[02:34:06] Mode 1/2 start: TOP-PERFORMING | 8 sites, 21 jobs/site
+[02:34:06] Mode 1/2 | Site 1/8 start: Kabat 33, residue 'V', train=3093, test=907
+[02:34:06] Job 1/336 | Site Kabat 33 | MOLM OneHot start
+[02:34:06] 🔄 RNG Reset: seed=2024 (MOLM-OneHot site 33)
+  Ep  1/25 | Acc: 0.587/0.590 | Gap: +0.13/+0.11 | GradCos: +0.007
+  Ep  5/25 | Acc: 0.878/0.865 | Gap: +1.41/+1.15 | GradCos: -0.013
+  Ep 10/25 | Acc: 0.902/0.901 | Gap: +1.81/+1.61 | GradCos: +0.014
+  Ep 15/25 | Acc: 0.913/0.910 | Gap: +1.95/+1.78 | GradCos: +0.065
+  Ep 20/25 | Acc: 0.925/0.916 | Gap: +2.05/+1.89 | GradCos: +0.048
+  Ep 25/25 | Acc: 0.920/0.920 | Gap: +2.13/+2.02 | GradCos: +0.070
+    MOLM (OneHot      ) Aff:0.9471 MCC:0.836 | Spec:0.9041 MCC:0.759
+[02:34:39] Job 1/336 | Site Kabat 33 | MOLM OneHot done in 33s
+[02:34:39] Job 2/336 | Site Kabat 33 | MOLM-ST OneHot affinity start
+[02:34:39] 🔄 RNG Reset: seed=2524 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.3695
+  ST affinity Ep  5/25 | Loss: 0.1166
+  ST affinity Ep 10/25 | Loss: 0.0924
+  ST affinity Ep 15/25 | Loss: 0.0875
+  ST affinity Ep 20/25 | Loss: 0.0759
+  ST affinity Ep 25/25 | Loss: 0.0760
+[02:34:56] Job 2/336 | Site Kabat 33 | MOLM-ST OneHot affinity done in 17s
+[02:34:56] Job 3/336 | Site Kabat 33 | MOLM-ST OneHot specificity start
+[02:34:56] 🔄 RNG Reset: seed=2624 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.4353
+  ST specificity Ep  5/25 | Loss: 0.1070
+  ST specificity Ep 10/25 | Loss: 0.0854
+  ST specificity Ep 15/25 | Loss: 0.0814
+  ST specificity Ep 20/25 | Loss: 0.0693
+  ST specificity Ep 25/25 | Loss: 0.0646
+[02:35:13] Job 3/336 | Site Kabat 33 | MOLM-ST OneHot specificity done in 17s
+    MOLM-ST (OneHot      ) Aff:0.9361 MCC:0.812 | Spec:0.9272 MCC:0.832
+[02:35:13] Job 4/336 | Site Kabat 33 | MOLM ESM2 start
+[02:35:13] 🔄 RNG Reset: seed=2124 (MOLM-ESM2 site 33)
+  Ep  1/25 | Acc: 0.529/0.502 | Gap: +0.01/+0.02 | GradCos: +0.005
+  Ep  5/25 | Acc: 0.676/0.768 | Gap: +0.30/+0.59 | GradCos: +0.044
+  Ep 10/25 | Acc: 0.799/0.881 | Gap: +0.77/+1.33 | GradCos: +0.133
+  Ep 15/25 | Acc: 0.815/0.881 | Gap: +1.00/+1.44 | GradCos: +0.154
+  Ep 20/25 | Acc: 0.841/0.895 | Gap: +1.12/+1.51 | GradCos: +0.094
+  Ep 25/25 | Acc: 0.838/0.896 | Gap: +1.23/+1.52 | GradCos: +0.108
+    MOLM (ESM2        ) Aff:0.8567 MCC:0.645 | Spec:0.8942 MCC:0.745
+[02:35:44] Job 4/336 | Site Kabat 33 | MOLM ESM2 done in 31s
+[02:35:44] Job 5/336 | Site Kabat 33 | MOLM-ST ESM2 affinity start
+[02:35:44] 🔄 RNG Reset: seed=2624 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.4141
+  ST affinity Ep  5/25 | Loss: 0.2373
+  ST affinity Ep 10/25 | Loss: 0.1682
+  ST affinity Ep 15/25 | Loss: 0.1429
+  ST affinity Ep 20/25 | Loss: 0.1323
+  ST affinity Ep 25/25 | Loss: 0.1227
+[02:35:59] Job 5/336 | Site Kabat 33 | MOLM-ST ESM2 affinity done in 15s
+[02:35:59] Job 6/336 | Site Kabat 33 | MOLM-ST ESM2 specificity start
+[02:35:59] 🔄 RNG Reset: seed=2724 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.5453
+  ST specificity Ep  5/25 | Loss: 0.2154
+  ST specificity Ep 10/25 | Loss: 0.1236
+  ST specificity Ep 15/25 | Loss: 0.1132
+  ST specificity Ep 20/25 | Loss: 0.1067
+  ST specificity Ep 25/25 | Loss: 0.1006
+[02:36:14] Job 6/336 | Site Kabat 33 | MOLM-ST ESM2 specificity done in 15s
+    MOLM-ST (ESM2        ) Aff:0.8181 MCC:0.617 | Spec:0.8897 MCC:0.738
+[02:36:14] Job 7/336 | Site Kabat 33 | MOLM Fusion-ESM2 start
+[02:36:14] 🔄 RNG Reset: seed=2224 (MOLM-Fusion-ESM2 site 33)
+  Ep  1/25 | Acc: 0.568/0.612 | Gap: +0.19/+0.18 | GradCos: +0.035
+  Ep  5/25 | Acc: 0.874/0.869 | Gap: +1.56/+1.12 | GradCos: +0.015
+  Ep 10/25 | Acc: 0.900/0.901 | Gap: +1.77/+1.48 | GradCos: +0.085
+  Ep 15/25 | Acc: 0.906/0.914 | Gap: +1.85/+1.70 | GradCos: +0.088
+  Ep 20/25 | Acc: 0.916/0.917 | Gap: +1.98/+1.93 | GradCos: +0.028
+  Ep 25/25 | Acc: 0.913/0.920 | Gap: +2.10/+1.95 | GradCos: +0.021
+    MOLM (Fusion-ESM2 ) Aff:0.9294 MCC:0.788 | Spec:0.9074 MCC:0.795
+[02:36:46] Job 7/336 | Site Kabat 33 | MOLM Fusion-ESM2 done in 32s
+[02:36:46] Job 8/336 | Site Kabat 33 | MOLM-ST Fusion-ESM2 affinity start
+[02:36:46] 🔄 RNG Reset: seed=2724 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.3049
+  ST affinity Ep  5/25 | Loss: 0.1173
+  ST affinity Ep 10/25 | Loss: 0.0919
+  ST affinity Ep 15/25 | Loss: 0.0871
+  ST affinity Ep 20/25 | Loss: 0.0887
+  ST affinity Ep 25/25 | Loss: 0.0821
+[02:37:03] Job 8/336 | Site Kabat 33 | MOLM-ST Fusion-ESM2 affinity done in 17s
+[02:37:03] Job 9/336 | Site Kabat 33 | MOLM-ST Fusion-ESM2 specificity start
+[02:37:04] 🔄 RNG Reset: seed=2824 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.3890
+  ST specificity Ep  5/25 | Loss: 0.1058
+  ST specificity Ep 10/25 | Loss: 0.0907
+  ST specificity Ep 15/25 | Loss: 0.0814
+  ST specificity Ep 20/25 | Loss: 0.0730
+  ST specificity Ep 25/25 | Loss: 0.0676
+[02:37:21] Job 9/336 | Site Kabat 33 | MOLM-ST Fusion-ESM2 specificity done in 17s
+    MOLM-ST (Fusion-ESM2 ) Aff:0.9217 MCC:0.752 | Spec:0.9316 MCC:0.838
+[02:37:21] Job 10/336 | Site Kabat 33 | NN OneHot affinity start
+[02:37:21] 🔄 RNG Reset: seed=2024 (NN-OneHot site 33 aff)
+[02:37:33] Job 10/336 | Site Kabat 33 | NN OneHot affinity done in 12s
+[02:37:33] Job 11/336 | Site Kabat 33 | NN OneHot specificity start
+[02:37:33] 🔄 RNG Reset: seed=2074 (NN-OneHot site 33 spec)
+[02:37:44] Job 11/336 | Site Kabat 33 | NN OneHot specificity done in 12s
+    NN (OneHot      )    Aff:0.9350 MCC:0.803 | Spec:0.9261 MCC:0.825
+[02:37:44] Job 12/336 | Site Kabat 33 | NN ESM2 affinity start
+[02:37:45] 🔄 RNG Reset: seed=2324 (NN-ESM2 site 33 aff)
+[02:37:53] Job 12/336 | Site Kabat 33 | NN ESM2 affinity done in 8s
+[02:37:53] Job 13/336 | Site Kabat 33 | NN ESM2 specificity start
+[02:37:53] 🔄 RNG Reset: seed=2374 (NN-ESM2 site 33 spec)
+[02:38:01] Job 13/336 | Site Kabat 33 | NN ESM2 specificity done in 8s
+    NN (ESM2        )    Aff:0.9107 MCC:0.714 | Spec:0.8357 MCC:0.668
+[02:38:01] Job 14/336 | Site Kabat 33 | NN Fusion-ESM2 affinity start
+[02:38:01] 🔄 RNG Reset: seed=2224 (NN-Fusion-ESM2 site 33 aff)
+[02:38:13] Job 14/336 | Site Kabat 33 | NN Fusion-ESM2 affinity done in 12s
+[02:38:13] Job 15/336 | Site Kabat 33 | NN Fusion-ESM2 specificity start
+[02:38:14] 🔄 RNG Reset: seed=2274 (NN-Fusion-ESM2 site 33 spec)
+[02:38:25] Job 15/336 | Site Kabat 33 | NN Fusion-ESM2 specificity done in 12s
+    NN (Fusion-ESM2 )    Aff:0.9394 MCC:0.815 | Spec:0.9272 MCC:0.832
+[02:38:26] Job 16/336 | Site Kabat 33 | LDA OneHot fit/eval start
+[02:38:35] Job 17/336 | Site Kabat 33 | LDA OneHot done in 10s
+    LDA (OneHot      )  Aff:0.9096 MCC:0.757 | Spec:0.8820 MCC:0.754
+[02:38:35] Job 18/336 | Site Kabat 33 | LDA ESM2 fit/eval start
+[02:38:36] Job 19/336 | Site Kabat 33 | LDA ESM2 done in 1s
+    LDA (ESM2        )  Aff:0.8908 MCC:0.717 | Spec:0.8368 MCC:0.577
+[02:38:36] Job 20/336 | Site Kabat 33 | LDA Fusion-ESM2 fit/eval start
+[02:38:46] Job 21/336 | Site Kabat 33 | LDA Fusion-ESM2 done in 10s
+    LDA (Fusion-ESM2 )  Aff:0.8611 MCC:0.667 | Spec:0.8611 MCC:0.643
+[02:38:46] Mode 1/2 | Site 1/8 done: Kabat 33 in 4.7m
+[02:38:46] Mode 1/2 | Site 2/8 start: Kabat 50, residue 'E', train=3572, test=428
+[02:38:46] Job 22/336 | Site Kabat 50 | MOLM OneHot start
+[02:38:47] 🔄 RNG Reset: seed=2025 (MOLM-OneHot site 50)
+  Ep  1/25 | Acc: 0.533/0.590 | Gap: +0.07/+0.14 | GradCos: +0.027
+  Ep  5/25 | Acc: 0.876/0.879 | Gap: +1.33/+1.32 | GradCos: +0.017
+  Ep 10/25 | Acc: 0.901/0.903 | Gap: +1.73/+1.65 | GradCos: +0.063
+  Ep 15/25 | Acc: 0.910/0.916 | Gap: +1.88/+1.83 | GradCos: +0.011
+  Ep 20/25 | Acc: 0.913/0.920 | Gap: +1.98/+1.97 | GradCos: -0.060
+  Ep 25/25 | Acc: 0.921/0.921 | Gap: +2.07/+2.11 | GradCos: +0.008
+    MOLM (OneHot      ) Aff:0.9790 MCC:0.298 | Spec:0.9182 MCC:0.494
+[02:39:23] Job 22/336 | Site Kabat 50 | MOLM OneHot done in 37s
+[02:39:23] Job 23/336 | Site Kabat 50 | MOLM-ST OneHot affinity start
+[02:39:23] 🔄 RNG Reset: seed=2525 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.3198
+  ST affinity Ep  5/25 | Loss: 0.1202
+  ST affinity Ep 10/25 | Loss: 0.0976
+  ST affinity Ep 15/25 | Loss: 0.0856
+  ST affinity Ep 20/25 | Loss: 0.0876
+  ST affinity Ep 25/25 | Loss: 0.0792
+[02:39:43] Job 23/336 | Site Kabat 50 | MOLM-ST OneHot affinity done in 20s
+[02:39:43] Job 24/336 | Site Kabat 50 | MOLM-ST OneHot specificity start
+[02:39:43] 🔄 RNG Reset: seed=2625 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.3704
+  ST specificity Ep  5/25 | Loss: 0.1132
+  ST specificity Ep 10/25 | Loss: 0.0879
+  ST specificity Ep 15/25 | Loss: 0.0770
+  ST specificity Ep 20/25 | Loss: 0.0722
+  ST specificity Ep 25/25 | Loss: 0.0662
+[02:40:02] Job 24/336 | Site Kabat 50 | MOLM-ST OneHot specificity done in 19s
+    MOLM-ST (OneHot      ) Aff:0.9182 MCC:0.166 | Spec:0.7944 MCC:0.329
+[02:40:02] Job 25/336 | Site Kabat 50 | MOLM ESM2 start
+[02:40:02] 🔄 RNG Reset: seed=2125 (MOLM-ESM2 site 50)
+  Ep  1/25 | Acc: 0.482/0.504 | Gap: -0.01/+0.02 | GradCos: -0.050
+  Ep  5/25 | Acc: 0.683/0.768 | Gap: +0.34/+0.55 | GradCos: +0.091
+  Ep 10/25 | Acc: 0.791/0.861 | Gap: +0.81/+1.07 | GradCos: +0.130
+  Ep 15/25 | Acc: 0.821/0.888 | Gap: +1.04/+1.29 | GradCos: +0.068
+  Ep 20/25 | Acc: 0.845/0.886 | Gap: +1.22/+1.33 | GradCos: +0.124
+  Ep 25/25 | Acc: 0.863/0.891 | Gap: +1.34/+1.42 | GradCos: +0.077
+    MOLM (ESM2        ) Aff:0.9299 MCC:0.185 | Spec:0.8621 MCC:0.345
+[02:40:37] Job 25/336 | Site Kabat 50 | MOLM ESM2 done in 35s
+[02:40:37] Job 26/336 | Site Kabat 50 | MOLM-ST ESM2 affinity start
+[02:40:37] 🔄 RNG Reset: seed=2625 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.3782
+  ST affinity Ep  5/25 | Loss: 0.2418
+  ST affinity Ep 10/25 | Loss: 0.1727
+  ST affinity Ep 15/25 | Loss: 0.1521
+  ST affinity Ep 20/25 | Loss: 0.1330
+  ST affinity Ep 25/25 | Loss: 0.1334
+[02:40:54] Job 26/336 | Site Kabat 50 | MOLM-ST ESM2 affinity done in 17s
+[02:40:55] Job 27/336 | Site Kabat 50 | MOLM-ST ESM2 specificity start
+[02:40:55] 🔄 RNG Reset: seed=2725 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.4808
+  ST specificity Ep  5/25 | Loss: 0.1935
+  ST specificity Ep 10/25 | Loss: 0.1326
+  ST specificity Ep 15/25 | Loss: 0.1172
+  ST specificity Ep 20/25 | Loss: 0.1150
+  ST specificity Ep 25/25 | Loss: 0.1032
+[02:41:12] Job 27/336 | Site Kabat 50 | MOLM-ST ESM2 specificity done in 17s
+    MOLM-ST (ESM2        ) Aff:0.9766 MCC:0.366 | Spec:0.8949 MCC:0.380
+[02:41:12] Job 28/336 | Site Kabat 50 | MOLM Fusion-ESM2 start
+[02:41:12] 🔄 RNG Reset: seed=2225 (MOLM-Fusion-ESM2 site 50)
+  Ep  1/25 | Acc: 0.568/0.589 | Gap: +0.13/+0.22 | GradCos: +0.013
+  Ep  5/25 | Acc: 0.871/0.878 | Gap: +1.37/+1.27 | GradCos: +0.080
+  Ep 10/25 | Acc: 0.885/0.911 | Gap: +1.62/+1.58 | GradCos: +0.046
+  Ep 15/25 | Acc: 0.905/0.915 | Gap: +1.86/+1.75 | GradCos: +0.021
+  Ep 20/25 | Acc: 0.915/0.916 | Gap: +1.94/+1.87 | GradCos: +0.005
+  Ep 25/25 | Acc: 0.913/0.920 | Gap: +2.03/+1.97 | GradCos: +0.061
+    MOLM (Fusion-ESM2 ) Aff:0.8995 MCC:0.199 | Spec:0.8107 MCC:0.333
+[02:41:49] Job 28/336 | Site Kabat 50 | MOLM Fusion-ESM2 done in 37s
+[02:41:49] Job 29/336 | Site Kabat 50 | MOLM-ST Fusion-ESM2 affinity start
+[02:41:49] 🔄 RNG Reset: seed=2725 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.2753
+  ST affinity Ep  5/25 | Loss: 0.1119
+  ST affinity Ep 10/25 | Loss: 0.0961
+  ST affinity Ep 15/25 | Loss: 0.0914
+  ST affinity Ep 20/25 | Loss: 0.0927
+  ST affinity Ep 25/25 | Loss: 0.0806
+[02:42:09] Job 29/336 | Site Kabat 50 | MOLM-ST Fusion-ESM2 affinity done in 20s
+[02:42:09] Job 30/336 | Site Kabat 50 | MOLM-ST Fusion-ESM2 specificity start
+[02:42:09] 🔄 RNG Reset: seed=2825 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.3425
+  ST specificity Ep  5/25 | Loss: 0.1079
+  ST specificity Ep 10/25 | Loss: 0.0940
+  ST specificity Ep 15/25 | Loss: 0.0800
+  ST specificity Ep 20/25 | Loss: 0.0732
+  ST specificity Ep 25/25 | Loss: 0.0702
+[02:42:28] Job 30/336 | Site Kabat 50 | MOLM-ST Fusion-ESM2 specificity done in 20s
+    MOLM-ST (Fusion-ESM2 ) Aff:0.9509 MCC:0.233 | Spec:0.8294 MCC:0.327
+[02:42:28] Job 31/336 | Site Kabat 50 | NN OneHot affinity start
+[02:42:29] 🔄 RNG Reset: seed=2124 (NN-OneHot site 50 aff)
+[02:42:42] Job 31/336 | Site Kabat 50 | NN OneHot affinity done in 14s
+[02:42:42] Job 32/336 | Site Kabat 50 | NN OneHot specificity start
+[02:42:42] 🔄 RNG Reset: seed=2174 (NN-OneHot site 50 spec)
+[02:42:56] Job 32/336 | Site Kabat 50 | NN OneHot specificity done in 13s
+    NN (OneHot      )    Aff:0.9346 MCC:0.125 | Spec:0.7780 MCC:0.311
+[02:42:56] Job 33/336 | Site Kabat 50 | NN ESM2 affinity start
+[02:42:56] 🔄 RNG Reset: seed=2424 (NN-ESM2 site 50 aff)
+[02:43:05] Job 33/336 | Site Kabat 50 | NN ESM2 affinity done in 10s
+[02:43:05] Job 34/336 | Site Kabat 50 | NN ESM2 specificity start
+[02:43:06] 🔄 RNG Reset: seed=2474 (NN-ESM2 site 50 spec)
+[02:43:15] Job 34/336 | Site Kabat 50 | NN ESM2 specificity done in 10s
+    NN (ESM2        )    Aff:0.9766 MCC:0.274 | Spec:0.9019 MCC:0.365
+[02:43:15] Job 35/336 | Site Kabat 50 | NN Fusion-ESM2 affinity start
+[02:43:15] 🔄 RNG Reset: seed=2324 (NN-Fusion-ESM2 site 50 aff)
+[02:43:29] Job 35/336 | Site Kabat 50 | NN Fusion-ESM2 affinity done in 14s
+[02:43:29] Job 36/336 | Site Kabat 50 | NN Fusion-ESM2 specificity start
+[02:43:29] 🔄 RNG Reset: seed=2374 (NN-Fusion-ESM2 site 50 spec)
+[02:43:43] Job 36/336 | Site Kabat 50 | NN Fusion-ESM2 specificity done in 14s
+    NN (Fusion-ESM2 )    Aff:0.9159 MCC:0.101 | Spec:0.8505 MCC:0.358
+[02:43:43] Job 37/336 | Site Kabat 50 | LDA OneHot fit/eval start
+[02:43:54] Job 38/336 | Site Kabat 50 | LDA OneHot done in 11s
+    LDA (OneHot      )  Aff:0.9112 MCC:0.157 | Spec:0.7500 MCC:0.268
+[02:43:54] Job 39/336 | Site Kabat 50 | LDA ESM2 fit/eval start
+[02:43:55] Job 40/336 | Site Kabat 50 | LDA ESM2 done in 1s
+    LDA (ESM2        )  Aff:0.9836 MCC:nan | Spec:0.9229 MCC:nan
+[02:43:55] Job 41/336 | Site Kabat 50 | LDA Fusion-ESM2 fit/eval start
+[02:44:06] Job 42/336 | Site Kabat 50 | LDA Fusion-ESM2 done in 11s
+    LDA (Fusion-ESM2 )  Aff:0.9813 MCC:-0.006 | Spec:0.9393 MCC:0.446
+[02:44:06] Mode 1/2 | Site 2/8 done: Kabat 50 in 5.3m
+[02:44:06] Mode 1/2 | Site 3/8 start: Kabat 54, residue 'G', train=2476, test=1524
+[02:44:06] Job 43/336 | Site Kabat 54 | MOLM OneHot start
+[02:44:06] 🔄 RNG Reset: seed=2026 (MOLM-OneHot site 54)
+  Ep  1/25 | Acc: 0.512/0.547 | Gap: +0.09/+0.12 | GradCos: -0.008
+  Ep  5/25 | Acc: 0.873/0.852 | Gap: +1.22/+1.16 | GradCos: +0.046
+  Ep 10/25 | Acc: 0.894/0.889 | Gap: +1.50/+1.55 | GradCos: +0.065
+  Ep 15/25 | Acc: 0.911/0.901 | Gap: +1.73/+1.76 | GradCos: +0.026
+  Ep 20/25 | Acc: 0.916/0.900 | Gap: +1.87/+1.88 | GradCos: +0.017
+  Ep 25/25 | Acc: 0.931/0.912 | Gap: +1.93/+1.89 | GradCos: +0.063
+    MOLM (OneHot      ) Aff:0.9304 MCC:0.849 | Spec:0.9364 MCC:0.873
+[02:44:32] Job 43/336 | Site Kabat 54 | MOLM OneHot done in 26s
+[02:44:32] Job 44/336 | Site Kabat 54 | MOLM-ST OneHot affinity start
+[02:44:32] 🔄 RNG Reset: seed=2526 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.3609
+  ST affinity Ep  5/25 | Loss: 0.1163
+  ST affinity Ep 10/25 | Loss: 0.0946
+  ST affinity Ep 15/25 | Loss: 0.0826
+  ST affinity Ep 20/25 | Loss: 0.0779
+  ST affinity Ep 25/25 | Loss: 0.0743
+[02:44:46] Job 44/336 | Site Kabat 54 | MOLM-ST OneHot affinity done in 14s
+[02:44:46] Job 45/336 | Site Kabat 54 | MOLM-ST OneHot specificity start
+[02:44:46] 🔄 RNG Reset: seed=2626 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.4579
+  ST specificity Ep  5/25 | Loss: 0.1216
+  ST specificity Ep 10/25 | Loss: 0.0973
+  ST specificity Ep 15/25 | Loss: 0.0846
+  ST specificity Ep 20/25 | Loss: 0.0753
+  ST specificity Ep 25/25 | Loss: 0.0708
+[02:45:00] Job 45/336 | Site Kabat 54 | MOLM-ST OneHot specificity done in 14s
+    MOLM-ST (OneHot      ) Aff:0.9259 MCC:0.839 | Spec:0.9278 MCC:0.856
+[02:45:00] Job 46/336 | Site Kabat 54 | MOLM ESM2 start
+[02:45:00] 🔄 RNG Reset: seed=2126 (MOLM-ESM2 site 54)
+  Ep  1/25 | Acc: 0.542/0.506 | Gap: +0.00/+0.01 | GradCos: -0.051
+  Ep  5/25 | Acc: 0.592/0.635 | Gap: +0.07/+0.25 | GradCos: +0.112
+  Ep 10/25 | Acc: 0.780/0.827 | Gap: +0.60/+1.00 | GradCos: +0.174
+  Ep 15/25 | Acc: 0.816/0.864 | Gap: +0.85/+1.25 | GradCos: +0.147
+  Ep 20/25 | Acc: 0.835/0.871 | Gap: +0.96/+1.30 | GradCos: +0.136
+  Ep 25/25 | Acc: 0.846/0.878 | Gap: +1.05/+1.38 | GradCos: +0.043
+    MOLM (ESM2        ) Aff:0.8510 MCC:0.721 | Spec:0.9147 MCC:0.831
+[02:45:24] Job 46/336 | Site Kabat 54 | MOLM ESM2 done in 24s
+[02:45:24] Job 47/336 | Site Kabat 54 | MOLM-ST ESM2 affinity start
+[02:45:25] 🔄 RNG Reset: seed=2626 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.4046
+  ST affinity Ep  5/25 | Loss: 0.3308
+  ST affinity Ep 10/25 | Loss: 0.2050
+  ST affinity Ep 15/25 | Loss: 0.1693
+  ST affinity Ep 20/25 | Loss: 0.1520
+  ST affinity Ep 25/25 | Loss: 0.1331
+[02:45:37] Job 47/336 | Site Kabat 54 | MOLM-ST ESM2 affinity done in 12s
+[02:45:37] Job 48/336 | Site Kabat 54 | MOLM-ST ESM2 specificity start
+[02:45:37] 🔄 RNG Reset: seed=2726 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.4988
+  ST specificity Ep  5/25 | Loss: 0.2587
+  ST specificity Ep 10/25 | Loss: 0.1492
+  ST specificity Ep 15/25 | Loss: 0.1242
+  ST specificity Ep 20/25 | Loss: 0.1256
+  ST specificity Ep 25/25 | Loss: 0.1125
+[02:45:49] Job 48/336 | Site Kabat 54 | MOLM-ST ESM2 specificity done in 12s
+    MOLM-ST (ESM2        ) Aff:0.8524 MCC:0.724 | Spec:0.9068 MCC:0.816
+[02:45:49] Job 49/336 | Site Kabat 54 | MOLM Fusion-ESM2 start
+[02:45:49] 🔄 RNG Reset: seed=2226 (MOLM-Fusion-ESM2 site 54)
+  Ep  1/25 | Acc: 0.559/0.552 | Gap: +0.16/+0.09 | GradCos: +0.039
+  Ep  5/25 | Acc: 0.863/0.861 | Gap: +1.39/+0.90 | GradCos: +0.104
+  Ep 10/25 | Acc: 0.888/0.886 | Gap: +1.65/+1.17 | GradCos: +0.051
+  Ep 15/25 | Acc: 0.917/0.896 | Gap: +1.87/+1.43 | GradCos: +0.013
+  Ep 20/25 | Acc: 0.918/0.906 | Gap: +1.93/+1.58 | GradCos: +0.048
+  Ep 25/25 | Acc: 0.930/0.910 | Gap: +2.06/+1.69 | GradCos: +0.049
+    MOLM (Fusion-ESM2 ) Aff:0.9311 MCC:0.853 | Spec:0.9304 MCC:0.862
+[02:46:15] Job 49/336 | Site Kabat 54 | MOLM Fusion-ESM2 done in 26s
+[02:46:15] Job 50/336 | Site Kabat 54 | MOLM-ST Fusion-ESM2 affinity start
+[02:46:15] 🔄 RNG Reset: seed=2726 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.3559
+  ST affinity Ep  5/25 | Loss: 0.1246
+  ST affinity Ep 10/25 | Loss: 0.1049
+  ST affinity Ep 15/25 | Loss: 0.0952
+  ST affinity Ep 20/25 | Loss: 0.0847
+  ST affinity Ep 25/25 | Loss: 0.0808
+[02:46:28] Job 50/336 | Site Kabat 54 | MOLM-ST Fusion-ESM2 affinity done in 14s
+[02:46:29] Job 51/336 | Site Kabat 54 | MOLM-ST Fusion-ESM2 specificity start
+[02:46:29] 🔄 RNG Reset: seed=2826 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.4063
+  ST specificity Ep  5/25 | Loss: 0.1225
+  ST specificity Ep 10/25 | Loss: 0.0926
+  ST specificity Ep 15/25 | Loss: 0.0875
+  ST specificity Ep 20/25 | Loss: 0.0775
+  ST specificity Ep 25/25 | Loss: 0.0762
+[02:46:42] Job 51/336 | Site Kabat 54 | MOLM-ST Fusion-ESM2 specificity done in 14s
+    MOLM-ST (Fusion-ESM2 ) Aff:0.9226 MCC:0.837 | Spec:0.9199 MCC:0.845
+[02:46:42] Job 52/336 | Site Kabat 54 | NN OneHot affinity start
+[02:46:43] 🔄 RNG Reset: seed=2224 (NN-OneHot site 54 aff)
+[02:46:52] Job 52/336 | Site Kabat 54 | NN OneHot affinity done in 9s
+[02:46:52] Job 53/336 | Site Kabat 54 | NN OneHot specificity start
+[02:46:52] 🔄 RNG Reset: seed=2274 (NN-OneHot site 54 spec)
+[02:47:01] Job 53/336 | Site Kabat 54 | NN OneHot specificity done in 9s
+    NN (OneHot      )    Aff:0.9232 MCC:0.834 | Spec:0.8885 MCC:0.793
+[02:47:02] Job 54/336 | Site Kabat 54 | NN ESM2 affinity start
+[02:47:02] 🔄 RNG Reset: seed=2524 (NN-ESM2 site 54 aff)
+[02:47:08] Job 54/336 | Site Kabat 54 | NN ESM2 affinity done in 7s
+[02:47:08] Job 55/336 | Site Kabat 54 | NN ESM2 specificity start
+[02:47:09] 🔄 RNG Reset: seed=2574 (NN-ESM2 site 54 spec)
+[02:47:15] Job 55/336 | Site Kabat 54 | NN ESM2 specificity done in 7s
+    NN (ESM2        )    Aff:0.8825 MCC:0.756 | Spec:0.9055 MCC:0.816
+[02:47:15] Job 56/336 | Site Kabat 54 | NN Fusion-ESM2 affinity start
+[02:47:15] 🔄 RNG Reset: seed=2424 (NN-Fusion-ESM2 site 54 aff)
+[02:47:25] Job 56/336 | Site Kabat 54 | NN Fusion-ESM2 affinity done in 10s
+[02:47:25] Job 57/336 | Site Kabat 54 | NN Fusion-ESM2 specificity start
+[02:47:25] 🔄 RNG Reset: seed=2474 (NN-Fusion-ESM2 site 54 spec)
+[02:47:35] Job 57/336 | Site Kabat 54 | NN Fusion-ESM2 specificity done in 10s
+    NN (Fusion-ESM2 )    Aff:0.9219 MCC:0.830 | Spec:0.8432 MCC:0.722
+[02:47:35] Job 58/336 | Site Kabat 54 | LDA OneHot fit/eval start
+[02:47:43] Job 59/336 | Site Kabat 54 | LDA OneHot done in 8s
+    LDA (OneHot      )  Aff:0.9239 MCC:0.837 | Spec:0.8970 MCC:0.804
+[02:47:43] Job 60/336 | Site Kabat 54 | LDA ESM2 fit/eval start
+[02:47:44] Job 61/336 | Site Kabat 54 | LDA ESM2 done in 1s
+    LDA (ESM2        )  Aff:0.8458 MCC:0.702 | Spec:0.8406 MCC:0.714
+[02:47:44] Job 62/336 | Site Kabat 54 | LDA Fusion-ESM2 fit/eval start
+[02:47:52] Job 63/336 | Site Kabat 54 | LDA Fusion-ESM2 done in 8s
+    LDA (Fusion-ESM2 )  Aff:0.7966 MCC:0.604 | Spec:0.4895 MCC:0.118
+[02:47:52] Mode 1/2 | Site 3/8 done: Kabat 54 in 3.8m
+[02:47:52] Mode 1/2 | Site 4/8 start: Kabat 55, residue 'G', train=2626, test=1374
+[02:47:52] Job 64/336 | Site Kabat 55 | MOLM OneHot start
+[02:47:52] 🔄 RNG Reset: seed=2027 (MOLM-OneHot site 55)
+  Ep  1/25 | Acc: 0.507/0.542 | Gap: +0.10/+0.04 | GradCos: +0.002
+  Ep  5/25 | Acc: 0.867/0.848 | Gap: +1.59/+1.14 | GradCos: +0.056
+  Ep 10/25 | Acc: 0.897/0.897 | Gap: +1.79/+1.55 | GradCos: +0.038
+  Ep 15/25 | Acc: 0.916/0.920 | Gap: +1.93/+1.92 | GradCos: +0.022
+  Ep 20/25 | Acc: 0.920/0.921 | Gap: +2.04/+2.05 | GradCos: +0.071
+  Ep 25/25 | Acc: 0.915/0.917 | Gap: +2.10/+2.09 | GradCos: +0.061
+    MOLM (OneHot      ) Aff:0.9243 MCC:0.838 | Spec:0.8901 MCC:0.794
+[02:48:20] Job 64/336 | Site Kabat 55 | MOLM OneHot done in 28s
+[02:48:20] Job 65/336 | Site Kabat 55 | MOLM-ST OneHot affinity start
+[02:48:20] 🔄 RNG Reset: seed=2527 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.3223
+  ST affinity Ep  5/25 | Loss: 0.1242
+  ST affinity Ep 10/25 | Loss: 0.0975
+  ST affinity Ep 15/25 | Loss: 0.0838
+  ST affinity Ep 20/25 | Loss: 0.0810
+  ST affinity Ep 25/25 | Loss: 0.0851
+[02:48:34] Job 65/336 | Site Kabat 55 | MOLM-ST OneHot affinity done in 15s
+[02:48:34] Job 66/336 | Site Kabat 55 | MOLM-ST OneHot specificity start
+[02:48:35] 🔄 RNG Reset: seed=2627 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.5320
+  ST specificity Ep  5/25 | Loss: 0.1223
+  ST specificity Ep 10/25 | Loss: 0.0905
+  ST specificity Ep 15/25 | Loss: 0.0824
+  ST specificity Ep 20/25 | Loss: 0.0733
+  ST specificity Ep 25/25 | Loss: 0.0724
+[02:48:49] Job 66/336 | Site Kabat 55 | MOLM-ST OneHot specificity done in 15s
+    MOLM-ST (OneHot      ) Aff:0.9119 MCC:0.814 | Spec:0.9119 MCC:0.828
+[02:48:49] Job 67/336 | Site Kabat 55 | MOLM ESM2 start
+[02:48:49] 🔄 RNG Reset: seed=2127 (MOLM-ESM2 site 55)
+  Ep  1/25 | Acc: 0.532/0.528 | Gap: -0.02/+0.02 | GradCos: -0.002
+  Ep  5/25 | Acc: 0.591/0.666 | Gap: +0.13/+0.32 | GradCos: +0.033
+  Ep 10/25 | Acc: 0.781/0.855 | Gap: +0.73/+1.03 | GradCos: +0.055
+  Ep 15/25 | Acc: 0.808/0.868 | Gap: +0.96/+1.25 | GradCos: +0.103
+  Ep 20/25 | Acc: 0.829/0.887 | Gap: +1.13/+1.45 | GradCos: +0.154
+  Ep 25/25 | Acc: 0.843/0.897 | Gap: +1.26/+1.42 | GradCos: +0.126
+    MOLM (ESM2        ) Aff:0.8166 MCC:0.612 | Spec:0.9039 MCC:0.802
+[02:49:16] Job 67/336 | Site Kabat 55 | MOLM ESM2 done in 26s
+[02:49:16] Job 68/336 | Site Kabat 55 | MOLM-ST ESM2 affinity start
+[02:49:16] 🔄 RNG Reset: seed=2627 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.4641
+  ST affinity Ep  5/25 | Loss: 0.3056
+  ST affinity Ep 10/25 | Loss: 0.1845
+  ST affinity Ep 15/25 | Loss: 0.1531
+  ST affinity Ep 20/25 | Loss: 0.1357
+  ST affinity Ep 25/25 | Loss: 0.1245
+[02:49:29] Job 68/336 | Site Kabat 55 | MOLM-ST ESM2 affinity done in 13s
+[02:49:29] Job 69/336 | Site Kabat 55 | MOLM-ST ESM2 specificity start
+[02:49:29] 🔄 RNG Reset: seed=2727 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.6104
+  ST specificity Ep  5/25 | Loss: 0.2649
+  ST specificity Ep 10/25 | Loss: 0.1526
+  ST specificity Ep 15/25 | Loss: 0.1186
+  ST specificity Ep 20/25 | Loss: 0.1144
+  ST specificity Ep 25/25 | Loss: 0.1058
+[02:49:42] Job 69/336 | Site Kabat 55 | MOLM-ST ESM2 specificity done in 13s
+    MOLM-ST (ESM2        ) Aff:0.7904 MCC:0.558 | Spec:0.8828 MCC:0.775
+[02:49:42] Job 70/336 | Site Kabat 55 | MOLM Fusion-ESM2 start
+[02:49:42] 🔄 RNG Reset: seed=2227 (MOLM-Fusion-ESM2 site 55)
+  Ep  1/25 | Acc: 0.546/0.588 | Gap: +0.15/+0.16 | GradCos: +0.084
+  Ep  5/25 | Acc: 0.871/0.865 | Gap: +1.51/+1.20 | GradCos: +0.048
+  Ep 10/25 | Acc: 0.882/0.894 | Gap: +1.75/+1.58 | GradCos: +0.002
+  Ep 15/25 | Acc: 0.907/0.913 | Gap: +1.98/+1.85 | GradCos: +0.029
+  Ep 20/25 | Acc: 0.929/0.913 | Gap: +2.03/+1.99 | GradCos: +0.059
+  Ep 25/25 | Acc: 0.910/0.918 | Gap: +2.06/+1.97 | GradCos: +0.056
+    MOLM (Fusion-ESM2 ) Aff:0.8850 MCC:0.760 | Spec:0.9119 MCC:0.826
+[02:50:09] Job 70/336 | Site Kabat 55 | MOLM Fusion-ESM2 done in 28s
+[02:50:09] Job 71/336 | Site Kabat 55 | MOLM-ST Fusion-ESM2 affinity start
+[02:50:09] 🔄 RNG Reset: seed=2727 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.3073
+  ST affinity Ep  5/25 | Loss: 0.1150
+  ST affinity Ep 10/25 | Loss: 0.0987
+  ST affinity Ep 15/25 | Loss: 0.0886
+  ST affinity Ep 20/25 | Loss: 0.0813
+  ST affinity Ep 25/25 | Loss: 0.0865
+[02:50:24] Job 71/336 | Site Kabat 55 | MOLM-ST Fusion-ESM2 affinity done in 15s
+[02:50:24] Job 72/336 | Site Kabat 55 | MOLM-ST Fusion-ESM2 specificity start
+[02:50:24] 🔄 RNG Reset: seed=2827 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.4075
+  ST specificity Ep  5/25 | Loss: 0.1209
+  ST specificity Ep 10/25 | Loss: 0.0864
+  ST specificity Ep 15/25 | Loss: 0.0808
+  ST specificity Ep 20/25 | Loss: 0.0774
+  ST specificity Ep 25/25 | Loss: 0.0748
+[02:50:39] Job 72/336 | Site Kabat 55 | MOLM-ST Fusion-ESM2 specificity done in 15s
+    MOLM-ST (Fusion-ESM2 ) Aff:0.9236 MCC:0.835 | Spec:0.9170 MCC:0.836
+[02:50:39] Job 73/336 | Site Kabat 55 | NN OneHot affinity start
+[02:50:39] 🔄 RNG Reset: seed=2324 (NN-OneHot site 55 aff)
+[02:50:49] Job 73/336 | Site Kabat 55 | NN OneHot affinity done in 10s
+[02:50:49] Job 74/336 | Site Kabat 55 | NN OneHot specificity start
+[02:50:49] 🔄 RNG Reset: seed=2374 (NN-OneHot site 55 spec)
+[02:50:59] Job 74/336 | Site Kabat 55 | NN OneHot specificity done in 10s
+    NN (OneHot      )    Aff:0.9170 MCC:0.822 | Spec:0.8923 MCC:0.799
+[02:50:59] Job 75/336 | Site Kabat 55 | NN ESM2 affinity start
+[02:50:59] 🔄 RNG Reset: seed=2624 (NN-ESM2 site 55 aff)
+[02:51:06] Job 75/336 | Site Kabat 55 | NN ESM2 affinity done in 7s
+[02:51:06] Job 76/336 | Site Kabat 55 | NN ESM2 specificity start
+[02:51:07] 🔄 RNG Reset: seed=2674 (NN-ESM2 site 55 spec)
+[02:51:13] Job 76/336 | Site Kabat 55 | NN ESM2 specificity done in 7s
+    NN (ESM2        )    Aff:0.8566 MCC:0.693 | Spec:0.8967 MCC:0.790
+[02:51:14] Job 77/336 | Site Kabat 55 | NN Fusion-ESM2 affinity start
+[02:51:14] 🔄 RNG Reset: seed=2524 (NN-Fusion-ESM2 site 55 aff)
+[02:51:24] Job 77/336 | Site Kabat 55 | NN Fusion-ESM2 affinity done in 10s
+[02:51:24] Job 78/336 | Site Kabat 55 | NN Fusion-ESM2 specificity start
+[02:51:24] 🔄 RNG Reset: seed=2574 (NN-Fusion-ESM2 site 55 spec)
+[02:51:34] Job 78/336 | Site Kabat 55 | NN Fusion-ESM2 specificity done in 10s
+    NN (Fusion-ESM2 )    Aff:0.9010 MCC:0.791 | Spec:0.9003 MCC:0.813
+[02:51:35] Job 79/336 | Site Kabat 55 | LDA OneHot fit/eval start
+[02:51:43] Job 80/336 | Site Kabat 55 | LDA OneHot done in 8s
+    LDA (OneHot      )  Aff:0.9236 MCC:0.836 | Spec:0.8930 MCC:0.799
+[02:51:43] Job 81/336 | Site Kabat 55 | LDA ESM2 fit/eval start
+[02:51:44] Job 82/336 | Site Kabat 55 | LDA ESM2 done in 1s
+    LDA (ESM2        )  Aff:0.7533 MCC:0.452 | Spec:0.8937 MCC:0.783
+[02:51:44] Job 83/336 | Site Kabat 55 | LDA Fusion-ESM2 fit/eval start
+[02:51:52] Job 84/336 | Site Kabat 55 | LDA Fusion-ESM2 done in 8s
+    LDA (Fusion-ESM2 )  Aff:0.8217 MCC:0.649 | Spec:0.5226 MCC:0.306
+[02:51:52] Mode 1/2 | Site 4/8 done: Kabat 55 in 4.0m
+[02:51:52] Mode 1/2 | Site 5/8 start: Kabat 56, residue 'D', train=3283, test=717
+[02:51:52] Job 85/336 | Site Kabat 56 | MOLM OneHot start
+[02:51:52] 🔄 RNG Reset: seed=2028 (MOLM-OneHot site 56)
+  Ep  1/25 | Acc: 0.553/0.595 | Gap: +0.07/+0.19 | GradCos: +0.038
+  Ep  5/25 | Acc: 0.878/0.893 | Gap: +1.40/+1.38 | GradCos: +0.105
+  Ep 10/25 | Acc: 0.910/0.915 | Gap: +1.84/+1.71 | GradCos: -0.019
+  Ep 15/25 | Acc: 0.925/0.917 | Gap: +2.02/+1.89 | GradCos: +0.059
+  Ep 20/25 | Acc: 0.931/0.924 | Gap: +2.12/+2.01 | GradCos: +0.032
+  Ep 25/25 | Acc: 0.926/0.928 | Gap: +2.19/+2.08 | GradCos: +0.044
+    MOLM (OneHot      ) Aff:0.8801 MCC:0.690 | Spec:0.8326 MCC:0.644
+[02:52:26] Job 85/336 | Site Kabat 56 | MOLM OneHot done in 34s
+[02:52:26] Job 86/336 | Site Kabat 56 | MOLM-ST OneHot affinity start
+[02:52:26] 🔄 RNG Reset: seed=2528 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.3342
+  ST affinity Ep  5/25 | Loss: 0.1024
+  ST affinity Ep 10/25 | Loss: 0.0869
+  ST affinity Ep 15/25 | Loss: 0.0783
+  ST affinity Ep 20/25 | Loss: 0.0745
+  ST affinity Ep 25/25 | Loss: 0.0714
+[02:52:44] Job 86/336 | Site Kabat 56 | MOLM-ST OneHot affinity done in 18s
+[02:52:44] Job 87/336 | Site Kabat 56 | MOLM-ST OneHot specificity start
+[02:52:44] 🔄 RNG Reset: seed=2628 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.4355
+  ST specificity Ep  5/25 | Loss: 0.0938
+  ST specificity Ep 10/25 | Loss: 0.0752
+  ST specificity Ep 15/25 | Loss: 0.0711
+  ST specificity Ep 20/25 | Loss: 0.0643
+  ST specificity Ep 25/25 | Loss: 0.0629
+[02:53:02] Job 87/336 | Site Kabat 56 | MOLM-ST OneHot specificity done in 18s
+    MOLM-ST (OneHot      ) Aff:0.9107 MCC:0.742 | Spec:0.8396 MCC:0.659
+[02:53:02] Job 88/336 | Site Kabat 56 | MOLM ESM2 start
+[02:53:02] 🔄 RNG Reset: seed=2128 (MOLM-ESM2 site 56)
+  Ep  1/25 | Acc: 0.477/0.467 | Gap: -0.01/+0.02 | GradCos: -0.028
+  Ep  5/25 | Acc: 0.698/0.780 | Gap: +0.44/+0.61 | GradCos: +0.140
+  Ep 10/25 | Acc: 0.814/0.875 | Gap: +0.99/+1.26 | GradCos: +0.143
+  Ep 15/25 | Acc: 0.844/0.896 | Gap: +1.23/+1.41 | GradCos: +0.148
+  Ep 20/25 | Acc: 0.855/0.904 | Gap: +1.31/+1.58 | GradCos: +0.124
+  Ep 25/25 | Acc: 0.864/0.896 | Gap: +1.42/+1.62 | GradCos: +0.176
+    MOLM (ESM2        ) Aff:0.8271 MCC:0.514 | Spec:0.8103 MCC:0.595
+[02:53:35] Job 88/336 | Site Kabat 56 | MOLM ESM2 done in 32s
+[02:53:35] Job 89/336 | Site Kabat 56 | MOLM-ST ESM2 affinity start
+[02:53:35] 🔄 RNG Reset: seed=2628 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.3974
+  ST affinity Ep  5/25 | Loss: 0.2357
+  ST affinity Ep 10/25 | Loss: 0.1663
+  ST affinity Ep 15/25 | Loss: 0.1338
+  ST affinity Ep 20/25 | Loss: 0.1210
+  ST affinity Ep 25/25 | Loss: 0.1150
+[02:53:51] Job 89/336 | Site Kabat 56 | MOLM-ST ESM2 affinity done in 16s
+[02:53:51] Job 90/336 | Site Kabat 56 | MOLM-ST ESM2 specificity start
+[02:53:51] 🔄 RNG Reset: seed=2728 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.4634
+  ST specificity Ep  5/25 | Loss: 0.1736
+  ST specificity Ep 10/25 | Loss: 0.1217
+  ST specificity Ep 15/25 | Loss: 0.1091
+  ST specificity Ep 20/25 | Loss: 0.1031
+  ST specificity Ep 25/25 | Loss: 0.0969
+[02:54:07] Job 90/336 | Site Kabat 56 | MOLM-ST ESM2 specificity done in 16s
+    MOLM-ST (ESM2        ) Aff:0.8424 MCC:0.589 | Spec:0.8187 MCC:0.610
+[02:54:07] Job 91/336 | Site Kabat 56 | MOLM Fusion-ESM2 start
+[02:54:07] 🔄 RNG Reset: seed=2228 (MOLM-Fusion-ESM2 site 56)
+  Ep  1/25 | Acc: 0.540/0.587 | Gap: +0.06/+0.14 | GradCos: +0.050
+  Ep  5/25 | Acc: 0.875/0.881 | Gap: +1.44/+1.29 | GradCos: +0.075
+  Ep 10/25 | Acc: 0.906/0.910 | Gap: +1.80/+1.63 | GradCos: +0.044
+  Ep 15/25 | Acc: 0.921/0.926 | Gap: +2.04/+1.85 | GradCos: +0.116
+  Ep 20/25 | Acc: 0.927/0.922 | Gap: +2.16/+1.95 | GradCos: +0.085
+  Ep 25/25 | Acc: 0.924/0.922 | Gap: +2.16/+2.01 | GradCos: +0.118
+    MOLM (Fusion-ESM2 ) Aff:0.9149 MCC:0.740 | Spec:0.8438 MCC:0.661
+[02:54:41] Job 91/336 | Site Kabat 56 | MOLM Fusion-ESM2 done in 34s
+[02:54:41] Job 92/336 | Site Kabat 56 | MOLM-ST Fusion-ESM2 affinity start
+[02:54:41] 🔄 RNG Reset: seed=2728 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.3156
+  ST affinity Ep  5/25 | Loss: 0.1095
+  ST affinity Ep 10/25 | Loss: 0.0958
+  ST affinity Ep 15/25 | Loss: 0.0900
+  ST affinity Ep 20/25 | Loss: 0.0771
+  ST affinity Ep 25/25 | Loss: 0.0714
+[02:54:59] Job 92/336 | Site Kabat 56 | MOLM-ST Fusion-ESM2 affinity done in 18s
+[02:54:59] Job 93/336 | Site Kabat 56 | MOLM-ST Fusion-ESM2 specificity start
+[02:55:00] 🔄 RNG Reset: seed=2828 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.4282
+  ST specificity Ep  5/25 | Loss: 0.1036
+  ST specificity Ep 10/25 | Loss: 0.0814
+  ST specificity Ep 15/25 | Loss: 0.0762
+  ST specificity Ep 20/25 | Loss: 0.0663
+  ST specificity Ep 25/25 | Loss: 0.0679
+[02:55:18] Job 93/336 | Site Kabat 56 | MOLM-ST Fusion-ESM2 specificity done in 18s
+    MOLM-ST (Fusion-ESM2 ) Aff:0.8940 MCC:0.712 | Spec:0.7490 MCC:0.549
+[02:55:18] Job 94/336 | Site Kabat 56 | NN OneHot affinity start
+[02:55:18] 🔄 RNG Reset: seed=2424 (NN-OneHot site 56 aff)
+[02:55:30] Job 94/336 | Site Kabat 56 | NN OneHot affinity done in 12s
+[02:55:30] Job 95/336 | Site Kabat 56 | NN OneHot specificity start
+[02:55:31] 🔄 RNG Reset: seed=2474 (NN-OneHot site 56 spec)
+[02:55:43] Job 95/336 | Site Kabat 56 | NN OneHot specificity done in 12s
+    NN (OneHot      )    Aff:0.8870 MCC:0.701 | Spec:0.7838 MCC:0.586
+[02:55:43] Job 96/336 | Site Kabat 56 | NN ESM2 affinity start
+[02:55:43] 🔄 RNG Reset: seed=2724 (NN-ESM2 site 56 aff)
+[02:55:52] Job 96/336 | Site Kabat 56 | NN ESM2 affinity done in 9s
+[02:55:52] Job 97/336 | Site Kabat 56 | NN ESM2 specificity start
+[02:55:52] 🔄 RNG Reset: seed=2774 (NN-ESM2 site 56 spec)
+[02:56:01] Job 97/336 | Site Kabat 56 | NN ESM2 specificity done in 9s
+    NN (ESM2        )    Aff:0.8577 MCC:0.564 | Spec:0.8382 MCC:0.635
+[02:56:01] Job 98/336 | Site Kabat 56 | NN Fusion-ESM2 affinity start
+[02:56:01] 🔄 RNG Reset: seed=2624 (NN-Fusion-ESM2 site 56 aff)
+[02:56:14] Job 98/336 | Site Kabat 56 | NN Fusion-ESM2 affinity done in 13s
+[02:56:14] Job 99/336 | Site Kabat 56 | NN Fusion-ESM2 specificity start
+[02:56:14] 🔄 RNG Reset: seed=2674 (NN-Fusion-ESM2 site 56 spec)
+[02:56:26] Job 99/336 | Site Kabat 56 | NN Fusion-ESM2 specificity done in 13s
+    NN (Fusion-ESM2 )    Aff:0.9205 MCC:0.765 | Spec:0.8131 MCC:0.626
+[02:56:27] Job 100/336 | Site Kabat 56 | LDA OneHot fit/eval start
+[02:56:37] Job 101/336 | Site Kabat 56 | LDA OneHot done in 10s
+    LDA (OneHot      )  Aff:0.8201 MCC:0.616 | Spec:0.7420 MCC:0.538
+[02:56:37] Job 102/336 | Site Kabat 56 | LDA ESM2 fit/eval start
+[02:56:37] Job 103/336 | Site Kabat 56 | LDA ESM2 done in 1s
+    LDA (ESM2        )  Aff:0.8131 MCC:0.334 | Spec:0.7741 MCC:0.207
+[02:56:37] Job 104/336 | Site Kabat 56 | LDA Fusion-ESM2 fit/eval start
+[02:56:48] Job 105/336 | Site Kabat 56 | LDA Fusion-ESM2 done in 11s
+    LDA (Fusion-ESM2 )  Aff:0.8298 MCC:0.534 | Spec:0.8229 MCC:0.614
+[02:56:48] Mode 1/2 | Site 5/8 done: Kabat 56 in 4.9m
+[02:56:48] Mode 1/2 | Site 6/8 start: Kabat 95, residue 'S', train=2897, test=1103
+[02:56:48] Job 106/336 | Site Kabat 95 | MOLM OneHot start
+[02:56:48] 🔄 RNG Reset: seed=2029 (MOLM-OneHot site 95)
+  Ep  1/25 | Acc: 0.540/0.549 | Gap: +0.11/+0.12 | GradCos: +0.015
+  Ep  5/25 | Acc: 0.865/0.889 | Gap: +1.37/+1.34 | GradCos: +0.068
+  Ep 10/25 | Acc: 0.898/0.907 | Gap: +1.66/+1.67 | GradCos: +0.077
+  Ep 15/25 | Acc: 0.920/0.926 | Gap: +1.88/+1.92 | GradCos: +0.013
+  Ep 20/25 | Acc: 0.916/0.931 | Gap: +1.89/+2.02 | GradCos: +0.022
+  Ep 25/25 | Acc: 0.924/0.919 | Gap: +2.06/+2.10 | GradCos: -0.002
+    MOLM (OneHot      ) Aff:0.8160 MCC:0.680 | Spec:0.8939 MCC:0.775
+[02:57:19] Job 106/336 | Site Kabat 95 | MOLM OneHot done in 30s
+[02:57:19] Job 107/336 | Site Kabat 95 | MOLM-ST OneHot affinity start
+[02:57:19] 🔄 RNG Reset: seed=2529 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.2956
+  ST affinity Ep  5/25 | Loss: 0.1060
+  ST affinity Ep 10/25 | Loss: 0.0940
+  ST affinity Ep 15/25 | Loss: 0.0826
+  ST affinity Ep 20/25 | Loss: 0.0811
+  ST affinity Ep 25/25 | Loss: 0.0802
+[02:57:35] Job 107/336 | Site Kabat 95 | MOLM-ST OneHot affinity done in 16s
+[02:57:35] Job 108/336 | Site Kabat 95 | MOLM-ST OneHot specificity start
+[02:57:35] 🔄 RNG Reset: seed=2629 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.4450
+  ST specificity Ep  5/25 | Loss: 0.1070
+  ST specificity Ep 10/25 | Loss: 0.0842
+  ST specificity Ep 15/25 | Loss: 0.0768
+  ST specificity Ep 20/25 | Loss: 0.0715
+  ST specificity Ep 25/25 | Loss: 0.0643
+[02:57:51] Job 108/336 | Site Kabat 95 | MOLM-ST OneHot specificity done in 16s
+    MOLM-ST (OneHot      ) Aff:0.8413 MCC:0.715 | Spec:0.9030 MCC:0.793
+[02:57:51] Job 109/336 | Site Kabat 95 | MOLM ESM2 start
+[02:57:51] 🔄 RNG Reset: seed=2129 (MOLM-ESM2 site 95)
+  Ep  1/25 | Acc: 0.588/0.526 | Gap: +0.02/+0.02 | GradCos: +0.020
+  Ep  5/25 | Acc: 0.723/0.741 | Gap: +0.36/+0.43 | GradCos: +0.083
+  Ep 10/25 | Acc: 0.821/0.872 | Gap: +0.84/+1.16 | GradCos: +0.104
+  Ep 15/25 | Acc: 0.847/0.890 | Gap: +1.11/+1.35 | GradCos: +0.052
+  Ep 20/25 | Acc: 0.868/0.893 | Gap: +1.27/+1.50 | GradCos: +0.049
+  Ep 25/25 | Acc: 0.867/0.895 | Gap: +1.32/+1.56 | GradCos: +0.088
+    MOLM (ESM2        ) Aff:0.8504 MCC:0.701 | Spec:0.8568 MCC:0.720
+[02:58:20] Job 109/336 | Site Kabat 95 | MOLM ESM2 done in 29s
+[02:58:20] Job 110/336 | Site Kabat 95 | MOLM-ST ESM2 affinity start
+[02:58:20] 🔄 RNG Reset: seed=2629 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.3867
+  ST affinity Ep  5/25 | Loss: 0.2315
+  ST affinity Ep 10/25 | Loss: 0.1597
+  ST affinity Ep 15/25 | Loss: 0.1385
+  ST affinity Ep 20/25 | Loss: 0.1259
+  ST affinity Ep 25/25 | Loss: 0.1206
+[02:58:34] Job 110/336 | Site Kabat 95 | MOLM-ST ESM2 affinity done in 14s
+[02:58:34] Job 111/336 | Site Kabat 95 | MOLM-ST ESM2 specificity start
+[02:58:34] 🔄 RNG Reset: seed=2729 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.5134
+  ST specificity Ep  5/25 | Loss: 0.2017
+  ST specificity Ep 10/25 | Loss: 0.1236
+  ST specificity Ep 15/25 | Loss: 0.1060
+  ST specificity Ep 20/25 | Loss: 0.1019
+  ST specificity Ep 25/25 | Loss: 0.1032
+[02:58:49] Job 111/336 | Site Kabat 95 | MOLM-ST ESM2 specificity done in 14s
+    MOLM-ST (ESM2        ) Aff:0.8704 MCC:0.734 | Spec:0.7924 MCC:0.626
+[02:58:49] Job 112/336 | Site Kabat 95 | MOLM Fusion-ESM2 start
+[02:58:49] 🔄 RNG Reset: seed=2229 (MOLM-Fusion-ESM2 site 95)
+  Ep  1/25 | Acc: 0.587/0.598 | Gap: +0.13/+0.17 | GradCos: +0.087
+  Ep  5/25 | Acc: 0.873/0.873 | Gap: +1.19/+1.19 | GradCos: +0.070
+  Ep 10/25 | Acc: 0.893/0.900 | Gap: +1.56/+1.63 | GradCos: +0.079
+  Ep 15/25 | Acc: 0.909/0.925 | Gap: +1.77/+1.88 | GradCos: +0.037
+  Ep 20/25 | Acc: 0.919/0.923 | Gap: +1.82/+2.01 | GradCos: +0.001
+  Ep 25/25 | Acc: 0.924/0.930 | Gap: +1.96/+2.13 | GradCos: +0.002
+    MOLM (Fusion-ESM2 ) Aff:0.8395 MCC:0.717 | Spec:0.9066 MCC:0.804
+[02:59:19] Job 112/336 | Site Kabat 95 | MOLM Fusion-ESM2 done in 30s
+[02:59:19] Job 113/336 | Site Kabat 95 | MOLM-ST Fusion-ESM2 affinity start
+[02:59:19] 🔄 RNG Reset: seed=2729 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.2906
+  ST affinity Ep  5/25 | Loss: 0.1212
+  ST affinity Ep 10/25 | Loss: 0.0938
+  ST affinity Ep 15/25 | Loss: 0.0856
+  ST affinity Ep 20/25 | Loss: 0.0809
+  ST affinity Ep 25/25 | Loss: 0.0815
+[02:59:35] Job 113/336 | Site Kabat 95 | MOLM-ST Fusion-ESM2 affinity done in 16s
+[02:59:35] Job 114/336 | Site Kabat 95 | MOLM-ST Fusion-ESM2 specificity start
+[02:59:36] 🔄 RNG Reset: seed=2829 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.4152
+  ST specificity Ep  5/25 | Loss: 0.1048
+  ST specificity Ep 10/25 | Loss: 0.0829
+  ST specificity Ep 15/25 | Loss: 0.0718
+  ST specificity Ep 20/25 | Loss: 0.0686
+  ST specificity Ep 25/25 | Loss: 0.0682
+[02:59:52] Job 114/336 | Site Kabat 95 | MOLM-ST Fusion-ESM2 specificity done in 16s
+    MOLM-ST (Fusion-ESM2 ) Aff:0.8731 MCC:0.765 | Spec:0.8704 MCC:0.744
+[02:59:52] Job 115/336 | Site Kabat 95 | NN OneHot affinity start
+[02:59:52] 🔄 RNG Reset: seed=2524 (NN-OneHot site 95 aff)
+[03:00:03] Job 115/336 | Site Kabat 95 | NN OneHot affinity done in 11s
+[03:00:03] Job 116/336 | Site Kabat 95 | NN OneHot specificity start
+[03:00:03] 🔄 RNG Reset: seed=2574 (NN-OneHot site 95 spec)
+[03:00:14] Job 116/336 | Site Kabat 95 | NN OneHot specificity done in 11s
+    NN (OneHot      )    Aff:0.8694 MCC:0.758 | Spec:0.9220 MCC:0.834
+[03:00:14] Job 117/336 | Site Kabat 95 | NN ESM2 affinity start
+[03:00:14] 🔄 RNG Reset: seed=2824 (NN-ESM2 site 95 aff)
+[03:00:22] Job 117/336 | Site Kabat 95 | NN ESM2 affinity done in 8s
+[03:00:22] Job 118/336 | Site Kabat 95 | NN ESM2 specificity start
+[03:00:22] 🔄 RNG Reset: seed=2874 (NN-ESM2 site 95 spec)
+[03:00:29] Job 118/336 | Site Kabat 95 | NN ESM2 specificity done in 8s
+    NN (ESM2        )    Aff:0.7670 MCC:0.592 | Spec:0.7942 MCC:0.628
+[03:00:29] Job 119/336 | Site Kabat 95 | NN Fusion-ESM2 affinity start
+[03:00:30] 🔄 RNG Reset: seed=2724 (NN-Fusion-ESM2 site 95 aff)
+[03:00:41] Job 119/336 | Site Kabat 95 | NN Fusion-ESM2 affinity done in 11s
+[03:00:41] Job 120/336 | Site Kabat 95 | NN Fusion-ESM2 specificity start
+[03:00:41] 🔄 RNG Reset: seed=2774 (NN-Fusion-ESM2 site 95 spec)
+[03:00:52] Job 120/336 | Site Kabat 95 | NN Fusion-ESM2 specificity done in 11s
+    NN (Fusion-ESM2 )    Aff:0.7824 MCC:0.637 | Spec:0.9003 MCC:0.789
+[03:00:52] Job 121/336 | Site Kabat 95 | LDA OneHot fit/eval start
+[03:01:01] Job 122/336 | Site Kabat 95 | LDA OneHot done in 9s
+    LDA (OneHot      )  Aff:0.8314 MCC:0.698 | Spec:0.9112 MCC:0.811
+[03:01:01] Job 123/336 | Site Kabat 95 | LDA ESM2 fit/eval start
+[03:01:02] Job 124/336 | Site Kabat 95 | LDA ESM2 done in 1s
+    LDA (ESM2        )  Aff:0.5186 MCC:0.265 | Spec:0.6908 MCC:0.519
+[03:01:02] Job 125/336 | Site Kabat 95 | LDA Fusion-ESM2 fit/eval start
+[03:01:12] Job 126/336 | Site Kabat 95 | LDA Fusion-ESM2 done in 10s
+    LDA (Fusion-ESM2 )  Aff:0.4306 MCC:0.037 | Spec:0.3808 MCC:nan
+[03:01:12] Mode 1/2 | Site 6/8 done: Kabat 95 in 4.4m
+[03:01:12] Mode 1/2 | Site 7/8 start: Kabat 97, residue 'L', train=3552, test=448
+[03:01:12] Job 127/336 | Site Kabat 97 | MOLM OneHot start
+[03:01:12] 🔄 RNG Reset: seed=2030 (MOLM-OneHot site 97)
+  Ep  1/25 | Acc: 0.583/0.602 | Gap: +0.07/+0.16 | GradCos: -0.022
+  Ep  5/25 | Acc: 0.873/0.878 | Gap: +1.46/+1.24 | GradCos: +0.061
+  Ep 10/25 | Acc: 0.904/0.904 | Gap: +1.91/+1.66 | GradCos: -0.001
+  Ep 15/25 | Acc: 0.913/0.911 | Gap: +1.97/+1.85 | GradCos: -0.007
+  Ep 20/25 | Acc: 0.923/0.917 | Gap: +2.12/+2.00 | GradCos: +0.065
+  Ep 25/25 | Acc: 0.933/0.926 | Gap: +2.26/+2.05 | GradCos: +0.032
+    MOLM (OneHot      ) Aff:0.9308 MCC:0.861 | Spec:0.8973 MCC:0.801
+[03:01:49] Job 127/336 | Site Kabat 97 | MOLM OneHot done in 37s
+[03:01:49] Job 128/336 | Site Kabat 97 | MOLM-ST OneHot affinity start
+[03:01:49] 🔄 RNG Reset: seed=2530 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.3422
+  ST affinity Ep  5/25 | Loss: 0.1081
+  ST affinity Ep 10/25 | Loss: 0.0881
+  ST affinity Ep 15/25 | Loss: 0.0846
+  ST affinity Ep 20/25 | Loss: 0.0771
+  ST affinity Ep 25/25 | Loss: 0.0771
+[03:02:09] Job 128/336 | Site Kabat 97 | MOLM-ST OneHot affinity done in 20s
+[03:02:09] Job 129/336 | Site Kabat 97 | MOLM-ST OneHot specificity start
+[03:02:09] 🔄 RNG Reset: seed=2630 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.3941
+  ST specificity Ep  5/25 | Loss: 0.0965
+  ST specificity Ep 10/25 | Loss: 0.0849
+  ST specificity Ep 15/25 | Loss: 0.0801
+  ST specificity Ep 20/25 | Loss: 0.0763
+  ST specificity Ep 25/25 | Loss: 0.0698
+[03:02:29] Job 129/336 | Site Kabat 97 | MOLM-ST OneHot specificity done in 20s
+    MOLM-ST (OneHot      ) Aff:0.9219 MCC:0.845 | Spec:0.9018 MCC:0.803
+[03:02:29] Job 130/336 | Site Kabat 97 | MOLM ESM2 start
+[03:02:29] 🔄 RNG Reset: seed=2130 (MOLM-ESM2 site 97)
+  Ep  1/25 | Acc: 0.531/0.518 | Gap: +0.02/+0.02 | GradCos: +0.003
+  Ep  5/25 | Acc: 0.720/0.793 | Gap: +0.48/+0.69 | GradCos: +0.203
+  Ep 10/25 | Acc: 0.822/0.873 | Gap: +1.04/+1.21 | GradCos: +0.090
+  Ep 15/25 | Acc: 0.830/0.870 | Gap: +1.13/+1.35 | GradCos: +0.152
+  Ep 20/25 | Acc: 0.853/0.888 | Gap: +1.33/+1.47 | GradCos: +0.102
+  Ep 25/25 | Acc: 0.862/0.891 | Gap: +1.42/+1.49 | GradCos: +0.103
+    MOLM (ESM2        ) Aff:0.9107 MCC:0.821 | Spec:0.8571 MCC:0.732
+[03:03:03] Job 130/336 | Site Kabat 97 | MOLM ESM2 done in 35s
+[03:03:03] Job 131/336 | Site Kabat 97 | MOLM-ST ESM2 affinity start
+[03:03:04] 🔄 RNG Reset: seed=2630 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.3793
+  ST affinity Ep  5/25 | Loss: 0.2109
+  ST affinity Ep 10/25 | Loss: 0.1572
+  ST affinity Ep 15/25 | Loss: 0.1380
+  ST affinity Ep 20/25 | Loss: 0.1337
+  ST affinity Ep 25/25 | Loss: 0.1237
+[03:03:21] Job 131/336 | Site Kabat 97 | MOLM-ST ESM2 affinity done in 18s
+[03:03:21] Job 132/336 | Site Kabat 97 | MOLM-ST ESM2 specificity start
+[03:03:21] 🔄 RNG Reset: seed=2730 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.4958
+  ST specificity Ep  5/25 | Loss: 0.1916
+  ST specificity Ep 10/25 | Loss: 0.1257
+  ST specificity Ep 15/25 | Loss: 0.1143
+  ST specificity Ep 20/25 | Loss: 0.1058
+  ST specificity Ep 25/25 | Loss: 0.1002
+[03:03:39] Job 132/336 | Site Kabat 97 | MOLM-ST ESM2 specificity done in 18s
+    MOLM-ST (ESM2        ) Aff:0.8973 MCC:0.801 | Spec:0.8929 MCC:0.789
+[03:03:39] Job 133/336 | Site Kabat 97 | MOLM Fusion-ESM2 start
+[03:03:39] 🔄 RNG Reset: seed=2230 (MOLM-Fusion-ESM2 site 97)
+  Ep  1/25 | Acc: 0.606/0.551 | Gap: +0.09/+0.08 | GradCos: +0.025
+  Ep  5/25 | Acc: 0.869/0.875 | Gap: +1.19/+1.36 | GradCos: +0.106
+  Ep 10/25 | Acc: 0.899/0.905 | Gap: +1.62/+1.78 | GradCos: +0.031
+  Ep 15/25 | Acc: 0.911/0.919 | Gap: +1.79/+1.99 | GradCos: +0.006
+  Ep 20/25 | Acc: 0.919/0.922 | Gap: +1.94/+2.11 | GradCos: +0.015
+  Ep 25/25 | Acc: 0.931/0.929 | Gap: +2.07/+2.21 | GradCos: +0.025
+    MOLM (Fusion-ESM2 ) Aff:0.9263 MCC:0.853 | Spec:0.9196 MCC:0.840
+[03:04:15] Job 133/336 | Site Kabat 97 | MOLM Fusion-ESM2 done in 36s
+[03:04:15] Job 134/336 | Site Kabat 97 | MOLM-ST Fusion-ESM2 affinity start
+[03:04:15] 🔄 RNG Reset: seed=2730 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.3226
+  ST affinity Ep  5/25 | Loss: 0.1102
+  ST affinity Ep 10/25 | Loss: 0.0914
+  ST affinity Ep 15/25 | Loss: 0.0881
+  ST affinity Ep 20/25 | Loss: 0.0800
+  ST affinity Ep 25/25 | Loss: 0.0754
+[03:04:35] Job 134/336 | Site Kabat 97 | MOLM-ST Fusion-ESM2 affinity done in 19s
+[03:04:35] Job 135/336 | Site Kabat 97 | MOLM-ST Fusion-ESM2 specificity start
+[03:04:35] 🔄 RNG Reset: seed=2830 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.4150
+  ST specificity Ep  5/25 | Loss: 0.1040
+  ST specificity Ep 10/25 | Loss: 0.0875
+  ST specificity Ep 15/25 | Loss: 0.0791
+  ST specificity Ep 20/25 | Loss: 0.0740
+  ST specificity Ep 25/25 | Loss: 0.0696
+[03:04:55] Job 135/336 | Site Kabat 97 | MOLM-ST Fusion-ESM2 specificity done in 20s
+    MOLM-ST (Fusion-ESM2 ) Aff:0.9196 MCC:0.847 | Spec:0.8996 MCC:0.800
+[03:04:55] Job 136/336 | Site Kabat 97 | NN OneHot affinity start
+[03:04:55] 🔄 RNG Reset: seed=2624 (NN-OneHot site 97 aff)
+[03:05:08] Job 136/336 | Site Kabat 97 | NN OneHot affinity done in 13s
+[03:05:08] Job 137/336 | Site Kabat 97 | NN OneHot specificity start
+[03:05:09] 🔄 RNG Reset: seed=2674 (NN-OneHot site 97 spec)
+[03:05:22] Job 137/336 | Site Kabat 97 | NN OneHot specificity done in 13s
+    NN (OneHot      )    Aff:0.9241 MCC:0.849 | Spec:0.9107 MCC:0.824
+[03:05:22] Job 138/336 | Site Kabat 97 | NN ESM2 affinity start
+[03:05:22] 🔄 RNG Reset: seed=2924 (NN-ESM2 site 97 aff)
+[03:05:31] Job 138/336 | Site Kabat 97 | NN ESM2 affinity done in 10s
+[03:05:32] Job 139/336 | Site Kabat 97 | NN ESM2 specificity start
+[03:05:32] 🔄 RNG Reset: seed=2974 (NN-ESM2 site 97 spec)
+[03:05:41] Job 139/336 | Site Kabat 97 | NN ESM2 specificity done in 10s
+    NN (ESM2        )    Aff:0.8616 MCC:0.731 | Spec:0.8906 MCC:0.785
+[03:05:41] Job 140/336 | Site Kabat 97 | NN Fusion-ESM2 affinity start
+[03:05:41] 🔄 RNG Reset: seed=2824 (NN-Fusion-ESM2 site 97 aff)
+[03:05:55] Job 140/336 | Site Kabat 97 | NN Fusion-ESM2 affinity done in 14s
+[03:05:55] Job 141/336 | Site Kabat 97 | NN Fusion-ESM2 specificity start
+[03:05:55] 🔄 RNG Reset: seed=2874 (NN-Fusion-ESM2 site 97 spec)
+[03:06:09] Job 141/336 | Site Kabat 97 | NN Fusion-ESM2 specificity done in 14s
+    NN (Fusion-ESM2 )    Aff:0.9219 MCC:0.844 | Spec:0.8951 MCC:0.799
+[03:06:09] Job 142/336 | Site Kabat 97 | LDA OneHot fit/eval start
+[03:06:20] Job 143/336 | Site Kabat 97 | LDA OneHot done in 10s
+    LDA (OneHot      )  Aff:0.9286 MCC:0.857 | Spec:0.9018 MCC:0.807
+[03:06:20] Job 144/336 | Site Kabat 97 | LDA ESM2 fit/eval start
+[03:06:20] Job 145/336 | Site Kabat 97 | LDA ESM2 done in 1s
+    LDA (ESM2        )  Aff:0.9152 MCC:0.833 | Spec:0.4888 MCC:0.079
+[03:06:20] Job 146/336 | Site Kabat 97 | LDA Fusion-ESM2 fit/eval start
+[03:06:31] Job 147/336 | Site Kabat 97 | LDA Fusion-ESM2 done in 11s
+    LDA (Fusion-ESM2 )  Aff:0.8036 MCC:0.649 | Spec:0.4821 MCC:nan
+[03:06:31] Mode 1/2 | Site 7/8 done: Kabat 97 in 5.3m
+[03:06:31] Mode 1/2 | Site 8/8 start: Kabat 102, residue 'D', train=3152, test=848
+[03:06:31] Job 148/336 | Site Kabat 102 | MOLM OneHot start
+[03:06:31] 🔄 RNG Reset: seed=2031 (MOLM-OneHot site 102)
+  Ep  1/25 | Acc: 0.563/0.554 | Gap: +0.11/+0.09 | GradCos: +0.010
+  Ep  5/25 | Acc: 0.878/0.878 | Gap: +1.35/+1.10 | GradCos: +0.086
+  Ep 10/25 | Acc: 0.910/0.911 | Gap: +1.78/+1.50 | GradCos: -0.007
+  Ep 15/25 | Acc: 0.922/0.913 | Gap: +1.97/+1.75 | GradCos: -0.012
+  Ep 20/25 | Acc: 0.933/0.927 | Gap: +2.10/+1.96 | GradCos: +0.065
+  Ep 25/25 | Acc: 0.932/0.928 | Gap: +2.24/+2.07 | GradCos: +0.016
+    MOLM (OneHot      ) Aff:0.9175 MCC:0.835 | Spec:0.8502 MCC:0.723
+[03:07:04] Job 148/336 | Site Kabat 102 | MOLM OneHot done in 33s
+[03:07:04] Job 149/336 | Site Kabat 102 | MOLM-ST OneHot affinity start
+[03:07:04] 🔄 RNG Reset: seed=2531 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.3504
+  ST affinity Ep  5/25 | Loss: 0.1085
+  ST affinity Ep 10/25 | Loss: 0.0917
+  ST affinity Ep 15/25 | Loss: 0.0861
+  ST affinity Ep 20/25 | Loss: 0.0768
+  ST affinity Ep 25/25 | Loss: 0.0729
+[03:07:21] Job 149/336 | Site Kabat 102 | MOLM-ST OneHot affinity done in 17s
+[03:07:22] Job 150/336 | Site Kabat 102 | MOLM-ST OneHot specificity start
+[03:07:22] 🔄 RNG Reset: seed=2631 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.3928
+  ST specificity Ep  5/25 | Loss: 0.1013
+  ST specificity Ep 10/25 | Loss: 0.0821
+  ST specificity Ep 15/25 | Loss: 0.0722
+  ST specificity Ep 20/25 | Loss: 0.0678
+  ST specificity Ep 25/25 | Loss: 0.0619
+[03:07:39] Job 150/336 | Site Kabat 102 | MOLM-ST OneHot specificity done in 17s
+    MOLM-ST (OneHot      ) Aff:0.9151 MCC:0.833 | Spec:0.8821 MCC:0.771
+[03:07:39] Job 151/336 | Site Kabat 102 | MOLM ESM2 start
+[03:07:39] 🔄 RNG Reset: seed=2131 (MOLM-ESM2 site 102)
+  Ep  1/25 | Acc: 0.539/0.496 | Gap: +0.02/+0.03 | GradCos: +0.040
+  Ep  5/25 | Acc: 0.752/0.808 | Gap: +0.62/+0.82 | GradCos: +0.160
+  Ep 10/25 | Acc: 0.839/0.889 | Gap: +1.18/+1.43 | GradCos: +0.118
+  Ep 15/25 | Acc: 0.854/0.893 | Gap: +1.31/+1.49 | GradCos: +0.091
+  Ep 20/25 | Acc: 0.863/0.902 | Gap: +1.41/+1.61 | GradCos: +0.072
+  Ep 25/25 | Acc: 0.870/0.902 | Gap: +1.49/+1.71 | GradCos: +0.068
+    MOLM (ESM2        ) Aff:0.8125 MCC:0.639 | Spec:0.6946 MCC:0.514
+[03:08:10] Job 151/336 | Site Kabat 102 | MOLM ESM2 done in 31s
+[03:08:10] Job 152/336 | Site Kabat 102 | MOLM-ST ESM2 affinity start
+[03:08:10] 🔄 RNG Reset: seed=2631 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.3657
+  ST affinity Ep  5/25 | Loss: 0.2149
+  ST affinity Ep 10/25 | Loss: 0.1401
+  ST affinity Ep 15/25 | Loss: 0.1288
+  ST affinity Ep 20/25 | Loss: 0.1168
+  ST affinity Ep 25/25 | Loss: 0.1136
+[03:08:25] Job 152/336 | Site Kabat 102 | MOLM-ST ESM2 affinity done in 16s
+[03:08:25] Job 153/336 | Site Kabat 102 | MOLM-ST ESM2 specificity start
+[03:08:26] 🔄 RNG Reset: seed=2731 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.5389
+  ST specificity Ep  5/25 | Loss: 0.2015
+  ST specificity Ep 10/25 | Loss: 0.1097
+  ST specificity Ep 15/25 | Loss: 0.0979
+  ST specificity Ep 20/25 | Loss: 0.0943
+  ST specificity Ep 25/25 | Loss: 0.0876
+[03:08:41] Job 153/336 | Site Kabat 102 | MOLM-ST ESM2 specificity done in 15s
+    MOLM-ST (ESM2        ) Aff:0.7771 MCC:0.585 | Spec:0.6675 MCC:0.482
+[03:08:41] Job 154/336 | Site Kabat 102 | MOLM Fusion-ESM2 start
+[03:08:41] 🔄 RNG Reset: seed=2231 (MOLM-Fusion-ESM2 site 102)
+  Ep  1/25 | Acc: 0.522/0.573 | Gap: +0.08/+0.13 | GradCos: +0.008
+  Ep  5/25 | Acc: 0.875/0.895 | Gap: +1.33/+1.33 | GradCos: +0.061
+  Ep 10/25 | Acc: 0.900/0.915 | Gap: +1.70/+1.70 | GradCos: +0.029
+  Ep 15/25 | Acc: 0.913/0.924 | Gap: +2.01/+1.92 | GradCos: +0.005
+  Ep 20/25 | Acc: 0.929/0.927 | Gap: +2.10/+2.05 | GradCos: +0.047
+  Ep 25/25 | Acc: 0.919/0.925 | Gap: +2.15/+2.15 | GradCos: +0.070
+    MOLM (Fusion-ESM2 ) Aff:0.9127 MCC:0.826 | Spec:0.8915 MCC:0.787
+[03:09:14] Job 154/336 | Site Kabat 102 | MOLM Fusion-ESM2 done in 33s
+[03:09:14] Job 155/336 | Site Kabat 102 | MOLM-ST Fusion-ESM2 affinity start
+[03:09:14] 🔄 RNG Reset: seed=2731 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.3072
+  ST affinity Ep  5/25 | Loss: 0.1075
+  ST affinity Ep 10/25 | Loss: 0.0903
+  ST affinity Ep 15/25 | Loss: 0.0819
+  ST affinity Ep 20/25 | Loss: 0.0795
+  ST affinity Ep 25/25 | Loss: 0.0754
+[03:09:31] Job 155/336 | Site Kabat 102 | MOLM-ST Fusion-ESM2 affinity done in 18s
+[03:09:31] Job 156/336 | Site Kabat 102 | MOLM-ST Fusion-ESM2 specificity start
+[03:09:32] 🔄 RNG Reset: seed=2831 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.3716
+  ST specificity Ep  5/25 | Loss: 0.0988
+  ST specificity Ep 10/25 | Loss: 0.0812
+  ST specificity Ep 15/25 | Loss: 0.0760
+  ST specificity Ep 20/25 | Loss: 0.0710
+  ST specificity Ep 25/25 | Loss: 0.0664
+[03:09:49] Job 156/336 | Site Kabat 102 | MOLM-ST Fusion-ESM2 specificity done in 18s
+    MOLM-ST (Fusion-ESM2 ) Aff:0.9222 MCC:0.844 | Spec:0.8998 MCC:0.799
+[03:09:49] Job 157/336 | Site Kabat 102 | NN OneHot affinity start
+[03:09:49] 🔄 RNG Reset: seed=2724 (NN-OneHot site 102 aff)
+[03:10:01] Job 157/336 | Site Kabat 102 | NN OneHot affinity done in 12s
+[03:10:01] Job 158/336 | Site Kabat 102 | NN OneHot specificity start
+[03:10:01] 🔄 RNG Reset: seed=2774 (NN-OneHot site 102 spec)
+[03:10:13] Job 158/336 | Site Kabat 102 | NN OneHot specificity done in 12s
+    NN (OneHot      )    Aff:0.9245 MCC:0.848 | Spec:0.8974 MCC:0.795
+[03:10:13] Job 159/336 | Site Kabat 102 | NN ESM2 affinity start
+[03:10:13] 🔄 RNG Reset: seed=3024 (NN-ESM2 site 102 aff)
+[03:10:22] Job 159/336 | Site Kabat 102 | NN ESM2 affinity done in 9s
+[03:10:22] Job 160/336 | Site Kabat 102 | NN ESM2 specificity start
+[03:10:22] 🔄 RNG Reset: seed=3074 (NN-ESM2 site 102 spec)
+[03:10:30] Job 160/336 | Site Kabat 102 | NN ESM2 specificity done in 9s
+    NN (ESM2        )    Aff:0.6167 MCC:0.299 | Spec:0.7264 MCC:0.555
+[03:10:30] Job 161/336 | Site Kabat 102 | NN Fusion-ESM2 affinity start
+[03:10:30] 🔄 RNG Reset: seed=2924 (NN-Fusion-ESM2 site 102 aff)
+[03:10:43] Job 161/336 | Site Kabat 102 | NN Fusion-ESM2 affinity done in 12s
+[03:10:43] Job 162/336 | Site Kabat 102 | NN Fusion-ESM2 specificity start
+[03:10:43] 🔄 RNG Reset: seed=2974 (NN-Fusion-ESM2 site 102 spec)
+[03:10:55] Job 162/336 | Site Kabat 102 | NN Fusion-ESM2 specificity done in 12s
+    NN (Fusion-ESM2 )    Aff:0.8986 MCC:0.798 | Spec:0.8679 MCC:0.749
+[03:10:55] Job 163/336 | Site Kabat 102 | LDA OneHot fit/eval start
+[03:11:05] Job 164/336 | Site Kabat 102 | LDA OneHot done in 10s
+    LDA (OneHot      )  Aff:0.9127 MCC:0.826 | Spec:0.9057 MCC:0.806
+[03:11:05] Job 165/336 | Site Kabat 102 | LDA ESM2 fit/eval start
+[03:11:06] Job 166/336 | Site Kabat 102 | LDA ESM2 done in 1s
+    LDA (ESM2        )  Aff:0.8892 MCC:0.779 | Spec:0.8561 MCC:0.704
+[03:11:06] Job 167/336 | Site Kabat 102 | LDA Fusion-ESM2 fit/eval start
+[03:11:16] Job 168/336 | Site Kabat 102 | LDA Fusion-ESM2 done in 10s
+    LDA (Fusion-ESM2 )  Aff:0.7252 MCC:0.507 | Spec:0.8715 MCC:0.740
+[03:11:16] Mode 1/2 | Site 8/8 done: Kabat 102 in 4.7m
+
+  ==========================================================================================
+  TOP-PERFORMING HELD-OUT SUMMARY (mean ± std across 8 sites)
+  ==========================================================================================
+  Model                               Aff Acc    Aff MCC     Spec Acc   Spec MCC
+  ------------------------------------------------------------------------------------------
+  MOLM (OneHot)                  0.9156±0.0457      0.736 0.8904±0.0318      0.733
+  MOLM-ST (OneHot)               0.9101±0.0271      0.721 0.8860±0.0436      0.734
+  MOLM (ESM2)                    0.8569±0.0400      0.605 0.8492±0.0662      0.661
+  MOLM-ST (ESM2)                 0.8531±0.0597      0.622 0.8432±0.0766      0.652
+  MOLM (Fusion-ESM2)             0.9048±0.0287      0.717 0.8903±0.0387      0.739
+  MOLM-ST (Fusion-ESM2)          0.9160±0.0216      0.728 0.8771±0.0572      0.717
+  NN (OneHot)                    0.9144±0.0220      0.718 0.8749±0.0557      0.721
+  NN (ESM2)                      0.8412±0.1011      0.578 0.8487±0.0595      0.655
+  NN (Fusion-ESM2)               0.9002±0.0461      0.698 0.8747±0.0352      0.711
+  LDA (OneHot)                   0.8951±0.0407      0.698 0.8603±0.0665      0.699
+  LDA (ESM2)                     0.8262±0.1329      0.583 0.7880±0.1315      0.512
+  LDA (Fusion-ESM2)              0.7812±0.1488      0.455 0.6712±0.2080      0.478
+
+  McNemar (MOLM(Fusion-ESM2) vs baselines):
+    vs_molm_st          : Aff 5/8 sig | Spec 5/8 sig
+    vs_nn_oh            : Aff 4/8 sig | Spec 6/8 sig
+    vs_nn_esm2          : Aff 8/8 sig | Spec 7/8 sig
+    vs_nn_fesm2         : Aff 2/8 sig | Spec 7/8 sig
+    vs_lda              : Aff 3/8 sig | Spec 5/8 sig
+
+  McNemar (MOLM(OneHot) vs baselines):
+    vs_molm_st          : Aff 4/8 sig | Spec 5/8 sig
+    vs_nn_oh            : Aff 2/8 sig | Spec 6/8 sig
+    vs_nn_esm2          : Aff 6/8 sig | Spec 4/8 sig
+    vs_nn_fesm2         : Aff 5/8 sig | Spec 6/8 sig
+    vs_lda              : Aff 3/8 sig | Spec 5/8 sig
+[03:11:16] Mode 1/2 done: TOP-PERFORMING
+
+🧬 Held-out evaluation (WILD-TYPE)...
+  Sites: [33, 50, 54, 55, 56, 95, 97, 102], Primary: Fusion-ESM2
+[03:11:16] Mode 2/2 start: WILD-TYPE | 8 sites, 21 jobs/site
+[03:11:16] Mode 2/2 | Site 1/8 start: Kabat 33, residue 'Y', train=1414, test=2586
+[03:11:16] Job 169/336 | Site Kabat 33 | MOLM OneHot start
+[03:11:16] 🔄 RNG Reset: seed=2024 (MOLM-OneHot site 33)
+  Ep  1/25 | Acc: 0.532/0.700 | Gap: -0.03/+0.04 | GradCos: -0.039
+  Ep  5/25 | Acc: 0.761/0.802 | Gap: +0.47/+0.49 | GradCos: +0.032
+  Ep 10/25 | Acc: 0.873/0.887 | Gap: +1.10/+0.99 | GradCos: +0.015
+  Ep 15/25 | Acc: 0.893/0.887 | Gap: +1.44/+1.20 | GradCos: -0.032
+  Ep 20/25 | Acc: 0.892/0.906 | Gap: +1.58/+1.40 | GradCos: -0.013
+  Ep 25/25 | Acc: 0.916/0.907 | Gap: +1.70/+1.47 | GradCos: -0.003
+    MOLM (OneHot      ) Aff:0.8523 MCC:0.678 | Spec:0.8585 MCC:0.719
+[03:11:31] Job 169/336 | Site Kabat 33 | MOLM OneHot done in 15s
+[03:11:31] Job 170/336 | Site Kabat 33 | MOLM-ST OneHot affinity start
+[03:11:31] 🔄 RNG Reset: seed=2524 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.3747
+  ST affinity Ep  5/25 | Loss: 0.1733
+  ST affinity Ep 10/25 | Loss: 0.1156
+  ST affinity Ep 15/25 | Loss: 0.1089
+  ST affinity Ep 20/25 | Loss: 0.0898
+  ST affinity Ep 25/25 | Loss: 0.0868
+[03:11:39] Job 170/336 | Site Kabat 33 | MOLM-ST OneHot affinity done in 8s
+[03:11:39] Job 171/336 | Site Kabat 33 | MOLM-ST OneHot specificity start
+[03:11:40] 🔄 RNG Reset: seed=2624 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.5112
+  ST specificity Ep  5/25 | Loss: 0.2012
+  ST specificity Ep 10/25 | Loss: 0.1148
+  ST specificity Ep 15/25 | Loss: 0.0947
+  ST specificity Ep 20/25 | Loss: 0.0954
+  ST specificity Ep 25/25 | Loss: 0.0847
+[03:11:47] Job 171/336 | Site Kabat 33 | MOLM-ST OneHot specificity done in 8s
+    MOLM-ST (OneHot      ) Aff:0.7827 MCC:0.584 | Spec:0.8666 MCC:0.717
+[03:11:48] Job 172/336 | Site Kabat 33 | MOLM ESM2 start
+[03:11:48] 🔄 RNG Reset: seed=2124 (MOLM-ESM2 site 33)
+  Ep  1/25 | Acc: 0.436/0.470 | Gap: -0.01/+0.02 | GradCos: -0.009
+  Ep  5/25 | Acc: 0.650/0.733 | Gap: +0.00/+0.05 | GradCos: +0.018
+  Ep 10/25 | Acc: 0.671/0.762 | Gap: +0.04/+0.22 | GradCos: +0.028
+  Ep 15/25 | Acc: 0.715/0.804 | Gap: +0.28/+0.60 | GradCos: +0.102
+  Ep 20/25 | Acc: 0.781/0.842 | Gap: +0.53/+0.90 | GradCos: +0.235
+  Ep 25/25 | Acc: 0.765/0.852 | Gap: +0.59/+0.93 | GradCos: +0.205
+    MOLM (ESM2        ) Aff:0.5998 MCC:0.400 | Spec:0.8059 MCC:0.636
+[03:12:02] Job 172/336 | Site Kabat 33 | MOLM ESM2 done in 14s
+[03:12:02] Job 173/336 | Site Kabat 33 | MOLM-ST ESM2 affinity start
+[03:12:02] 🔄 RNG Reset: seed=2624 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.6102
+  ST affinity Ep  5/25 | Loss: 0.3389
+  ST affinity Ep 10/25 | Loss: 0.2829
+  ST affinity Ep 15/25 | Loss: 0.2279
+  ST affinity Ep 20/25 | Loss: 0.1906
+  ST affinity Ep 25/25 | Loss: 0.1819
+[03:12:09] Job 173/336 | Site Kabat 33 | MOLM-ST ESM2 affinity done in 7s
+[03:12:09] Job 174/336 | Site Kabat 33 | MOLM-ST ESM2 specificity start
+[03:12:09] 🔄 RNG Reset: seed=2724 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.5711
+  ST specificity Ep  5/25 | Loss: 0.4342
+  ST specificity Ep 10/25 | Loss: 0.2617
+  ST specificity Ep 15/25 | Loss: 0.1861
+  ST specificity Ep 20/25 | Loss: 0.1445
+  ST specificity Ep 25/25 | Loss: 0.1405
+[03:12:17] Job 174/336 | Site Kabat 33 | MOLM-ST ESM2 specificity done in 7s
+    MOLM-ST (ESM2        ) Aff:0.6125 MCC:0.412 | Spec:0.7730 MCC:0.601
+[03:12:17] Job 175/336 | Site Kabat 33 | MOLM Fusion-ESM2 start
+[03:12:17] 🔄 RNG Reset: seed=2224 (MOLM-Fusion-ESM2 site 33)
+  Ep  1/25 | Acc: 0.624/0.638 | Gap: +0.13/+0.05 | GradCos: +0.072
+  Ep  5/25 | Acc: 0.807/0.839 | Gap: +0.84/+0.66 | GradCos: +0.044
+  Ep 10/25 | Acc: 0.859/0.877 | Gap: +1.25/+0.96 | GradCos: +0.160
+  Ep 15/25 | Acc: 0.881/0.886 | Gap: +1.50/+1.12 | GradCos: +0.018
+  Ep 20/25 | Acc: 0.889/0.885 | Gap: +1.51/+1.26 | GradCos: +0.048
+  Ep 25/25 | Acc: 0.911/0.891 | Gap: +1.64/+1.38 | GradCos: +0.093
+    MOLM (Fusion-ESM2 ) Aff:0.8666 MCC:0.696 | Spec:0.8871 MCC:0.763
+[03:12:32] Job 175/336 | Site Kabat 33 | MOLM Fusion-ESM2 done in 16s
+[03:12:32] Job 176/336 | Site Kabat 33 | MOLM-ST Fusion-ESM2 affinity start
+[03:12:32] 🔄 RNG Reset: seed=2724 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.3790
+  ST affinity Ep  5/25 | Loss: 0.1864
+  ST affinity Ep 10/25 | Loss: 0.1179
+  ST affinity Ep 15/25 | Loss: 0.1003
+  ST affinity Ep 20/25 | Loss: 0.0990
+  ST affinity Ep 25/25 | Loss: 0.0937
+[03:12:41] Job 176/336 | Site Kabat 33 | MOLM-ST Fusion-ESM2 affinity done in 8s
+[03:12:41] Job 177/336 | Site Kabat 33 | MOLM-ST Fusion-ESM2 specificity start
+[03:12:41] 🔄 RNG Reset: seed=2824 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.5235
+  ST specificity Ep  5/25 | Loss: 0.1611
+  ST specificity Ep 10/25 | Loss: 0.0985
+  ST specificity Ep 15/25 | Loss: 0.1008
+  ST specificity Ep 20/25 | Loss: 0.0833
+  ST specificity Ep 25/25 | Loss: 0.0893
+[03:12:49] Job 177/336 | Site Kabat 33 | MOLM-ST Fusion-ESM2 specificity done in 8s
+    MOLM-ST (Fusion-ESM2 ) Aff:0.8863 MCC:0.730 | Spec:0.8561 MCC:0.716
+[03:12:49] Job 178/336 | Site Kabat 33 | NN OneHot affinity start
+[03:12:49] 🔄 RNG Reset: seed=2024 (NN-OneHot site 33 aff)
+[03:12:54] Job 178/336 | Site Kabat 33 | NN OneHot affinity done in 5s
+[03:12:55] Job 179/336 | Site Kabat 33 | NN OneHot specificity start
+[03:12:55] 🔄 RNG Reset: seed=2074 (NN-OneHot site 33 spec)
+[03:13:00] Job 179/336 | Site Kabat 33 | NN OneHot specificity done in 5s
+    NN (OneHot      )    Aff:0.8318 MCC:0.649 | Spec:0.8786 MCC:0.749
+[03:13:00] Job 180/336 | Site Kabat 33 | NN ESM2 affinity start
+[03:13:00] 🔄 RNG Reset: seed=2324 (NN-ESM2 site 33 aff)
+[03:13:04] Job 180/336 | Site Kabat 33 | NN ESM2 affinity done in 4s
+[03:13:04] Job 181/336 | Site Kabat 33 | NN ESM2 specificity start
+[03:13:04] 🔄 RNG Reset: seed=2374 (NN-ESM2 site 33 spec)
+[03:13:08] Job 181/336 | Site Kabat 33 | NN ESM2 specificity done in 4s
+    NN (ESM2        )    Aff:0.7572 MCC:0.541 | Spec:0.8322 MCC:0.665
+[03:13:08] Job 182/336 | Site Kabat 33 | NN Fusion-ESM2 affinity start
+[03:13:08] 🔄 RNG Reset: seed=2224 (NN-Fusion-ESM2 site 33 aff)
+[03:13:14] Job 182/336 | Site Kabat 33 | NN Fusion-ESM2 affinity done in 6s
+[03:13:14] Job 183/336 | Site Kabat 33 | NN Fusion-ESM2 specificity start
+[03:13:14] 🔄 RNG Reset: seed=2274 (NN-Fusion-ESM2 site 33 spec)
+[03:13:19] Job 183/336 | Site Kabat 33 | NN Fusion-ESM2 specificity done in 6s
+    NN (Fusion-ESM2 )    Aff:0.8852 MCC:0.727 | Spec:0.8778 MCC:0.749
+[03:13:20] Job 184/336 | Site Kabat 33 | LDA OneHot fit/eval start
+[03:13:25] Job 185/336 | Site Kabat 33 | LDA OneHot done in 5s
+    LDA (OneHot      )  Aff:0.7997 MCC:0.607 | Spec:0.8248 MCC:0.667
+[03:13:25] Job 186/336 | Site Kabat 33 | LDA ESM2 fit/eval start
+[03:13:25] Job 187/336 | Site Kabat 33 | LDA ESM2 done in 1s
+    LDA (ESM2        )  Aff:0.8101 MCC:0.457 | Spec:0.7220 MCC:0.364
+[03:13:25] Job 188/336 | Site Kabat 33 | LDA Fusion-ESM2 fit/eval start
+[03:13:31] Job 189/336 | Site Kabat 33 | LDA Fusion-ESM2 done in 6s
+    LDA (Fusion-ESM2 )  Aff:0.7881 MCC:0.413 | Spec:0.6388 MCC:0.091
+[03:13:31] Mode 2/2 | Site 1/8 done: Kabat 33 in 2.3m
+[03:13:31] Mode 2/2 | Site 2/8 start: Kabat 50, residue 'R', train=1605, test=2395
+[03:13:31] Job 190/336 | Site Kabat 50 | MOLM OneHot start
+[03:13:32] 🔄 RNG Reset: seed=2025 (MOLM-OneHot site 50)
+  Ep  1/25 | Acc: 0.657/0.668 | Gap: +0.01/+0.02 | GradCos: -0.032
+  Ep  5/25 | Acc: 0.794/0.862 | Gap: +0.56/+0.89 | GradCos: +0.003
+  Ep 10/25 | Acc: 0.855/0.902 | Gap: +1.05/+1.41 | GradCos: +0.019
+  Ep 15/25 | Acc: 0.882/0.913 | Gap: +1.32/+1.66 | GradCos: +0.007
+  Ep 20/25 | Acc: 0.893/0.926 | Gap: +1.42/+1.77 | GradCos: +0.014
+  Ep 25/25 | Acc: 0.885/0.934 | Gap: +1.59/+1.92 | GradCos: -0.051
+    MOLM (OneHot      ) Aff:0.6664 MCC:0.409 | Spec:0.7658 MCC:0.572
+[03:13:49] Job 190/336 | Site Kabat 50 | MOLM OneHot done in 17s
+[03:13:49] Job 191/336 | Site Kabat 50 | MOLM-ST OneHot affinity start
+[03:13:49] 🔄 RNG Reset: seed=2525 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.3760
+  ST affinity Ep  5/25 | Loss: 0.1878
+  ST affinity Ep 10/25 | Loss: 0.1216
+  ST affinity Ep 15/25 | Loss: 0.1122
+  ST affinity Ep 20/25 | Loss: 0.1023
+  ST affinity Ep 25/25 | Loss: 0.1032
+[03:13:58] Job 191/336 | Site Kabat 50 | MOLM-ST OneHot affinity done in 9s
+[03:13:58] Job 192/336 | Site Kabat 50 | MOLM-ST OneHot specificity start
+[03:13:58] 🔄 RNG Reset: seed=2625 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.4927
+  ST specificity Ep  5/25 | Loss: 0.1338
+  ST specificity Ep 10/25 | Loss: 0.0876
+  ST specificity Ep 15/25 | Loss: 0.0726
+  ST specificity Ep 20/25 | Loss: 0.0608
+  ST specificity Ep 25/25 | Loss: 0.0539
+[03:14:07] Job 192/336 | Site Kabat 50 | MOLM-ST OneHot specificity done in 9s
+    MOLM-ST (OneHot      ) Aff:0.7482 MCC:0.473 | Spec:0.7445 MCC:0.562
+[03:14:07] Job 193/336 | Site Kabat 50 | MOLM ESM2 start
+[03:14:08] 🔄 RNG Reset: seed=2125 (MOLM-ESM2 site 50)
+  Ep  1/25 | Acc: 0.584/0.442 | Gap: -0.05/+0.02 | GradCos: -0.054
+  Ep  5/25 | Acc: 0.706/0.759 | Gap: +0.01/+0.01 | GradCos: -0.049
+  Ep 10/25 | Acc: 0.709/0.761 | Gap: +0.04/+0.12 | GradCos: -0.017
+  Ep 15/25 | Acc: 0.741/0.825 | Gap: +0.24/+0.48 | GradCos: +0.127
+  Ep 20/25 | Acc: 0.775/0.888 | Gap: +0.42/+0.87 | GradCos: +0.167
+  Ep 25/25 | Acc: 0.784/0.896 | Gap: +0.55/+1.08 | GradCos: +0.070
+    MOLM (ESM2        ) Aff:0.6877 MCC:0.423 | Spec:0.8714 MCC:0.708
+[03:14:24] Job 193/336 | Site Kabat 50 | MOLM ESM2 done in 16s
+[03:14:24] Job 194/336 | Site Kabat 50 | MOLM-ST ESM2 affinity start
+[03:14:24] 🔄 RNG Reset: seed=2625 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.3709
+  ST affinity Ep  5/25 | Loss: 0.3313
+  ST affinity Ep 10/25 | Loss: 0.3286
+  ST affinity Ep 15/25 | Loss: 0.2554
+  ST affinity Ep 20/25 | Loss: 0.2046
+  ST affinity Ep 25/25 | Loss: 0.1952
+[03:14:32] Job 194/336 | Site Kabat 50 | MOLM-ST ESM2 affinity done in 8s
+[03:14:32] Job 195/336 | Site Kabat 50 | MOLM-ST ESM2 specificity start
+[03:14:32] 🔄 RNG Reset: seed=2725 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.4481
+  ST specificity Ep  5/25 | Loss: 0.4584
+  ST specificity Ep 10/25 | Loss: 0.2512
+  ST specificity Ep 15/25 | Loss: 0.1450
+  ST specificity Ep 20/25 | Loss: 0.1247
+  ST specificity Ep 25/25 | Loss: 0.1121
+[03:14:40] Job 195/336 | Site Kabat 50 | MOLM-ST ESM2 specificity done in 8s
+    MOLM-ST (ESM2        ) Aff:0.6522 MCC:0.391 | Spec:0.8760 MCC:0.717
+[03:14:40] Job 196/336 | Site Kabat 50 | MOLM Fusion-ESM2 start
+[03:14:41] 🔄 RNG Reset: seed=2225 (MOLM-Fusion-ESM2 site 50)
+  Ep  1/25 | Acc: 0.642/0.526 | Gap: +0.05/+0.08 | GradCos: -0.088
+  Ep  5/25 | Acc: 0.813/0.888 | Gap: +0.54/+0.87 | GradCos: +0.086
+  Ep 10/25 | Acc: 0.862/0.919 | Gap: +0.97/+1.22 | GradCos: +0.039
+  Ep 15/25 | Acc: 0.883/0.929 | Gap: +1.26/+1.34 | GradCos: -0.003
+  Ep 20/25 | Acc: 0.908/0.942 | Gap: +1.41/+1.63 | GradCos: -0.001
+  Ep 25/25 | Acc: 0.877/0.946 | Gap: +1.43/+1.82 | GradCos: +0.030
+    MOLM (Fusion-ESM2 ) Aff:0.6547 MCC:0.405 | Spec:0.7499 MCC:0.560
+[03:14:58] Job 196/336 | Site Kabat 50 | MOLM Fusion-ESM2 done in 17s
+[03:14:58] Job 197/336 | Site Kabat 50 | MOLM-ST Fusion-ESM2 affinity start
+[03:14:58] 🔄 RNG Reset: seed=2725 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.3158
+  ST affinity Ep  5/25 | Loss: 0.1618
+  ST affinity Ep 10/25 | Loss: 0.1139
+  ST affinity Ep 15/25 | Loss: 0.1038
+  ST affinity Ep 20/25 | Loss: 0.1021
+  ST affinity Ep 25/25 | Loss: 0.1093
+[03:15:07] Job 197/336 | Site Kabat 50 | MOLM-ST Fusion-ESM2 affinity done in 9s
+[03:15:07] Job 198/336 | Site Kabat 50 | MOLM-ST Fusion-ESM2 specificity start
+[03:15:07] 🔄 RNG Reset: seed=2825 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.4323
+  ST specificity Ep  5/25 | Loss: 0.1540
+  ST specificity Ep 10/25 | Loss: 0.0798
+  ST specificity Ep 15/25 | Loss: 0.0742
+  ST specificity Ep 20/25 | Loss: 0.0601
+  ST specificity Ep 25/25 | Loss: 0.0569
+[03:15:17] Job 198/336 | Site Kabat 50 | MOLM-ST Fusion-ESM2 specificity done in 9s
+    MOLM-ST (Fusion-ESM2 ) Aff:0.6701 MCC:0.407 | Spec:0.7775 MCC:0.599
+[03:15:17] Job 199/336 | Site Kabat 50 | NN OneHot affinity start
+[03:15:17] 🔄 RNG Reset: seed=2124 (NN-OneHot site 50 aff)
+[03:15:23] Job 199/336 | Site Kabat 50 | NN OneHot affinity done in 6s
+[03:15:23] Job 200/336 | Site Kabat 50 | NN OneHot specificity start
+[03:15:23] 🔄 RNG Reset: seed=2174 (NN-OneHot site 50 spec)
+[03:15:29] Job 200/336 | Site Kabat 50 | NN OneHot specificity done in 6s
+    NN (OneHot      )    Aff:0.7557 MCC:0.485 | Spec:0.7862 MCC:0.602
+[03:15:30] Job 201/336 | Site Kabat 50 | NN ESM2 affinity start
+[03:15:30] 🔄 RNG Reset: seed=2424 (NN-ESM2 site 50 aff)
+[03:15:34] Job 201/336 | Site Kabat 50 | NN ESM2 affinity done in 4s
+[03:15:34] Job 202/336 | Site Kabat 50 | NN ESM2 specificity start
+[03:15:34] 🔄 RNG Reset: seed=2474 (NN-ESM2 site 50 spec)
+[03:15:39] Job 202/336 | Site Kabat 50 | NN ESM2 specificity done in 4s
+    NN (ESM2        )    Aff:0.7503 MCC:0.474 | Spec:0.8205 MCC:0.646
+[03:15:39] Job 203/336 | Site Kabat 50 | NN Fusion-ESM2 affinity start
+[03:15:39] 🔄 RNG Reset: seed=2324 (NN-Fusion-ESM2 site 50 aff)
+[03:15:45] Job 203/336 | Site Kabat 50 | NN Fusion-ESM2 affinity done in 6s
+[03:15:45] Job 204/336 | Site Kabat 50 | NN Fusion-ESM2 specificity start
+[03:15:45] 🔄 RNG Reset: seed=2374 (NN-Fusion-ESM2 site 50 spec)
+[03:15:52] Job 204/336 | Site Kabat 50 | NN Fusion-ESM2 specificity done in 6s
+    NN (Fusion-ESM2 )    Aff:0.7365 MCC:0.466 | Spec:0.7616 MCC:0.578
+[03:15:52] Job 205/336 | Site Kabat 50 | LDA OneHot fit/eval start
+[03:15:57] Job 206/336 | Site Kabat 50 | LDA OneHot done in 6s
+    LDA (OneHot      )  Aff:0.7086 MCC:0.442 | Spec:0.7148 MCC:0.530
+[03:15:57] Job 207/336 | Site Kabat 50 | LDA ESM2 fit/eval start
+[03:15:58] Job 208/336 | Site Kabat 50 | LDA ESM2 done in 1s
+    LDA (ESM2        )  Aff:0.3950 MCC:0.226 | Spec:0.6889 MCC:0.068
+[03:15:58] Job 209/336 | Site Kabat 50 | LDA Fusion-ESM2 fit/eval start
+[03:16:03] Job 210/336 | Site Kabat 50 | LDA Fusion-ESM2 done in 5s
+    LDA (Fusion-ESM2 )  Aff:0.1578 MCC:0.025 | Spec:0.5002 MCC:-0.171
+[03:16:03] Mode 2/2 | Site 2/8 done: Kabat 50 in 2.5m
+[03:16:03] Mode 2/2 | Site 3/8 start: Kabat 54, residue 'R', train=655, test=3345
+[03:16:03] Job 211/336 | Site Kabat 54 | MOLM OneHot start
+[03:16:03] 🔄 RNG Reset: seed=2026 (MOLM-OneHot site 54)
+  Ep  1/25 | Acc: 0.556/0.666 | Gap: +0.09/+0.03 | GradCos: +0.053
+  Ep  5/25 | Acc: 0.658/0.754 | Gap: +0.31/+0.43 | GradCos: +0.059
+  Ep 10/25 | Acc: 0.816/0.842 | Gap: +0.79/+0.97 | GradCos: +0.056
+  Ep 15/25 | Acc: 0.860/0.862 | Gap: +1.09/+1.24 | GradCos: +0.108
+  Ep 20/25 | Acc: 0.880/0.910 | Gap: +1.32/+1.39 | GradCos: +0.043
+  Ep 25/25 | Acc: 0.889/0.895 | Gap: +1.46/+1.66 | GradCos: +0.014
+    MOLM (OneHot      ) Aff:0.9004 MCC:0.793 | Spec:0.8362 MCC:0.692
+[03:16:10] Job 211/336 | Site Kabat 54 | MOLM OneHot done in 7s
+[03:16:10] Job 212/336 | Site Kabat 54 | MOLM-ST OneHot affinity start
+[03:16:10] 🔄 RNG Reset: seed=2526 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.5105
+  ST affinity Ep  5/25 | Loss: 0.2494
+  ST affinity Ep 10/25 | Loss: 0.1514
+  ST affinity Ep 15/25 | Loss: 0.1073
+  ST affinity Ep 20/25 | Loss: 0.1038
+  ST affinity Ep 25/25 | Loss: 0.1062
+[03:16:14] Job 212/336 | Site Kabat 54 | MOLM-ST OneHot affinity done in 4s
+[03:16:14] Job 213/336 | Site Kabat 54 | MOLM-ST OneHot specificity start
+[03:16:15] 🔄 RNG Reset: seed=2626 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.4920
+  ST specificity Ep  5/25 | Loss: 0.2342
+  ST specificity Ep 10/25 | Loss: 0.1439
+  ST specificity Ep 15/25 | Loss: 0.1053
+  ST specificity Ep 20/25 | Loss: 0.0863
+  ST specificity Ep 25/25 | Loss: 0.0793
+[03:16:18] Job 213/336 | Site Kabat 54 | MOLM-ST OneHot specificity done in 4s
+    MOLM-ST (OneHot      ) Aff:0.9133 MCC:0.806 | Spec:0.7880 MCC:0.625
+[03:16:19] Job 214/336 | Site Kabat 54 | MOLM ESM2 start
+[03:16:19] 🔄 RNG Reset: seed=2126 (MOLM-ESM2 site 54)
+  Ep  1/25 | Acc: 0.500/0.432 | Gap: +0.01/-0.01 | GradCos: -0.182
+  Ep  5/25 | Acc: 0.544/0.643 | Gap: -0.02/+0.03 | GradCos: -0.056
+  Ep 10/25 | Acc: 0.534/0.693 | Gap: -0.01/+0.11 | GradCos: -0.021
+  Ep 15/25 | Acc: 0.581/0.671 | Gap: +0.02/+0.12 | GradCos: +0.067
+  Ep 20/25 | Acc: 0.554/0.754 | Gap: +0.04/+0.31 | GradCos: +0.146
+  Ep 25/25 | Acc: 0.670/0.809 | Gap: +0.18/+0.59 | GradCos: +0.137
+    MOLM (ESM2        ) Aff:0.7471 MCC:0.552 | Spec:0.8242 MCC:0.647
+[03:16:26] Job 214/336 | Site Kabat 54 | MOLM ESM2 done in 7s
+[03:16:26] Job 215/336 | Site Kabat 54 | MOLM-ST ESM2 affinity start
+[03:16:26] 🔄 RNG Reset: seed=2626 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.4182
+  ST affinity Ep  5/25 | Loss: 0.3581
+  ST affinity Ep 10/25 | Loss: 0.3388
+  ST affinity Ep 15/25 | Loss: 0.3343
+  ST affinity Ep 20/25 | Loss: 0.3022
+  ST affinity Ep 25/25 | Loss: 0.2738
+[03:16:29] Job 215/336 | Site Kabat 54 | MOLM-ST ESM2 affinity done in 4s
+[03:16:29] Job 216/336 | Site Kabat 54 | MOLM-ST ESM2 specificity start
+[03:16:29] 🔄 RNG Reset: seed=2726 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.4521
+  ST specificity Ep  5/25 | Loss: 0.4562
+  ST specificity Ep 10/25 | Loss: 0.3679
+  ST specificity Ep 15/25 | Loss: 0.3304
+  ST specificity Ep 20/25 | Loss: 0.2311
+  ST specificity Ep 25/25 | Loss: 0.1922
+[03:16:33] Job 216/336 | Site Kabat 54 | MOLM-ST ESM2 specificity done in 4s
+    MOLM-ST (ESM2        ) Aff:0.7226 MCC:0.499 | Spec:0.8344 MCC:0.666
+[03:16:33] Job 217/336 | Site Kabat 54 | MOLM Fusion-ESM2 start
+[03:16:33] 🔄 RNG Reset: seed=2226 (MOLM-Fusion-ESM2 site 54)
+  Ep  1/25 | Acc: 0.528/0.581 | Gap: +0.06/-0.01 | GradCos: +0.060
+  Ep  5/25 | Acc: 0.674/0.770 | Gap: +0.41/+0.34 | GradCos: +0.001
+  Ep 10/25 | Acc: 0.839/0.854 | Gap: +1.17/+0.78 | GradCos: +0.093
+  Ep 15/25 | Acc: 0.849/0.873 | Gap: +1.24/+0.91 | GradCos: +0.125
+  Ep 20/25 | Acc: 0.890/0.879 | Gap: +1.48/+1.02 | GradCos: +0.000
+  Ep 25/25 | Acc: 0.900/0.904 | Gap: +1.69/+1.13 | GradCos: +0.036
+    MOLM (Fusion-ESM2 ) Aff:0.9067 MCC:0.799 | Spec:0.8646 MCC:0.737
+[03:16:41] Job 217/336 | Site Kabat 54 | MOLM Fusion-ESM2 done in 8s
+[03:16:41] Job 218/336 | Site Kabat 54 | MOLM-ST Fusion-ESM2 affinity start
+[03:16:41] 🔄 RNG Reset: seed=2726 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.4294
+  ST affinity Ep  5/25 | Loss: 0.2641
+  ST affinity Ep 10/25 | Loss: 0.1741
+  ST affinity Ep 15/25 | Loss: 0.1344
+  ST affinity Ep 20/25 | Loss: 0.1105
+  ST affinity Ep 25/25 | Loss: 0.1096
+[03:16:45] Job 218/336 | Site Kabat 54 | MOLM-ST Fusion-ESM2 affinity done in 4s
+[03:16:45] Job 219/336 | Site Kabat 54 | MOLM-ST Fusion-ESM2 specificity start
+[03:16:45] 🔄 RNG Reset: seed=2826 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.3917
+  ST specificity Ep  5/25 | Loss: 0.2000
+  ST specificity Ep 10/25 | Loss: 0.1167
+  ST specificity Ep 15/25 | Loss: 0.0979
+  ST specificity Ep 20/25 | Loss: 0.0878
+  ST specificity Ep 25/25 | Loss: 0.0728
+[03:16:49] Job 219/336 | Site Kabat 54 | MOLM-ST Fusion-ESM2 specificity done in 4s
+    MOLM-ST (Fusion-ESM2 ) Aff:0.9163 MCC:0.814 | Spec:0.8706 MCC:0.750
+[03:16:49] Job 220/336 | Site Kabat 54 | NN OneHot affinity start
+[03:16:49] 🔄 RNG Reset: seed=2224 (NN-OneHot site 54 aff)
+[03:16:52] Job 220/336 | Site Kabat 54 | NN OneHot affinity done in 3s
+[03:16:52] Job 221/336 | Site Kabat 54 | NN OneHot specificity start
+[03:16:52] 🔄 RNG Reset: seed=2274 (NN-OneHot site 54 spec)
+[03:16:54] Job 221/336 | Site Kabat 54 | NN OneHot specificity done in 3s
+    NN (OneHot      )    Aff:0.9100 MCC:0.805 | Spec:0.7342 MCC:0.555
+[03:16:55] Job 222/336 | Site Kabat 54 | NN ESM2 affinity start
+[03:16:55] 🔄 RNG Reset: seed=2524 (NN-ESM2 site 54 aff)
+[03:16:57] Job 222/336 | Site Kabat 54 | NN ESM2 affinity done in 2s
+[03:16:57] Job 223/336 | Site Kabat 54 | NN ESM2 specificity start
+[03:16:57] 🔄 RNG Reset: seed=2574 (NN-ESM2 site 54 spec)
+[03:16:59] Job 223/336 | Site Kabat 54 | NN ESM2 specificity done in 2s
+    NN (ESM2        )    Aff:0.7955 MCC:0.562 | Spec:0.4562 MCC:nan
+[03:16:59] Job 224/336 | Site Kabat 54 | NN Fusion-ESM2 affinity start
+[03:16:59] 🔄 RNG Reset: seed=2424 (NN-Fusion-ESM2 site 54 aff)
+[03:17:02] Job 224/336 | Site Kabat 54 | NN Fusion-ESM2 affinity done in 3s
+[03:17:02] Job 225/336 | Site Kabat 54 | NN Fusion-ESM2 specificity start
+[03:17:02] 🔄 RNG Reset: seed=2474 (NN-Fusion-ESM2 site 54 spec)
+[03:17:04] Job 225/336 | Site Kabat 54 | NN Fusion-ESM2 specificity done in 3s
+    NN (Fusion-ESM2 )    Aff:0.9079 MCC:0.804 | Spec:0.8087 MCC:0.655
+[03:17:05] Job 226/336 | Site Kabat 54 | LDA OneHot fit/eval start
+[03:17:08] Job 227/336 | Site Kabat 54 | LDA OneHot done in 3s
+    LDA (OneHot      )  Aff:0.8795 MCC:0.759 | Spec:0.7907 MCC:0.624
+[03:17:08] Job 228/336 | Site Kabat 54 | LDA ESM2 fit/eval start
+[03:17:09] Job 229/336 | Site Kabat 54 | LDA ESM2 done in 0s
+    LDA (ESM2        )  Aff:0.7357 MCC:0.371 | Spec:0.5444 MCC:0.222
+[03:17:09] Job 230/336 | Site Kabat 54 | LDA Fusion-ESM2 fit/eval start
+[03:17:11] Job 231/336 | Site Kabat 54 | LDA Fusion-ESM2 done in 2s
+    LDA (Fusion-ESM2 )  Aff:0.7016 MCC:0.272 | Spec:0.4963 MCC:-0.052
+[03:17:11] Mode 2/2 | Site 3/8 done: Kabat 54 in 1.1m
+[03:17:11] Mode 2/2 | Site 4/8 start: Kabat 55, residue 'R', train=1206, test=2794
+[03:17:11] Job 232/336 | Site Kabat 55 | MOLM OneHot start
+[03:17:11] 🔄 RNG Reset: seed=2027 (MOLM-OneHot site 55)
+  Ep  1/25 | Acc: 0.552/0.670 | Gap: +0.02/+0.07 | GradCos: -0.005
+  Ep  5/25 | Acc: 0.681/0.795 | Gap: +0.46/+0.56 | GradCos: +0.052
+  Ep 10/25 | Acc: 0.848/0.860 | Gap: +1.18/+1.17 | GradCos: +0.010
+  Ep 15/25 | Acc: 0.858/0.908 | Gap: +1.47/+1.53 | GradCos: +0.027
+  Ep 20/25 | Acc: 0.891/0.900 | Gap: +1.61/+1.63 | GradCos: +0.045
+  Ep 25/25 | Acc: 0.902/0.916 | Gap: +1.81/+1.71 | GradCos: +0.016
+    MOLM (OneHot      ) Aff:0.9220 MCC:0.815 | Spec:0.8490 MCC:0.722
+[03:17:24] Job 232/336 | Site Kabat 55 | MOLM OneHot done in 13s
+[03:17:24] Job 233/336 | Site Kabat 55 | MOLM-ST OneHot affinity start
+[03:17:24] 🔄 RNG Reset: seed=2527 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.3516
+  ST affinity Ep  5/25 | Loss: 0.2113
+  ST affinity Ep 10/25 | Loss: 0.1453
+  ST affinity Ep 15/25 | Loss: 0.1084
+  ST affinity Ep 20/25 | Loss: 0.0986
+  ST affinity Ep 25/25 | Loss: 0.0989
+[03:17:31] Job 233/336 | Site Kabat 55 | MOLM-ST OneHot affinity done in 7s
+[03:17:31] Job 234/336 | Site Kabat 55 | MOLM-ST OneHot specificity start
+[03:17:31] 🔄 RNG Reset: seed=2627 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.6317
+  ST specificity Ep  5/25 | Loss: 0.1934
+  ST specificity Ep 10/25 | Loss: 0.1109
+  ST specificity Ep 15/25 | Loss: 0.1016
+  ST specificity Ep 20/25 | Loss: 0.0869
+  ST specificity Ep 25/25 | Loss: 0.0823
+[03:17:37] Job 234/336 | Site Kabat 55 | MOLM-ST OneHot specificity done in 7s
+    MOLM-ST (OneHot      ) Aff:0.9202 MCC:0.808 | Spec:0.8754 MCC:0.763
+[03:17:38] Job 235/336 | Site Kabat 55 | MOLM ESM2 start
+[03:17:38] 🔄 RNG Reset: seed=2127 (MOLM-ESM2 site 55)
+  Ep  1/25 | Acc: 0.493/0.687 | Gap: +0.00/+0.04 | GradCos: -0.048
+  Ep  5/25 | Acc: 0.544/0.703 | Gap: -0.00/+0.05 | GradCos: -0.023
+  Ep 10/25 | Acc: 0.564/0.717 | Gap: +0.04/+0.22 | GradCos: +0.084
+  Ep 15/25 | Acc: 0.649/0.804 | Gap: +0.25/+0.58 | GradCos: +0.150
+  Ep 20/25 | Acc: 0.743/0.856 | Gap: +0.48/+0.98 | GradCos: +0.053
+  Ep 25/25 | Acc: 0.779/0.877 | Gap: +0.71/+1.20 | GradCos: +0.025
+    MOLM (ESM2        ) Aff:0.8232 MCC:0.558 | Spec:0.8397 MCC:0.671
+[03:17:50] Job 235/336 | Site Kabat 55 | MOLM ESM2 done in 12s
+[03:17:50] Job 236/336 | Site Kabat 55 | MOLM-ST ESM2 affinity start
+[03:17:50] 🔄 RNG Reset: seed=2627 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.5123
+  ST affinity Ep  5/25 | Loss: 0.3663
+  ST affinity Ep 10/25 | Loss: 0.3457
+  ST affinity Ep 15/25 | Loss: 0.2889
+  ST affinity Ep 20/25 | Loss: 0.2294
+  ST affinity Ep 25/25 | Loss: 0.2030
+[03:17:55] Job 236/336 | Site Kabat 55 | MOLM-ST ESM2 affinity done in 6s
+[03:17:56] Job 237/336 | Site Kabat 55 | MOLM-ST ESM2 specificity start
+[03:17:56] 🔄 RNG Reset: seed=2727 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.7436
+  ST specificity Ep  5/25 | Loss: 0.4488
+  ST specificity Ep 10/25 | Loss: 0.3407
+  ST specificity Ep 15/25 | Loss: 0.1970
+  ST specificity Ep 20/25 | Loss: 0.1385
+  ST specificity Ep 25/25 | Loss: 0.1195
+[03:18:02] Job 237/336 | Site Kabat 55 | MOLM-ST ESM2 specificity done in 6s
+    MOLM-ST (ESM2        ) Aff:0.8021 MCC:0.494 | Spec:0.8683 MCC:0.727
+[03:18:02] Job 238/336 | Site Kabat 55 | MOLM Fusion-ESM2 start
+[03:18:02] 🔄 RNG Reset: seed=2227 (MOLM-Fusion-ESM2 site 55)
+  Ep  1/25 | Acc: 0.529/0.610 | Gap: +0.01/+0.03 | GradCos: -0.026
+  Ep  5/25 | Acc: 0.722/0.787 | Gap: +0.52/+0.59 | GradCos: +0.158
+  Ep 10/25 | Acc: 0.841/0.881 | Gap: +1.22/+1.20 | GradCos: +0.026
+  Ep 15/25 | Acc: 0.875/0.884 | Gap: +1.49/+1.32 | GradCos: +0.066
+  Ep 20/25 | Acc: 0.891/0.913 | Gap: +1.71/+1.53 | GradCos: +0.045
+  Ep 25/25 | Acc: 0.897/0.914 | Gap: +1.87/+1.65 | GradCos: +0.095
+    MOLM (Fusion-ESM2 ) Aff:0.9127 MCC:0.789 | Spec:0.8443 MCC:0.720
+[03:18:15] Job 238/336 | Site Kabat 55 | MOLM Fusion-ESM2 done in 13s
+[03:18:15] Job 239/336 | Site Kabat 55 | MOLM-ST Fusion-ESM2 affinity start
+[03:18:15] 🔄 RNG Reset: seed=2727 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.3540
+  ST affinity Ep  5/25 | Loss: 0.1882
+  ST affinity Ep 10/25 | Loss: 0.1276
+  ST affinity Ep 15/25 | Loss: 0.1098
+  ST affinity Ep 20/25 | Loss: 0.1133
+  ST affinity Ep 25/25 | Loss: 0.0955
+[03:18:22] Job 239/336 | Site Kabat 55 | MOLM-ST Fusion-ESM2 affinity done in 7s
+[03:18:22] Job 240/336 | Site Kabat 55 | MOLM-ST Fusion-ESM2 specificity start
+[03:18:22] 🔄 RNG Reset: seed=2827 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.5138
+  ST specificity Ep  5/25 | Loss: 0.1764
+  ST specificity Ep 10/25 | Loss: 0.1117
+  ST specificity Ep 15/25 | Loss: 0.0929
+  ST specificity Ep 20/25 | Loss: 0.0822
+  ST specificity Ep 25/25 | Loss: 0.0828
+[03:18:29] Job 240/336 | Site Kabat 55 | MOLM-ST Fusion-ESM2 specificity done in 7s
+    MOLM-ST (Fusion-ESM2 ) Aff:0.9152 MCC:0.802 | Spec:0.8862 MCC:0.780
+[03:18:29] Job 241/336 | Site Kabat 55 | NN OneHot affinity start
+[03:18:29] 🔄 RNG Reset: seed=2324 (NN-OneHot site 55 aff)
+[03:18:33] Job 241/336 | Site Kabat 55 | NN OneHot affinity done in 5s
+[03:18:34] Job 242/336 | Site Kabat 55 | NN OneHot specificity start
+[03:18:34] 🔄 RNG Reset: seed=2374 (NN-OneHot site 55 spec)
+[03:18:38] Job 242/336 | Site Kabat 55 | NN OneHot specificity done in 5s
+    NN (OneHot      )    Aff:0.9173 MCC:0.809 | Spec:0.9037 MCC:0.808
+[03:18:38] Job 243/336 | Site Kabat 55 | NN ESM2 affinity start
+[03:18:39] 🔄 RNG Reset: seed=2624 (NN-ESM2 site 55 aff)
+[03:18:42] Job 243/336 | Site Kabat 55 | NN ESM2 affinity done in 3s
+[03:18:42] Job 244/336 | Site Kabat 55 | NN ESM2 specificity start
+[03:18:42] 🔄 RNG Reset: seed=2674 (NN-ESM2 site 55 spec)
+[03:18:45] Job 244/336 | Site Kabat 55 | NN ESM2 specificity done in 3s
+    NN (ESM2        )    Aff:0.8089 MCC:0.517 | Spec:0.8737 MCC:0.739
+[03:18:45] Job 245/336 | Site Kabat 55 | NN Fusion-ESM2 affinity start
+[03:18:46] 🔄 RNG Reset: seed=2524 (NN-Fusion-ESM2 site 55 aff)
+[03:18:50] Job 245/336 | Site Kabat 55 | NN Fusion-ESM2 affinity done in 5s
+[03:18:50] Job 246/336 | Site Kabat 55 | NN Fusion-ESM2 specificity start
+[03:18:51] 🔄 RNG Reset: seed=2574 (NN-Fusion-ESM2 site 55 spec)
+[03:18:55] Job 246/336 | Site Kabat 55 | NN Fusion-ESM2 specificity done in 5s
+    NN (Fusion-ESM2 )    Aff:0.9198 MCC:0.817 | Spec:0.8980 MCC:0.798
+[03:18:56] Job 247/336 | Site Kabat 55 | LDA OneHot fit/eval start
+[03:19:00] Job 248/336 | Site Kabat 55 | LDA OneHot done in 5s
+    LDA (OneHot      )  Aff:0.8966 MCC:0.778 | Spec:0.8561 MCC:0.732
+[03:19:00] Job 249/336 | Site Kabat 55 | LDA ESM2 fit/eval start
+[03:19:01] Job 250/336 | Site Kabat 55 | LDA ESM2 done in 1s
+    LDA (ESM2        )  Aff:0.7423 MCC:0.303 | Spec:0.4499 MCC:0.044
+[03:19:01] Job 251/336 | Site Kabat 55 | LDA Fusion-ESM2 fit/eval start
+[03:19:06] Job 252/336 | Site Kabat 55 | LDA Fusion-ESM2 done in 5s
+    LDA (Fusion-ESM2 )  Aff:0.6625 MCC:0.113 | Spec:0.3733 MCC:-0.181
+[03:19:06] Mode 2/2 | Site 4/8 done: Kabat 55 in 1.9m
+[03:19:06] Mode 2/2 | Site 5/8 start: Kabat 56, residue 'G', train=1962, test=2038
+[03:19:06] Job 253/336 | Site Kabat 56 | MOLM OneHot start
+[03:19:06] 🔄 RNG Reset: seed=2028 (MOLM-OneHot site 56)
+  Ep  1/25 | Acc: 0.536/0.570 | Gap: +0.04/+0.15 | GradCos: -0.017
+  Ep  5/25 | Acc: 0.847/0.880 | Gap: +1.10/+1.19 | GradCos: +0.133
+  Ep 10/25 | Acc: 0.878/0.913 | Gap: +1.48/+1.59 | GradCos: +0.070
+  Ep 15/25 | Acc: 0.898/0.930 | Gap: +1.72/+1.80 | GradCos: +0.041
+  Ep 20/25 | Acc: 0.905/0.927 | Gap: +1.76/+1.94 | GradCos: +0.021
+  Ep 25/25 | Acc: 0.913/0.936 | Gap: +1.93/+2.06 | GradCos: +0.017
+    MOLM (OneHot      ) Aff:0.8445 MCC:0.681 | Spec:0.8440 MCC:0.710
+[03:19:26] Job 253/336 | Site Kabat 56 | MOLM OneHot done in 20s
+[03:19:26] Job 254/336 | Site Kabat 56 | MOLM-ST OneHot affinity start
+[03:19:26] 🔄 RNG Reset: seed=2528 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.3648
+  ST affinity Ep  5/25 | Loss: 0.1454
+  ST affinity Ep 10/25 | Loss: 0.1013
+  ST affinity Ep 15/25 | Loss: 0.0925
+  ST affinity Ep 20/25 | Loss: 0.0838
+  ST affinity Ep 25/25 | Loss: 0.0814
+[03:19:37] Job 254/336 | Site Kabat 56 | MOLM-ST OneHot affinity done in 11s
+[03:19:37] Job 255/336 | Site Kabat 56 | MOLM-ST OneHot specificity start
+[03:19:37] 🔄 RNG Reset: seed=2628 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.5084
+  ST specificity Ep  5/25 | Loss: 0.1140
+  ST specificity Ep 10/25 | Loss: 0.0769
+  ST specificity Ep 15/25 | Loss: 0.0677
+  ST specificity Ep 20/25 | Loss: 0.0666
+  ST specificity Ep 25/25 | Loss: 0.0619
+[03:19:48] Job 255/336 | Site Kabat 56 | MOLM-ST OneHot specificity done in 11s
+    MOLM-ST (OneHot      ) Aff:0.8940 MCC:0.756 | Spec:0.8685 MCC:0.745
+[03:19:48] Job 256/336 | Site Kabat 56 | MOLM ESM2 start
+[03:19:48] 🔄 RNG Reset: seed=2128 (MOLM-ESM2 site 56)
+  Ep  1/25 | Acc: 0.493/0.432 | Gap: +0.01/+0.01 | GradCos: -0.086
+  Ep  5/25 | Acc: 0.543/0.661 | Gap: +0.09/+0.26 | GradCos: +0.081
+  Ep 10/25 | Acc: 0.778/0.842 | Gap: +0.74/+0.95 | GradCos: +0.145
+  Ep 15/25 | Acc: 0.822/0.897 | Gap: +1.00/+1.28 | GradCos: +0.172
+  Ep 20/25 | Acc: 0.815/0.898 | Gap: +1.04/+1.38 | GradCos: +0.331
+  Ep 25/25 | Acc: 0.844/0.909 | Gap: +1.17/+1.51 | GradCos: +0.117
+    MOLM (ESM2        ) Aff:0.7851 MCC:0.575 | Spec:0.8503 MCC:0.703
+[03:20:08] Job 256/336 | Site Kabat 56 | MOLM ESM2 done in 20s
+[03:20:08] Job 257/336 | Site Kabat 56 | MOLM-ST ESM2 affinity start
+[03:20:08] 🔄 RNG Reset: seed=2628 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.4264
+  ST affinity Ep  5/25 | Loss: 0.3040
+  ST affinity Ep 10/25 | Loss: 0.1902
+  ST affinity Ep 15/25 | Loss: 0.1677
+  ST affinity Ep 20/25 | Loss: 0.1510
+  ST affinity Ep 25/25 | Loss: 0.1472
+[03:20:18] Job 257/336 | Site Kabat 56 | MOLM-ST ESM2 affinity done in 10s
+[03:20:18] Job 258/336 | Site Kabat 56 | MOLM-ST ESM2 specificity start
+[03:20:18] 🔄 RNG Reset: seed=2728 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.5189
+  ST specificity Ep  5/25 | Loss: 0.2813
+  ST specificity Ep 10/25 | Loss: 0.1295
+  ST specificity Ep 15/25 | Loss: 0.1078
+  ST specificity Ep 20/25 | Loss: 0.0999
+  ST specificity Ep 25/25 | Loss: 0.0927
+[03:20:28] Job 258/336 | Site Kabat 56 | MOLM-ST ESM2 specificity done in 10s
+    MOLM-ST (ESM2        ) Aff:0.8170 MCC:0.617 | Spec:0.8440 MCC:0.698
+[03:20:28] Job 259/336 | Site Kabat 56 | MOLM Fusion-ESM2 start
+[03:20:28] 🔄 RNG Reset: seed=2228 (MOLM-Fusion-ESM2 site 56)
+  Ep  1/25 | Acc: 0.507/0.562 | Gap: +0.00/+0.07 | GradCos: +0.083
+  Ep  5/25 | Acc: 0.840/0.879 | Gap: +1.08/+1.12 | GradCos: +0.055
+  Ep 10/25 | Acc: 0.878/0.919 | Gap: +1.50/+1.52 | GradCos: +0.080
+  Ep 15/25 | Acc: 0.890/0.926 | Gap: +1.74/+1.68 | GradCos: -0.005
+  Ep 20/25 | Acc: 0.904/0.927 | Gap: +1.87/+1.86 | GradCos: +0.031
+  Ep 25/25 | Acc: 0.911/0.935 | Gap: +1.93/+1.98 | GradCos: -0.002
+    MOLM (Fusion-ESM2 ) Aff:0.9073 MCC:0.770 | Spec:0.8562 MCC:0.726
+[03:20:48] Job 259/336 | Site Kabat 56 | MOLM Fusion-ESM2 done in 21s
+[03:20:48] Job 260/336 | Site Kabat 56 | MOLM-ST Fusion-ESM2 affinity start
+[03:20:48] 🔄 RNG Reset: seed=2728 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.3740
+  ST affinity Ep  5/25 | Loss: 0.1330
+  ST affinity Ep 10/25 | Loss: 0.1183
+  ST affinity Ep 15/25 | Loss: 0.1017
+  ST affinity Ep 20/25 | Loss: 0.0869
+  ST affinity Ep 25/25 | Loss: 0.0864
+[03:20:59] Job 260/336 | Site Kabat 56 | MOLM-ST Fusion-ESM2 affinity done in 11s
+[03:20:59] Job 261/336 | Site Kabat 56 | MOLM-ST Fusion-ESM2 specificity start
+[03:20:59] 🔄 RNG Reset: seed=2828 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.4908
+  ST specificity Ep  5/25 | Loss: 0.1169
+  ST specificity Ep 10/25 | Loss: 0.0856
+  ST specificity Ep 15/25 | Loss: 0.0695
+  ST specificity Ep 20/25 | Loss: 0.0630
+  ST specificity Ep 25/25 | Loss: 0.0607
+[03:21:10] Job 261/336 | Site Kabat 56 | MOLM-ST Fusion-ESM2 specificity done in 11s
+    MOLM-ST (Fusion-ESM2 ) Aff:0.9048 MCC:0.773 | Spec:0.8445 MCC:0.712
+[03:21:11] Job 262/336 | Site Kabat 56 | NN OneHot affinity start
+[03:21:11] 🔄 RNG Reset: seed=2424 (NN-OneHot site 56 aff)
+[03:21:18] Job 262/336 | Site Kabat 56 | NN OneHot affinity done in 7s
+[03:21:18] Job 263/336 | Site Kabat 56 | NN OneHot specificity start
+[03:21:18] 🔄 RNG Reset: seed=2474 (NN-OneHot site 56 spec)
+[03:21:26] Job 263/336 | Site Kabat 56 | NN OneHot specificity done in 8s
+    NN (OneHot      )    Aff:0.8950 MCC:0.755 | Spec:0.8597 MCC:0.731
+[03:21:26] Job 264/336 | Site Kabat 56 | NN ESM2 affinity start
+[03:21:26] 🔄 RNG Reset: seed=2724 (NN-ESM2 site 56 aff)
+[03:21:31] Job 264/336 | Site Kabat 56 | NN ESM2 affinity done in 5s
+[03:21:31] Job 265/336 | Site Kabat 56 | NN ESM2 specificity start
+[03:21:31] 🔄 RNG Reset: seed=2774 (NN-ESM2 site 56 spec)
+[03:21:37] Job 265/336 | Site Kabat 56 | NN ESM2 specificity done in 5s
+    NN (ESM2        )    Aff:0.8337 MCC:0.573 | Spec:0.8675 MCC:0.730
+[03:21:37] Job 266/336 | Site Kabat 56 | NN Fusion-ESM2 affinity start
+[03:21:37] 🔄 RNG Reset: seed=2624 (NN-Fusion-ESM2 site 56 aff)
+[03:21:45] Job 266/336 | Site Kabat 56 | NN Fusion-ESM2 affinity done in 8s
+[03:21:45] Job 267/336 | Site Kabat 56 | NN Fusion-ESM2 specificity start
+[03:21:45] 🔄 RNG Reset: seed=2674 (NN-Fusion-ESM2 site 56 spec)
+[03:21:53] Job 267/336 | Site Kabat 56 | NN Fusion-ESM2 specificity done in 8s
+    NN (Fusion-ESM2 )    Aff:0.9053 MCC:0.771 | Spec:0.8773 MCC:0.754
+[03:21:53] Job 268/336 | Site Kabat 56 | LDA OneHot fit/eval start
+[03:21:59] Job 269/336 | Site Kabat 56 | LDA OneHot done in 7s
+    LDA (OneHot      )  Aff:0.8489 MCC:0.692 | Spec:0.8415 MCC:0.704
+[03:21:59] Job 270/336 | Site Kabat 56 | LDA ESM2 fit/eval start
+[03:22:00] Job 271/336 | Site Kabat 56 | LDA ESM2 done in 1s
+    LDA (ESM2        )  Aff:0.5510 MCC:0.347 | Spec:0.6938 MCC:0.446
+[03:22:00] Job 272/336 | Site Kabat 56 | LDA Fusion-ESM2 fit/eval start
+[03:22:06] Job 273/336 | Site Kabat 56 | LDA Fusion-ESM2 done in 6s
+    LDA (Fusion-ESM2 )  Aff:0.5191 MCC:0.209 | Spec:0.4539 MCC:0.150
+[03:22:06] Mode 2/2 | Site 5/8 done: Kabat 56 in 3.0m
+[03:22:06] Mode 2/2 | Site 6/8 start: Kabat 95, residue 'A', train=1204, test=2796
+[03:22:06] Job 274/336 | Site Kabat 95 | MOLM OneHot start
+[03:22:06] 🔄 RNG Reset: seed=2029 (MOLM-OneHot site 95)
+  Ep  1/25 | Acc: 0.537/0.603 | Gap: +0.04/+0.09 | GradCos: +0.006
+  Ep  5/25 | Acc: 0.745/0.805 | Gap: +0.66/+0.82 | GradCos: +0.050
+  Ep 10/25 | Acc: 0.870/0.890 | Gap: +1.37/+1.40 | GradCos: +0.068
+  Ep 15/25 | Acc: 0.889/0.900 | Gap: +1.68/+1.54 | GradCos: +0.094
+  Ep 20/25 | Acc: 0.906/0.914 | Gap: +1.87/+1.72 | GradCos: -0.066
+  Ep 25/25 | Acc: 0.916/0.918 | Gap: +1.97/+1.83 | GradCos: +0.009
+    MOLM (OneHot      ) Aff:0.8398 MCC:0.693 | Spec:0.8330 MCC:0.663
+[03:22:19] Job 274/336 | Site Kabat 95 | MOLM OneHot done in 13s
+[03:22:19] Job 275/336 | Site Kabat 95 | MOLM-ST OneHot affinity start
+[03:22:19] 🔄 RNG Reset: seed=2529 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.3610
+  ST affinity Ep  5/25 | Loss: 0.1696
+  ST affinity Ep 10/25 | Loss: 0.1090
+  ST affinity Ep 15/25 | Loss: 0.0901
+  ST affinity Ep 20/25 | Loss: 0.0928
+  ST affinity Ep 25/25 | Loss: 0.0768
+[03:22:26] Job 275/336 | Site Kabat 95 | MOLM-ST OneHot affinity done in 7s
+[03:22:26] Job 276/336 | Site Kabat 95 | MOLM-ST OneHot specificity start
+[03:22:26] 🔄 RNG Reset: seed=2629 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.5152
+  ST specificity Ep  5/25 | Loss: 0.1777
+  ST specificity Ep 10/25 | Loss: 0.1029
+  ST specificity Ep 15/25 | Loss: 0.0930
+  ST specificity Ep 20/25 | Loss: 0.0850
+  ST specificity Ep 25/25 | Loss: 0.0705
+[03:22:32] Job 276/336 | Site Kabat 95 | MOLM-ST OneHot specificity done in 7s
+    MOLM-ST (OneHot      ) Aff:0.8008 MCC:0.639 | Spec:0.8051 MCC:0.625
+[03:22:33] Job 277/336 | Site Kabat 95 | MOLM ESM2 start
+[03:22:33] 🔄 RNG Reset: seed=2129 (MOLM-ESM2 site 95)
+  Ep  1/25 | Acc: 0.530/0.540 | Gap: +0.02/-0.01 | GradCos: -0.029
+  Ep  5/25 | Acc: 0.558/0.598 | Gap: +0.05/+0.08 | GradCos: +0.055
+  Ep 10/25 | Acc: 0.664/0.728 | Gap: +0.30/+0.35 | GradCos: +0.150
+  Ep 15/25 | Acc: 0.785/0.808 | Gap: +0.71/+0.72 | GradCos: +0.149
+  Ep 20/25 | Acc: 0.802/0.856 | Gap: +0.93/+0.94 | GradCos: +0.203
+  Ep 25/25 | Acc: 0.842/0.872 | Gap: +1.07/+1.15 | GradCos: +0.080
+    MOLM (ESM2        ) Aff:0.7808 MCC:0.587 | Spec:0.8552 MCC:0.708
+[03:22:45] Job 277/336 | Site Kabat 95 | MOLM ESM2 done in 12s
+[03:22:45] Job 278/336 | Site Kabat 95 | MOLM-ST ESM2 affinity start
+[03:22:45] 🔄 RNG Reset: seed=2629 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.4553
+  ST affinity Ep  5/25 | Loss: 0.3546
+  ST affinity Ep 10/25 | Loss: 0.2561
+  ST affinity Ep 15/25 | Loss: 0.1963
+  ST affinity Ep 20/25 | Loss: 0.1725
+  ST affinity Ep 25/25 | Loss: 0.1534
+[03:22:51] Job 278/336 | Site Kabat 95 | MOLM-ST ESM2 affinity done in 6s
+[03:22:51] Job 279/336 | Site Kabat 95 | MOLM-ST ESM2 specificity start
+[03:22:51] 🔄 RNG Reset: seed=2729 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.5140
+  ST specificity Ep  5/25 | Loss: 0.4548
+  ST specificity Ep 10/25 | Loss: 0.2545
+  ST specificity Ep 15/25 | Loss: 0.1846
+  ST specificity Ep 20/25 | Loss: 0.1521
+  ST specificity Ep 25/25 | Loss: 0.1246
+[03:22:57] Job 279/336 | Site Kabat 95 | MOLM-ST ESM2 specificity done in 6s
+    MOLM-ST (ESM2        ) Aff:0.6660 MCC:0.487 | Spec:0.8498 MCC:0.699
+[03:22:57] Job 280/336 | Site Kabat 95 | MOLM Fusion-ESM2 start
+[03:22:57] 🔄 RNG Reset: seed=2229 (MOLM-Fusion-ESM2 site 95)
+  Ep  1/25 | Acc: 0.552/0.575 | Gap: +0.05/+0.12 | GradCos: +0.010
+  Ep  5/25 | Acc: 0.789/0.817 | Gap: +0.78/+0.81 | GradCos: +0.039
+  Ep 10/25 | Acc: 0.861/0.885 | Gap: +1.30/+1.26 | GradCos: +0.089
+  Ep 15/25 | Acc: 0.893/0.893 | Gap: +1.49/+1.36 | GradCos: -0.001
+  Ep 20/25 | Acc: 0.903/0.903 | Gap: +1.75/+1.49 | GradCos: +0.068
+  Ep 25/25 | Acc: 0.912/0.903 | Gap: +1.82/+1.61 | GradCos: +0.102
+    MOLM (Fusion-ESM2 ) Aff:0.8251 MCC:0.673 | Spec:0.8530 MCC:0.703
+[03:23:10] Job 280/336 | Site Kabat 95 | MOLM Fusion-ESM2 done in 13s
+[03:23:10] Job 281/336 | Site Kabat 95 | MOLM-ST Fusion-ESM2 affinity start
+[03:23:10] 🔄 RNG Reset: seed=2729 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.4031
+  ST affinity Ep  5/25 | Loss: 0.1639
+  ST affinity Ep 10/25 | Loss: 0.1158
+  ST affinity Ep 15/25 | Loss: 0.0944
+  ST affinity Ep 20/25 | Loss: 0.0851
+  ST affinity Ep 25/25 | Loss: 0.0879
+[03:23:17] Job 281/336 | Site Kabat 95 | MOLM-ST Fusion-ESM2 affinity done in 7s
+[03:23:17] Job 282/336 | Site Kabat 95 | MOLM-ST Fusion-ESM2 specificity start
+[03:23:17] 🔄 RNG Reset: seed=2829 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.4882
+  ST specificity Ep  5/25 | Loss: 0.1577
+  ST specificity Ep 10/25 | Loss: 0.1039
+  ST specificity Ep 15/25 | Loss: 0.0832
+  ST specificity Ep 20/25 | Loss: 0.0856
+  ST specificity Ep 25/25 | Loss: 0.0807
+[03:23:24] Job 282/336 | Site Kabat 95 | MOLM-ST Fusion-ESM2 specificity done in 7s
+    MOLM-ST (Fusion-ESM2 ) Aff:0.8577 MCC:0.717 | Spec:0.8340 MCC:0.679
+[03:23:24] Job 283/336 | Site Kabat 95 | NN OneHot affinity start
+[03:23:24] 🔄 RNG Reset: seed=2524 (NN-OneHot site 95 aff)
+[03:23:29] Job 283/336 | Site Kabat 95 | NN OneHot affinity done in 5s
+[03:23:29] Job 284/336 | Site Kabat 95 | NN OneHot specificity start
+[03:23:29] 🔄 RNG Reset: seed=2574 (NN-OneHot site 95 spec)
+[03:23:34] Job 284/336 | Site Kabat 95 | NN OneHot specificity done in 5s
+    NN (OneHot      )    Aff:0.8609 MCC:0.718 | Spec:0.8340 MCC:0.665
+[03:23:34] Job 285/336 | Site Kabat 95 | NN ESM2 affinity start
+[03:23:34] 🔄 RNG Reset: seed=2824 (NN-ESM2 site 95 aff)
+[03:23:37] Job 285/336 | Site Kabat 95 | NN ESM2 affinity done in 3s
+[03:23:37] Job 286/336 | Site Kabat 95 | NN ESM2 specificity start
+[03:23:38] 🔄 RNG Reset: seed=2874 (NN-ESM2 site 95 spec)
+[03:23:41] Job 286/336 | Site Kabat 95 | NN ESM2 specificity done in 3s
+    NN (ESM2        )    Aff:0.7911 MCC:0.581 | Spec:0.8383 MCC:0.681
+[03:23:41] Job 287/336 | Site Kabat 95 | NN Fusion-ESM2 affinity start
+[03:23:41] 🔄 RNG Reset: seed=2724 (NN-Fusion-ESM2 site 95 aff)
+[03:23:46] Job 287/336 | Site Kabat 95 | NN Fusion-ESM2 affinity done in 5s
+[03:23:46] Job 288/336 | Site Kabat 95 | NN Fusion-ESM2 specificity start
+[03:23:46] 🔄 RNG Reset: seed=2774 (NN-Fusion-ESM2 site 95 spec)
+[03:23:51] Job 288/336 | Site Kabat 95 | NN Fusion-ESM2 specificity done in 5s
+    NN (Fusion-ESM2 )    Aff:0.8670 MCC:0.729 | Spec:0.8505 MCC:0.698
+[03:23:51] Job 289/336 | Site Kabat 95 | LDA OneHot fit/eval start
+[03:23:58] Job 290/336 | Site Kabat 95 | LDA OneHot done in 6s
+    LDA (OneHot      )  Aff:0.8180 MCC:0.661 | Spec:0.8240 MCC:0.654
+[03:23:58] Job 291/336 | Site Kabat 95 | LDA ESM2 fit/eval start
+[03:23:58] Job 292/336 | Site Kabat 95 | LDA ESM2 done in 1s
+    LDA (ESM2        )  Aff:0.8144 MCC:0.627 | Spec:0.3097 MCC:-0.397
+[03:23:58] Job 293/336 | Site Kabat 95 | LDA Fusion-ESM2 fit/eval start
+[03:24:03] Job 294/336 | Site Kabat 95 | LDA Fusion-ESM2 done in 5s
+    LDA (Fusion-ESM2 )  Aff:0.7278 MCC:0.518 | Spec:0.3079 MCC:-0.401
+[03:24:03] Mode 2/2 | Site 6/8 done: Kabat 95 in 2.0m
+[03:24:03] Mode 2/2 | Site 7/8 start: Kabat 97, residue 'W', train=547, test=3453
+[03:24:03] Job 295/336 | Site Kabat 97 | MOLM OneHot start
+[03:24:03] 🔄 RNG Reset: seed=2030 (MOLM-OneHot site 97)
+  Ep  1/25 | Acc: 0.578/0.501 | Gap: -0.01/+0.00 | GradCos: +0.079
+  Ep  5/25 | Acc: 0.607/0.666 | Gap: +0.21/+0.25 | GradCos: -0.012
+  Ep 10/25 | Acc: 0.788/0.826 | Gap: +0.79/+0.82 | GradCos: -0.003
+  Ep 15/25 | Acc: 0.827/0.881 | Gap: +1.11/+1.07 | GradCos: +0.137
+  Ep 20/25 | Acc: 0.901/0.871 | Gap: +1.50/+1.17 | GradCos: +0.058
+  Ep 25/25 | Acc: 0.887/0.882 | Gap: +1.72/+1.35 | GradCos: -0.041
+    MOLM (OneHot      ) Aff:0.8668 MCC:0.740 | Spec:0.8659 MCC:0.737
+[03:24:09] Job 295/336 | Site Kabat 97 | MOLM OneHot done in 6s
+[03:24:09] Job 296/336 | Site Kabat 97 | MOLM-ST OneHot affinity start
+[03:24:10] 🔄 RNG Reset: seed=2530 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.4266
+  ST affinity Ep  5/25 | Loss: 0.2742
+  ST affinity Ep 10/25 | Loss: 0.1468
+  ST affinity Ep 15/25 | Loss: 0.1017
+  ST affinity Ep 20/25 | Loss: 0.0901
+  ST affinity Ep 25/25 | Loss: 0.0875
+[03:24:13] Job 296/336 | Site Kabat 97 | MOLM-ST OneHot affinity done in 3s
+[03:24:13] Job 297/336 | Site Kabat 97 | MOLM-ST OneHot specificity start
+[03:24:13] 🔄 RNG Reset: seed=2630 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.5805
+  ST specificity Ep  5/25 | Loss: 0.2696
+  ST specificity Ep 10/25 | Loss: 0.1673
+  ST specificity Ep 15/25 | Loss: 0.1232
+  ST specificity Ep 20/25 | Loss: 0.1086
+  ST specificity Ep 25/25 | Loss: 0.0981
+[03:24:16] Job 297/336 | Site Kabat 97 | MOLM-ST OneHot specificity done in 3s
+    MOLM-ST (OneHot      ) Aff:0.9073 MCC:0.805 | Spec:0.8847 MCC:0.771
+[03:24:16] Job 298/336 | Site Kabat 97 | MOLM ESM2 start
+[03:24:16] 🔄 RNG Reset: seed=2130 (MOLM-ESM2 site 97)
+  Ep  1/25 | Acc: 0.531/0.515 | Gap: +0.03/+0.03 | GradCos: +0.022
+  Ep  5/25 | Acc: 0.512/0.469 | Gap: -0.01/-0.04 | GradCos: -0.014
+  Ep 10/25 | Acc: 0.520/0.527 | Gap: +0.02/+0.03 | GradCos: +0.067
+  Ep 15/25 | Acc: 0.563/0.621 | Gap: +0.08/+0.20 | GradCos: +0.039
+  Ep 20/25 | Acc: 0.625/0.676 | Gap: +0.21/+0.34 | GradCos: +0.064
+  Ep 25/25 | Acc: 0.707/0.772 | Gap: +0.38/+0.55 | GradCos: +0.156
+    MOLM (ESM2        ) Aff:0.7929 MCC:0.588 | Spec:0.8726 MCC:0.748
+[03:24:22] Job 298/336 | Site Kabat 97 | MOLM ESM2 done in 6s
+[03:24:22] Job 299/336 | Site Kabat 97 | MOLM-ST ESM2 affinity start
+[03:24:22] 🔄 RNG Reset: seed=2630 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.4411
+  ST affinity Ep  5/25 | Loss: 0.3753
+  ST affinity Ep 10/25 | Loss: 0.3271
+  ST affinity Ep 15/25 | Loss: 0.3216
+  ST affinity Ep 20/25 | Loss: 0.2585
+  ST affinity Ep 25/25 | Loss: 0.2256
+[03:24:25] Job 299/336 | Site Kabat 97 | MOLM-ST ESM2 affinity done in 3s
+[03:24:25] Job 300/336 | Site Kabat 97 | MOLM-ST ESM2 specificity start
+[03:24:25] 🔄 RNG Reset: seed=2730 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.5383
+  ST specificity Ep  5/25 | Loss: 0.4850
+  ST specificity Ep 10/25 | Loss: 0.4382
+  ST specificity Ep 15/25 | Loss: 0.3851
+  ST specificity Ep 20/25 | Loss: 0.2524
+  ST specificity Ep 25/25 | Loss: 0.2069
+[03:24:28] Job 300/336 | Site Kabat 97 | MOLM-ST ESM2 specificity done in 3s
+    MOLM-ST (ESM2        ) Aff:0.7619 MCC:0.580 | Spec:0.8639 MCC:0.730
+[03:24:28] Job 301/336 | Site Kabat 97 | MOLM Fusion-ESM2 start
+[03:24:29] 🔄 RNG Reset: seed=2230 (MOLM-Fusion-ESM2 site 97)
+  Ep  1/25 | Acc: 0.563/0.475 | Gap: +0.04/-0.03 | GradCos: -0.063
+  Ep  5/25 | Acc: 0.630/0.632 | Gap: +0.14/+0.21 | GradCos: +0.084
+  Ep 10/25 | Acc: 0.825/0.816 | Gap: +0.64/+0.91 | GradCos: +0.045
+  Ep 15/25 | Acc: 0.879/0.870 | Gap: +1.03/+1.23 | GradCos: -0.113
+  Ep 20/25 | Acc: 0.907/0.868 | Gap: +1.33/+1.26 | GradCos: +0.070
+  Ep 25/25 | Acc: 0.899/0.878 | Gap: +1.37/+1.41 | GradCos: -0.008
+    MOLM (Fusion-ESM2 ) Aff:0.8928 MCC:0.771 | Spec:0.8769 MCC:0.754
+[03:24:35] Job 301/336 | Site Kabat 97 | MOLM Fusion-ESM2 done in 6s
+[03:24:35] Job 302/336 | Site Kabat 97 | MOLM-ST Fusion-ESM2 affinity start
+[03:24:35] 🔄 RNG Reset: seed=2730 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.3896
+  ST affinity Ep  5/25 | Loss: 0.2348
+  ST affinity Ep 10/25 | Loss: 0.1425
+  ST affinity Ep 15/25 | Loss: 0.1159
+  ST affinity Ep 20/25 | Loss: 0.0968
+  ST affinity Ep 25/25 | Loss: 0.0983
+[03:24:38] Job 302/336 | Site Kabat 97 | MOLM-ST Fusion-ESM2 affinity done in 3s
+[03:24:38] Job 303/336 | Site Kabat 97 | MOLM-ST Fusion-ESM2 specificity start
+[03:24:39] 🔄 RNG Reset: seed=2830 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.4928
+  ST specificity Ep  5/25 | Loss: 0.2348
+  ST specificity Ep 10/25 | Loss: 0.1342
+  ST specificity Ep 15/25 | Loss: 0.1306
+  ST specificity Ep 20/25 | Loss: 0.1061
+  ST specificity Ep 25/25 | Loss: 0.0981
+[03:24:42] Job 303/336 | Site Kabat 97 | MOLM-ST Fusion-ESM2 specificity done in 3s
+    MOLM-ST (Fusion-ESM2 ) Aff:0.9027 MCC:0.797 | Spec:0.8746 MCC:0.753
+[03:24:42] Job 304/336 | Site Kabat 97 | NN OneHot affinity start
+[03:24:42] 🔄 RNG Reset: seed=2624 (NN-OneHot site 97 aff)
+[03:24:44] Job 304/336 | Site Kabat 97 | NN OneHot affinity done in 2s
+[03:24:44] Job 305/336 | Site Kabat 97 | NN OneHot specificity start
+[03:24:44] 🔄 RNG Reset: seed=2674 (NN-OneHot site 97 spec)
+[03:24:47] Job 305/336 | Site Kabat 97 | NN OneHot specificity done in 2s
+    NN (OneHot      )    Aff:0.9123 MCC:0.814 | Spec:0.8804 MCC:0.764
+[03:24:47] Job 306/336 | Site Kabat 97 | NN ESM2 affinity start
+[03:24:47] 🔄 RNG Reset: seed=2924 (NN-ESM2 site 97 aff)
+[03:24:48] Job 306/336 | Site Kabat 97 | NN ESM2 affinity done in 2s
+[03:24:48] Job 307/336 | Site Kabat 97 | NN ESM2 specificity start
+[03:24:49] 🔄 RNG Reset: seed=2974 (NN-ESM2 site 97 spec)
+[03:24:50] Job 307/336 | Site Kabat 97 | NN ESM2 specificity done in 2s
+    NN (ESM2        )    Aff:0.6218 MCC:nan | Spec:0.8225 MCC:0.669
+[03:24:50] Job 308/336 | Site Kabat 97 | NN Fusion-ESM2 affinity start
+[03:24:50] 🔄 RNG Reset: seed=2824 (NN-Fusion-ESM2 site 97 aff)
+[03:24:52] Job 308/336 | Site Kabat 97 | NN Fusion-ESM2 affinity done in 2s
+[03:24:53] Job 309/336 | Site Kabat 97 | NN Fusion-ESM2 specificity start
+[03:24:53] 🔄 RNG Reset: seed=2874 (NN-Fusion-ESM2 site 97 spec)
+[03:24:55] Job 309/336 | Site Kabat 97 | NN Fusion-ESM2 specificity done in 2s
+    NN (Fusion-ESM2 )    Aff:0.9053 MCC:0.797 | Spec:0.8743 MCC:0.759
+[03:24:55] Job 310/336 | Site Kabat 97 | LDA OneHot fit/eval start
+[03:24:57] Job 311/336 | Site Kabat 97 | LDA OneHot done in 2s
+    LDA (OneHot      )  Aff:0.9096 MCC:0.811 | Spec:0.8694 MCC:0.749
+[03:24:57] Job 312/336 | Site Kabat 97 | LDA ESM2 fit/eval start
+[03:24:57] Job 313/336 | Site Kabat 97 | LDA ESM2 done in 0s
+    LDA (ESM2        )  Aff:0.6215 MCC:0.094 | Spec:0.4970 MCC:0.019
+[03:24:57] Job 314/336 | Site Kabat 97 | LDA Fusion-ESM2 fit/eval start
+[03:24:59] Job 315/336 | Site Kabat 97 | LDA Fusion-ESM2 done in 2s
+    LDA (Fusion-ESM2 )  Aff:0.6212 MCC:-0.019 | Spec:0.4987 MCC:0.015
+[03:24:59] Mode 2/2 | Site 7/8 done: Kabat 97 in 56s
+[03:24:59] Mode 2/2 | Site 8/8 start: Kabat 102, residue 'Y', train=410, test=3590
+[03:24:59] Job 316/336 | Site Kabat 102 | MOLM OneHot start
+[03:24:59] 🔄 RNG Reset: seed=2031 (MOLM-OneHot site 102)
+  Ep  1/25 | Acc: 0.505/0.503 | Gap: +0.05/-0.01 | GradCos: -0.015
+  Ep  5/25 | Acc: 0.529/0.588 | Gap: +0.10/+0.14 | GradCos: -0.060
+  Ep 10/25 | Acc: 0.697/0.707 | Gap: +0.42/+0.39 | GradCos: +0.035
+  Ep 15/25 | Acc: 0.829/0.870 | Gap: +1.01/+0.76 | GradCos: -0.012
+  Ep 20/25 | Acc: 0.871/0.866 | Gap: +1.23/+0.93 | GradCos: +0.072
+  Ep 25/25 | Acc: 0.900/0.891 | Gap: +1.41/+1.09 | GradCos: -0.005
+    MOLM (OneHot      ) Aff:0.8947 MCC:0.776 | Spec:0.8886 MCC:0.779
+[03:25:04] Job 316/336 | Site Kabat 102 | MOLM OneHot done in 5s
+[03:25:04] Job 317/336 | Site Kabat 102 | MOLM-ST OneHot affinity start
+[03:25:04] 🔄 RNG Reset: seed=2531 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.5450
+  ST affinity Ep  5/25 | Loss: 0.3305
+  ST affinity Ep 10/25 | Loss: 0.2083
+  ST affinity Ep 15/25 | Loss: 0.1447
+  ST affinity Ep 20/25 | Loss: 0.1068
+  ST affinity Ep 25/25 | Loss: 0.1080
+[03:25:07] Job 317/336 | Site Kabat 102 | MOLM-ST OneHot affinity done in 3s
+[03:25:07] Job 318/336 | Site Kabat 102 | MOLM-ST OneHot specificity start
+[03:25:07] 🔄 RNG Reset: seed=2631 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.5145
+  ST specificity Ep  5/25 | Loss: 0.3171
+  ST specificity Ep 10/25 | Loss: 0.1919
+  ST specificity Ep 15/25 | Loss: 0.1517
+  ST specificity Ep 20/25 | Loss: 0.1090
+  ST specificity Ep 25/25 | Loss: 0.0890
+[03:25:10] Job 318/336 | Site Kabat 102 | MOLM-ST OneHot specificity done in 3s
+    MOLM-ST (OneHot      ) Aff:0.8432 MCC:0.708 | Spec:0.8758 MCC:0.762
+[03:25:10] Job 319/336 | Site Kabat 102 | MOLM ESM2 start
+[03:25:10] 🔄 RNG Reset: seed=2131 (MOLM-ESM2 site 102)
+  Ep  1/25 | Acc: 0.586/0.535 | Gap: +0.03/+0.08 | GradCos: +0.062
+  Ep  5/25 | Acc: 0.483/0.557 | Gap: +0.01/+0.11 | GradCos: -0.016
+  Ep 10/25 | Acc: 0.481/0.557 | Gap: -0.00/+0.08 | GradCos: +0.017
+  Ep 15/25 | Acc: 0.497/0.569 | Gap: +0.02/+0.14 | GradCos: -0.001
+  Ep 20/25 | Acc: 0.520/0.627 | Gap: +0.06/+0.26 | GradCos: +0.140
+  Ep 25/25 | Acc: 0.646/0.707 | Gap: +0.19/+0.48 | GradCos: +0.084
+    MOLM (ESM2        ) Aff:0.7950 MCC:0.575 | Spec:0.8421 MCC:0.688
+[03:25:14] Job 319/336 | Site Kabat 102 | MOLM ESM2 done in 5s
+[03:25:14] Job 320/336 | Site Kabat 102 | MOLM-ST ESM2 affinity start
+[03:25:15] 🔄 RNG Reset: seed=2631 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.4085
+  ST affinity Ep  5/25 | Loss: 0.3597
+  ST affinity Ep 10/25 | Loss: 0.3448
+  ST affinity Ep 15/25 | Loss: 0.3201
+  ST affinity Ep 20/25 | Loss: 0.2764
+  ST affinity Ep 25/25 | Loss: 0.2532
+[03:25:17] Job 320/336 | Site Kabat 102 | MOLM-ST ESM2 affinity done in 2s
+[03:25:17] Job 321/336 | Site Kabat 102 | MOLM-ST ESM2 specificity start
+[03:25:17] 🔄 RNG Reset: seed=2731 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.6805
+  ST specificity Ep  5/25 | Loss: 0.5022
+  ST specificity Ep 10/25 | Loss: 0.4761
+  ST specificity Ep 15/25 | Loss: 0.3961
+  ST specificity Ep 20/25 | Loss: 0.3670
+  ST specificity Ep 25/25 | Loss: 0.2695
+[03:25:19] Job 321/336 | Site Kabat 102 | MOLM-ST ESM2 specificity done in 2s
+    MOLM-ST (ESM2        ) Aff:0.8011 MCC:0.582 | Spec:0.8504 MCC:0.703
+[03:25:19] Job 322/336 | Site Kabat 102 | MOLM Fusion-ESM2 start
+[03:25:20] 🔄 RNG Reset: seed=2231 (MOLM-Fusion-ESM2 site 102)
+  Ep  1/25 | Acc: 0.479/0.497 | Gap: +0.01/+0.03 | GradCos: -0.072
+  Ep  5/25 | Acc: 0.509/0.616 | Gap: +0.10/+0.19 | GradCos: +0.025
+  Ep 10/25 | Acc: 0.728/0.780 | Gap: +0.52/+0.60 | GradCos: -0.015
+  Ep 15/25 | Acc: 0.835/0.877 | Gap: +0.83/+1.01 | GradCos: +0.013
+  Ep 20/25 | Acc: 0.894/0.889 | Gap: +1.23/+1.15 | GradCos: +0.190
+  Ep 25/25 | Acc: 0.824/0.897 | Gap: +1.24/+1.29 | GradCos: +0.153
+    MOLM (Fusion-ESM2 ) Aff:0.8290 MCC:0.685 | Spec:0.8811 MCC:0.763
+[03:25:24] Job 322/336 | Site Kabat 102 | MOLM Fusion-ESM2 done in 5s
+[03:25:24] Job 323/336 | Site Kabat 102 | MOLM-ST Fusion-ESM2 affinity start
+[03:25:25] 🔄 RNG Reset: seed=2731 (MOLM-ST affinity)
+  ST affinity Ep  1/25 | Loss: 0.3720
+  ST affinity Ep  5/25 | Loss: 0.2627
+  ST affinity Ep 10/25 | Loss: 0.1872
+  ST affinity Ep 15/25 | Loss: 0.1099
+  ST affinity Ep 20/25 | Loss: 0.1268
+  ST affinity Ep 25/25 | Loss: 0.0941
+[03:25:27] Job 323/336 | Site Kabat 102 | MOLM-ST Fusion-ESM2 affinity done in 3s
+[03:25:27] Job 324/336 | Site Kabat 102 | MOLM-ST Fusion-ESM2 specificity start
+[03:25:27] 🔄 RNG Reset: seed=2831 (MOLM-ST specificity)
+  ST specificity Ep  1/25 | Loss: 0.4883
+  ST specificity Ep  5/25 | Loss: 0.2721
+  ST specificity Ep 10/25 | Loss: 0.1735
+  ST specificity Ep 15/25 | Loss: 0.1276
+  ST specificity Ep 20/25 | Loss: 0.0947
+  ST specificity Ep 25/25 | Loss: 0.0939
+[03:25:30] Job 324/336 | Site Kabat 102 | MOLM-ST Fusion-ESM2 specificity done in 3s
+    MOLM-ST (Fusion-ESM2 ) Aff:0.9114 MCC:0.812 | Spec:0.8958 MCC:0.794
+[03:25:30] Job 325/336 | Site Kabat 102 | NN OneHot affinity start
+[03:25:30] 🔄 RNG Reset: seed=2724 (NN-OneHot site 102 aff)
+[03:25:32] Job 325/336 | Site Kabat 102 | NN OneHot affinity done in 2s
+[03:25:32] Job 326/336 | Site Kabat 102 | NN OneHot specificity start
+[03:25:32] 🔄 RNG Reset: seed=2774 (NN-OneHot site 102 spec)
+[03:25:34] Job 326/336 | Site Kabat 102 | NN OneHot specificity done in 2s
+    NN (OneHot      )    Aff:0.8958 MCC:0.777 | Spec:0.9014 MCC:0.803
+[03:25:34] Job 327/336 | Site Kabat 102 | NN ESM2 affinity start
+[03:25:34] 🔄 RNG Reset: seed=3024 (NN-ESM2 site 102 aff)
+[03:25:35] Job 327/336 | Site Kabat 102 | NN ESM2 affinity done in 1s
+[03:25:35] Job 328/336 | Site Kabat 102 | NN ESM2 specificity start
+[03:25:36] 🔄 RNG Reset: seed=3074 (NN-ESM2 site 102 spec)
+[03:25:37] Job 328/336 | Site Kabat 102 | NN ESM2 specificity done in 1s
+    NN (ESM2        )    Aff:0.6212 MCC:nan | Spec:0.8460 MCC:0.702
+[03:25:37] Job 329/336 | Site Kabat 102 | NN Fusion-ESM2 affinity start
+[03:25:37] 🔄 RNG Reset: seed=2924 (NN-Fusion-ESM2 site 102 aff)
+[03:25:39] Job 329/336 | Site Kabat 102 | NN Fusion-ESM2 affinity done in 2s
+[03:25:39] Job 330/336 | Site Kabat 102 | NN Fusion-ESM2 specificity start
+[03:25:39] 🔄 RNG Reset: seed=2974 (NN-Fusion-ESM2 site 102 spec)
+[03:25:41] Job 330/336 | Site Kabat 102 | NN Fusion-ESM2 specificity done in 2s
+    NN (Fusion-ESM2 )    Aff:0.9028 MCC:0.792 | Spec:0.9014 MCC:0.803
+[03:25:41] Job 331/336 | Site Kabat 102 | LDA OneHot fit/eval start
+[03:25:42] Job 332/336 | Site Kabat 102 | LDA OneHot done in 1s
+    LDA (OneHot      )  Aff:0.8925 MCC:0.776 | Spec:0.9006 MCC:0.802
+[03:25:42] Job 333/336 | Site Kabat 102 | LDA ESM2 fit/eval start
+[03:25:42] Job 334/336 | Site Kabat 102 | LDA ESM2 done in 0s
+    LDA (ESM2        )  Aff:0.5206 MCC:0.072 | Spec:0.5008 MCC:0.013
+[03:25:42] Job 335/336 | Site Kabat 102 | LDA Fusion-ESM2 fit/eval start
+[03:25:44] Job 336/336 | Site Kabat 102 | LDA Fusion-ESM2 done in 1s
+    LDA (Fusion-ESM2 )  Aff:0.4766 MCC:0.017 | Spec:0.5036 MCC:0.008
+[03:25:44] Mode 2/2 | Site 8/8 done: Kabat 102 in 45s
+
+  ==========================================================================================
+  WILD-TYPE HELD-OUT SUMMARY (mean ± std across 8 sites)
+  ==========================================================================================
+  Model                               Aff Acc    Aff MCC     Spec Acc   Spec MCC
+  ------------------------------------------------------------------------------------------
+  MOLM (OneHot)                  0.8484±0.0740      0.698 0.8426±0.0335      0.699
+  MOLM-ST (OneHot)               0.8512±0.0628      0.697 0.8386±0.0488      0.696
+  MOLM (ESM2)                    0.7514±0.0688      0.532 0.8452±0.0212      0.689
+  MOLM-ST (ESM2)                 0.7294±0.0732      0.508 0.8450±0.0300      0.693
+  MOLM (Fusion-ESM2)             0.8494±0.0804      0.699 0.8516±0.0409      0.716
+  MOLM-ST (Fusion-ESM2)          0.8706±0.0779      0.731 0.8549±0.0351      0.723
+  NN (OneHot)                    0.8724±0.0518      0.726 0.8473±0.0559      0.710
+  NN (ESM2)                      0.7474±0.0769      0.541 0.7946±0.1292      0.690
+  NN (Fusion-ESM2)               0.8787±0.0558      0.738 0.8562±0.0451      0.724
+  LDA (OneHot)                   0.8442±0.0629      0.691 0.8277±0.0526      0.683
+  LDA (ESM2)                     0.6488±0.1418      0.312 0.5508±0.1335      0.097
+  LDA (Fusion-ESM2)              0.5819±0.1874      0.193 0.4716±0.0921     -0.067
+
+  McNemar (MOLM(Fusion-ESM2) vs baselines):
+    vs_molm_st          : Aff 6/8 sig | Spec 6/8 sig
+    vs_nn_oh            : Aff 6/8 sig | Spec 6/8 sig
+    vs_nn_esm2          : Aff 8/8 sig | Spec 7/8 sig
+    vs_nn_fesm2         : Aff 5/8 sig | Spec 6/8 sig
+    vs_lda              : Aff 7/8 sig | Spec 7/8 sig
+
+  McNemar (MOLM(OneHot) vs baselines):
+    vs_molm_st          : Aff 7/8 sig | Spec 7/8 sig
+    vs_nn_oh            : Aff 6/8 sig | Spec 7/8 sig
+    vs_nn_esm2          : Aff 7/8 sig | Spec 7/8 sig
+    vs_nn_fesm2         : Aff 7/8 sig | Spec 7/8 sig
+    vs_lda              : Aff 6/8 sig | Spec 4/8 sig
+[03:25:44] Mode 2/2 done: WILD-TYPE
+  ✓ Saved: C:\Users\dd7726\MOLM\outputs\seeds\seed_2024\phase4\holdout.pkl
+
+✓ Phase 4 complete in 3098s (51.6 min)
