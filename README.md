@@ -166,25 +166,7 @@ conda activate molm
 pip install torch scikit-learn scipy pandas numpy matplotlib fair-esm jupyter
 ```
 
-### Run the analysis
-
-Launch Jupyter:
-
-```bash
-jupyter notebook
-```
-
-Then open the notebooks in numerical order:
-
-1. `01_unified_experiment_suite.ipynb`
-2. `02_molm_st_mutation_holdout.ipynb`
-3. `03_molm_st_fixed_budget_pareto.ipynb`
-4. `04_component_architecture_ablation.ipynb`
-5. `05_publication_figure_generator.ipynb`
-
-Each notebook documents its required inputs, random seeds, representations, output tables, and analysis settings. See [`notebooks/README.md`](notebooks/README.md) for a description of each workflow.
-
-For the larger training and ablation experiments, the tested workflow uses a Kaggle T4 x2 accelerator with resumable intermediate outputs.
+See [`notebooks/README.md`](notebooks/README.md) for the purpose, inputs, and outputs of each workflow.
 ## Statistical notes
 
 - Optimization seeds are not treated as biological replicates.
@@ -209,4 +191,5 @@ A formal journal citation will be added after publication.
 ## License
 
 MIT License
+
 
