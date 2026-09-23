@@ -33,6 +33,8 @@ Runs two controlled experiment suites:
 
 All component arms are evaluated on the same fixed-budget Pareto endpoint rather than relying only on marginal prediction metrics.
 
+**Shared-base reference.** In the A--H architecture suite, Arm A (`shared_base`) is the within-suite shared reference. It implements the Standard-MOLM hard-sharing formulation but is trained independently inside this controlled suite. The shared baseline is rerun so routed and capacity modifications are compared against a common training implementation rather than against separately generated primary Standard-MOLM checkpoints. Cross-suite differences should not be interpreted as component effects.
+
 ### 5. `05_publication_figure_generator.ipynb`
 Loads finalized analysis bundles, validates key configuration metadata when available, and regenerates the manuscript/supplementary figures.
 

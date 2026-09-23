@@ -1,4 +1,4 @@
-﻿# MOLM: Multi-Objective Learning for Computational Antibody Sequence Co-Optimization
+# MOLM: Multi-Objective Learning for Computational Antibody Sequence Co-Optimization
 
 Code and reproducibility notebooks for the manuscript:
 
@@ -10,18 +10,18 @@ Code and reproducibility notebooks for the manuscript:
 
 This repository studies computational co-optimization of emibetuzumab VH variants under two assay-derived objectives:
 
-- **target-binding proxy** â€” a binary training endpoint derived from the source library-sorting workflow, not a direct thermodynamic affinity measurement;
-- **OVA-binding proxy** â€” a binary training endpoint used as a limited off-target/nonspecific-binding proxy, not a comprehensive measure of specificity or polyspecificity.
+- **target-binding proxy** — a binary training endpoint derived from the source library-sorting workflow, not a direct thermodynamic affinity measurement;
+- **OVA-binding proxy** — a binary training endpoint used as a limited off-target/nonspecific-binding proxy, not a comprehensive measure of specificity or polyspecificity.
 
 The 4,000-sequence EMI dataset is used for model training. Continuous target- and OVA-binding measurements from ISO and IgG panels are used for external evaluation within the same emibetuzumab scaffold.
 
 The revised evaluation compares:
 
-- **Standard-MOLM** â€” conventional hard parameter sharing with task-specific towers;
-- **MOLM-ST** â€” independent same-loss control using the same focal + ranking + gap task objective;
-- **Routed-MOLM** â€” shared backbone with task-private adapters, conditional shared-gradient projection, and a low-weight dominance-aware ordering term;
-- **NN** â€” neural single-task baseline;
-- **LDA** â€” linear baseline.
+- **Standard-MOLM** — conventional hard parameter sharing with task-specific towers;
+- **MOLM-ST** — independent same-loss control using the same focal + ranking + gap task objective;
+- **Routed-MOLM** — shared backbone with task-private adapters, conditional shared-gradient projection, and a low-weight dominance-aware ordering term;
+- **NN** — neural single-task baseline;
+- **LDA** — linear baseline.
 
 Five optimization seeds are used throughout: `42, 123, 456, 789, 2024`. Seeds quantify optimization variability rather than biological replication.
 
@@ -49,6 +49,8 @@ The repository covers:
 8. ranking/gap loss ablations;
 9. latent-PCA robustness for Standard-MOLM;
 10. publication figure generation.
+
+**Component-ablation note.** The A--H architecture study is a separately trained controlled suite. Arm A (`shared_base`) implements the Standard-MOLM hard-sharing formulation with the focal + ranking + gap objective, but is independently initialized and trained within the component-ablation pipeline. It serves as the common within-suite reference for evaluating the dominance term, conditional shared-gradient projection, task-private adapters, and capacity controls. Arm A is therefore not an additional replicate of, and should not be numerically equated with, the primary Standard-MOLM checkpoints used elsewhere in the analysis.
 
 For the measured external objective values, the ISO reference Pareto front contains **15 of 126 variants**, while the secondary IgG-all96 reference front contains **4 of 96 variants**. Exact-front Recall is therefore much coarser for IgG-all96 and is interpreted together with hypervolume (HV) and inverted generational distance (IGD).
 
@@ -93,8 +95,8 @@ These values are included for orientation; complete results and uncertainty esti
 
 | Evaluation | Example result |
 | --- | --- |
-| Standard-MOLM Mean-ESM2 â†’ Site-ESM2, target-proxy mutation MCC | `0.610 -> 0.737` |
-| Standard-MOLM Mean-ESM2 â†’ Site-ESM2, OVA-proxy mutation MCC | `0.665 -> 0.746` |
+| Standard-MOLM Mean-ESM2 → Site-ESM2, target-proxy mutation MCC | `0.610 -> 0.737` |
+| Standard-MOLM Mean-ESM2 → Site-ESM2, OVA-proxy mutation MCC | `0.665 -> 0.746` |
 | ISO Mean-ESM2 target-binding Spearman, Standard-MOLM | `0.884 +/- 0.005` |
 | ISO Mean-Fusion, K=20, Routed-MOLM Recall / HV / IGD | `0.307 / 0.664 / 0.0588` |
 | ISO Mean-Fusion, K=20, MOLM-ST Recall / HV / IGD | `0.293 / 0.659 / 0.0643` |
@@ -105,7 +107,9 @@ The ISO ordering changes with `K`. The IgG-all96 analysis is secondary and has a
 
 ## Core pipeline
 
-The original phase-based pipeline remains available at the repository root.
+The original phase-based pipeline is preserved at the pinned core-pipeline commit `c5923984f0d5176977edb4a4ffd8fc5f98536043`. The revision notebooks automatically check out this commit when the original model definitions and pipeline utilities are required.
+
+At the pinned core-pipeline commit, the phase-based workflow contains:
 
 | Phase | File | Description |
 | --- | --- | --- |
