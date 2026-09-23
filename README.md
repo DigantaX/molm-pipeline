@@ -1,208 +1,194 @@
-# MOLM: Multi-Objective Learning for Antibody Sequence Co-Optimization
+# MOLM: Multi-Objective Learning for Computational Antibody Sequence Co-Optimization
 
-A multi-task deep learning framework for joint prediction of antibody affinity and specificity from binary deep-sequencing labels.
+Code and reproducibility notebooks for the manuscript:
 
-**Paper:** *Multi-Objective Learning for Antibody Sequence Co-Optimization: Generalization Under Sparse Binary Supervision*  
-**Authors:** Diganta Das, Feng Cui, Haibo Yang  
+**Multi-Objective Learning for Computational Antibody Sequence Co-Optimization: Generalization Under Sparse Binary Supervision**
 
----
+**Authors:** Diganta Das, Weikang Fu, Feng Cui, Haibo Yang
 
 ## Overview
 
-MOLM jointly predicts affinity and specificity using a shared encoder with task-specific towers, trained on the [emibetuzumab co-optimization benchmark](https://www.nature.com/articles/s41467-022-31457-3) (Makowski et al., *Nature Communications*, 2022). The pipeline evaluates three feature representations (OneHot, ESM-2, Fusion-ESM2) across four evaluation paradigms: cross-validation, mutation-site holdout, cross-platform generalization, and Pareto-front recovery.
+This repository studies computational co-optimization of emibetuzumab VH variants under two assay-derived objectives:
 
-All experiments are repeated across **five random seeds** (42, 123, 456, 789, 2024) for reproducibility.
+- **target-binding proxy** — a binary training endpoint derived from the source library-sorting workflow, not a direct thermodynamic affinity measurement;
+- **OVA-binding proxy** — a binary training endpoint used as a limited off-target/nonspecific-binding proxy, not a comprehensive measure of specificity or polyspecificity.
 
-### Key Results (5-seed, mean +/- std)
+The 4,000-sequence EMI dataset is used for model training. Continuous target- and OVA-binding measurements from ISO and IgG panels are used for external evaluation within the same emibetuzumab scaffold.
 
-| Metric | MOLM | Best Baseline | Improvement |
-| --- | --- | --- | --- |
-| Holdout (combined accuracy, 5/8 sites won) | **91.1 +/- 1.2%** | 90.0 +/- 1.1% (NN) | +1.1 pp |
-| Holdout MCC at hardest site (Kabat 50) | **0.291 +/- 0.072** | 0.184 +/- 0.062 (NN) | +58% |
-| ISO Affinity Spearman rho | **0.884 +/- 0.010** | 0.876 +/- 0.004 (NN) | +0.008 |
-| Pareto Recall (latent PCA, ISO) | **0.253 +/- 0.073** | 0.160 +/- 0.037 (NN logits) | +58% |
-| Gradient alignment (% positive steps) | **89-95%** | - | Cooperative |
+The revised evaluation compares:
 
-## Architecture
+- **Standard-MOLM** — conventional hard parameter sharing with task-specific towers;
+- **MOLM-ST** — independent same-loss control using the same focal + ranking + gap task objective;
+- **Routed-MOLM** — shared backbone with task-private adapters, conditional shared-gradient projection, and a low-weight dominance-aware ordering term;
+- **NN** — neural single-task baseline;
+- **LDA** — linear baseline.
 
+Five optimization seeds are used throughout: `42, 123, 456, 789, 2024`. Seeds quantify optimization variability rather than biological replication.
+
+## Representations
+
+| Representation | Description | Dimensionality |
+| --- | --- | ---: |
+| OneHot | flattened sequence one-hot encoding | 2,300 |
+| Mean-ESM2 | whole-VH mean-pooled ESM-2 representation | 320 |
+| Mean-Fusion | OneHot + Mean-ESM2 | 2,620 |
+| Site-ESM2 | ESM-2 representations at the eight experimentally varied CDR positions | 2,560 |
+| Site-Fusion | OneHot + Site-ESM2 | 4,860 |
+
+## Evaluation suite
+
+The repository covers:
+
+1. 5-fold cross-validation;
+2. grouped residue mutation holdout;
+3. Hamming-distance-stratified within-scaffold generalization;
+4. ISO and IgG continuous-binding transfer;
+5. fixed-budget Pareto candidate prioritization at `K={5,10,15,20,25}`;
+6. same-loss Standard-MOLM versus MOLM-ST comparisons;
+7. Routed-MOLM component/capacity ablations;
+8. ranking/gap loss ablations;
+9. latent-PCA robustness for Standard-MOLM;
+10. publication figure generation.
+
+For the measured external objective values, the ISO reference Pareto front contains **15 of 126 variants**, while the secondary IgG-all96 reference front contains **4 of 96 variants**. Exact-front Recall is therefore much coarser for IgG-all96 and is interpreted together with hypervolume (HV) and inverted generational distance (IGD).
+
+## Revision / extended-analysis notebooks
+
+The cleaned notebooks supporting the current manuscript are in [`notebooks/`](notebooks/):
+
+| Notebook | Purpose |
+| --- | --- |
+| `01_unified_experiment_suite.ipynb` | Standard-MOLM extension, mutation/external statistics, fixed-budget Pareto, latent-PCA, A-H controls, loss ablation, and Hamming analysis |
+| `02_molm_st_mutation_holdout.ipynb` | dedicated original MOLM-ST mutation-holdout evaluation |
+| `03_molm_st_fixed_budget_pareto.ipynb` | original MOLM-ST fixed-budget Pareto and external evaluation |
+| `04_component_architecture_ablation.ipynb` | architecture/component and ranking/gap ablations under fixed-budget Pareto evaluation |
+| `05_publication_figure_generator.ipynb` | regeneration of manuscript and supplementary figures from finalized result bundles |
+
+The notebooks are intentionally written as scientific/reproducibility workflows and contain no response-to-review process annotations. Notebook outputs are cleared in the repository; running the notebooks recreates the analysis artifacts.
+
+### Pinned core pipeline
+
+The extended notebooks pin the original core-pipeline commit:
+
+```text
+c5923984f0d5176977edb4a4ffd8fc5f98536043
 ```
-Input (OneHot 2300D / ESM2 320D / Fusion-ESM2 2620D)
-        |
-  Shared Encoder (256 -> 128, LayerNorm, GELU, Dropout 0.2)
-        |
-   +----+----+
-   |         |
-Affinity   Specificity
- Tower       Tower
-(64->32->16)(64->32->16)
-   |         |
-Latent 16D  Latent 16D  --> PCA (train-fit) --> Pareto Recovery
-   |         |
- Logit      Logit
-   |         |
- y_aff     y_spec
-```
 
-**Training Objective** (per task): Focal Loss (gamma=2) + Ranking Loss (margin=1.0) + Gap Hinge Loss (margin=1.0)  
-**Configuration**: Simple MTL (ADV_WEIGHT=0, ORTHO_WEIGHT=0)  
-**Optional**: Pareto-diversity regularizer (lambda=0.1, 5-epoch warmup) - evaluated but not recommended
+This preserves the original data-processing and model definitions while the notebooks define the additional controlled experiments and analysis procedures explicitly.
 
----
+## Main interpretation
 
-## Pipeline Structure
+The current results do **not** support a universal marginal-prediction advantage from hard parameter sharing. Standard-MOLM and MOLM-ST are broadly comparable across many marginal endpoints, and model ordering varies by task, representation, dataset, and screening budget.
 
-### Core Pipeline (6 phases)
+Two recurring findings are:
 
-| Phase | File | Description | Output |
-| --- | --- | --- | --- |
-| 0 | `phase0_config.py` | Configuration, model definitions, losses, metrics | - |
-| 1 | `phase1_features.py` | Data loading, ESM-2 embedding computation | `features.pkl` |
-| 2 | `phase2_baselines.py` | LDA + NN baselines (5-fold CV) | `baselines.pkl` |
-| 3 | `phase3_molm_cv.py` | MOLM + MOLM-ST cross-validation (full feature grid) | `molm_cv.pkl` |
-| 4 | `phase4_holdout.py` | Mutation-site holdout (8 sites x all models) | `holdout.pkl` |
-| 5 | `phase5_generalization.py` | Cross-platform generalization + Pareto recovery | `generalization.pkl` |
+- residue-focused ESM-2 representations substantially improve neural mutation extrapolation relative to whole-VH mean pooling in several settings;
+- Routed-MOLM shows favorable mean multi-objective prioritization in selected fixed-budget regimes, most consistently in the secondary IgG-all96 OneHot analysis, but the five-seed contrasts do not remain significant after multiplicity correction.
 
-### Multi-Seed Orchestration
+Accordingly, fixed-budget Pareto results are treated as conditional effect-size patterns rather than universal superiority claims.
 
-| Script | Description |
+## Representative values from the current analysis
+
+These values are included for orientation; complete results and uncertainty estimates are produced by the notebooks and reported in the manuscript/supplement.
+
+| Evaluation | Example result |
 | --- | --- |
-| `run_multiseed.py` | Run all phases across 5 seeds (Pareto loss OFF) |
-| `run_pareto_on.py` | Run Phase 3+5 with Pareto loss ON across 5 seeds |
+| Standard-MOLM Mean-ESM2 → Site-ESM2, target-proxy mutation MCC | `0.610 -> 0.737` |
+| Standard-MOLM Mean-ESM2 → Site-ESM2, OVA-proxy mutation MCC | `0.665 -> 0.746` |
+| ISO Mean-ESM2 target-binding Spearman, Standard-MOLM | `0.884 +/- 0.005` |
+| ISO Mean-Fusion, K=20, Routed-MOLM Recall / HV / IGD | `0.307 / 0.664 / 0.0588` |
+| ISO Mean-Fusion, K=20, MOLM-ST Recall / HV / IGD | `0.293 / 0.659 / 0.0643` |
+| IgG-all96 OneHot, K=20, Routed-MOLM Recall / HV / IGD | `0.450 / 0.922 / 0.0500` |
+| IgG-all96 OneHot, K=20, MOLM-ST Recall / HV / IGD | `0.350 / 0.903 / 0.0853` |
 
-### Result Extraction
+The ISO ordering changes with `K`. The IgG-all96 analysis is secondary and has a four-variant measured reference front, so its exact-front Recall is interpreted jointly with HV and IGD.
 
-| Script | Output CSV |
+## Core pipeline
+
+The original phase-based pipeline remains available at the repository root.
+
+| Phase | File | Description |
+| --- | --- | --- |
+| 0 | `phase0_config.py` | configuration, model definitions, losses, and metrics |
+| 1 | `phase1_features.py` | data loading and ESM-2 feature computation |
+| 2 | `phase2_baselines.py` | LDA and NN baselines |
+| 3 | `phase3_molm_cv.py` | Standard-MOLM / MOLM-ST cross-validation |
+| 4 | `phase4_holdout.py` | mutation-site holdout |
+| 5 | `phase5_generalization.py` | external generalization and original Pareto analyses |
+
+The revision notebooks in `notebooks/` implement the additional controlled experiments used in the current manuscript.
+
+## Data
+
+The benchmark data were originally reported by Makowski et al. (2022) and are available from:
+
+- BioProject **PRJNA850089**;
+- [Tessier-Lab-UMich/Emi_Pareto_Opt_ML](https://github.com/Tessier-Lab-UMich/Emi_Pareto_Opt_ML).
+
+Expected benchmark files include:
+
+| File | Role |
 | --- | --- |
-| `aggregate_multiseed.py` | `multiseed_summary.csv` |
-| `extract_phase2_results.py` | `phase2_baselines.csv` |
-| `extract_phase3_results.py` | `phase3_molm_cv.csv` |
-| `extract_phase5_results.py` | `phase5_generalization.csv`, `phase5_pareto.csv` |
-| `extract_persite_holdout.py` | `persite_holdout.csv` |
-| `extract_gradient_diagnostics.py` | `gradient_cosine.csv` |
-| `extract_pareto_on_results.py` | `pareto_on_vs_off.csv` |
-| `extract_phase3_pareto_on.py` | `phase3_pareto_on_vs_off_raw.csv` |
+| `emi_binding.csv` | 4,000 binary-labeled training sequences |
+| `iso_binding.csv` | 126 continuous external measurements |
+| `igg_binding.csv` | 96 continuous IgG measurements; the 42-sequence primary panel is also analyzed separately |
+| representation/cache files | reusable sequence encodings used by the notebooks |
 
-### Verification Scripts
+All sequences belong to the emibetuzumab VH scaffold. The external evaluations therefore do not establish cross-scaffold or cross-antigen generalization.
 
-| Script | Description |
-| --- | --- |
-| `verify_sequence_homology.py` | EMI sequence identity, variable positions, CD-HIT simulation |
-| `verify_homology_fixed.py` | Cross-dataset overlap: ISO vs EMI, IgG vs EMI |
+## Environment
 
-### Visualization
+Typical dependencies used across the core pipeline and notebooks include:
 
-| Script | Description |
-| --- | --- |
-| `visualize_gradient_convergence.py` | 9-panel convergence figure |
-| `visualize_pareto_aggregate.py` | Pareto recall barplot, per-seed dotplot, precision-recall scatter |
-| `find_pareto_seed.py` | Find median-recall seed for representative diagnostics |
-| `collect_images.py` | Organize figures into `figures/` directory |
-
----
-
-## Setup and Usage
-
-### Requirements
-
-```
+```text
 Python 3.10+
-PyTorch (cu128 for RTX 5060 Ti, or CPU)
-TensorFlow 2.x
+PyTorch
+NumPy
+Pandas
+SciPy
 scikit-learn
-NumPy, Pandas
-fair-esm (for ESM-2 embeddings)
+Matplotlib
+fair-esm
+TensorFlow 2.x  # used by parts of the original pipeline
 ```
 
-### Running on Local Machine (Windows + GPU)
+For the large extended experiment notebooks, the tested workflow uses a Kaggle **T4 x2** accelerator and resumable intermediate result bundles.
+
+## Basic usage
+
+For the original phase-based pipeline:
 
 ```bash
-# Create environment
 conda create -n molm python=3.10
 conda activate molm
-pip install torch tensorflow scikit-learn pandas fair-esm
+pip install torch tensorflow scikit-learn scipy pandas numpy matplotlib fair-esm
 
-# Run full 5-seed pipeline (Pareto OFF - primary results)
 python run_multiseed.py
-
-# Run Pareto ON ablation (Phase 3+5 only)
-python run_pareto_on.py
-
-# Extract all results
 python aggregate_multiseed.py
-python extract_persite_holdout.py
-python extract_phase5_results.py
-python extract_gradient_diagnostics.py
-python extract_pareto_on_results.py
-
-# Verify sequence homology (for journal requirements)
-python verify_sequence_homology.py
-python verify_homology_fixed.py
 ```
 
-### Dataset
+For the current extended analysis, open the notebooks in numerical order under `notebooks/`. Each notebook documents its expected Kaggle inputs, pinned repository commit, seeds, representations, output tables, and reproducibility manifest.
 
-The pipeline expects the [emibetuzumab dataset](https://github.com/Tessier-Lab-UMich/Emi_Pareto_Opt_ML) files in `data/`:
+## Statistical notes
 
-| File | Description | Sequences |
-| --- | --- | --- |
-| `emi_binding.csv` | EMI binary labels (training) | 4,000 |
-| `iso_binding.csv` | ISO continuous measurements (eval) | 126 |
-| `igg_binding.csv` | IgG continuous measurements (eval) | 96 (42 used) |
-| `*_reps.csv` | Sequence representations | - |
-| `residue_dict.csv` | Residue mapping | - |
-
-**Sequence homology:** All EMI sequences are 115 residues with >91.3% pairwise identity (8 designed CDR positions vary). ISO sequences have zero exact overlap with EMI; 24/96 IgG sequences match EMI exactly. See [Makowski et al. (2022)](https://doi.org/10.1038/s41467-022-31457-3) for dataset details.
-
----
-
-## Key Findings
-
-1. **MOLM improves design-relevant extrapolation** - wins/ties at 5/8 held-out mutation sites; advantage increases at harder sites (r = -0.535)
-2. **Cooperative gradient structure** - affinity and specificity gradients aligned in 89-95% of training steps; all 15 per-seed means positive
-3. **Latent-space Pareto recovery** - MOLM latent PCA recall 0.253 vs logit recall 0.080; trade-off geometry captured in shared representations
-4. **Simple MTL wins** - adversarial regularization and Pareto-diversity loss both degrade primary metrics
-5. **Feature-task specificity** - OneHot best for holdout, ESM2 best for cross-platform affinity, Fusion-ESM2 balanced
-
----
-
-## Output Structure
-
-```
-outputs/
-├── phase1/                    # Shared features (deterministic)
-├── seeds/                     # 5-seed results (Pareto OFF)
-│   ├── seed_42/
-│   │   ├── phase2/
-│   │   ├── phase3/
-│   │   ├── phase4/
-│   │   └── phase5/
-│   ├── seed_123/
-│   ├── seed_456/
-│   ├── seed_789/
-│   └── seed_2024/
-├── seeds_pareto_on/           # 5-seed results (Pareto ON ablation)
-├── multiseed/                 # Aggregated CSVs
-└── pareto_on_logs/            # Run logs
-```
-
----
+- Optimization seeds are not treated as biological replicates.
+- Mutation inference uses the predefined mutation-site blocks where appropriate.
+- External model comparisons use paired sequence bootstrap uncertainty.
+- Fixed-budget neural Pareto selection is performed separately for each optimization seed before across-seed summaries are calculated; predictions are not averaged across seeds before Pareto selection.
+- Multiple-testing correction is applied to the planned comparison families described in the manuscript/supplement.
 
 ## Citation
 
-```bibtex
-@article{das2026molm,
-  title={Multi-Objective Learning for Antibody Sequence Co-Optimization: 
-         Generalization Under Sparse Binary Supervision},
-  author={Das, Diganta and Cui, Feng and Yang, Haibo},
-  journal={Bioinformatics},
-  year={2026}
-}
-```
+The manuscript associated with this repository is:
+
+> Das D, Fu W, Cui F, Yang H. **Multi-Objective Learning for Computational Antibody Sequence Co-Optimization: Generalization Under Sparse Binary Supervision.** 2026.
+
+A formal journal citation will be added after publication.
 
 ## References
 
-- Makowski, E.K. et al. (2022). Co-optimization of therapeutic antibody affinity and specificity using machine learning models that generalize to novel mutational space. *Nature Communications*, 13:3788.
-- Lin, Z. et al. (2023). Evolutionary-scale prediction of atomic-level protein structure with a language model. *Science*, 379(6637):1123-1130.
+- Makowski EK et al. (2022). Co-optimization of therapeutic antibody affinity and specificity using machine learning models that generalize to novel mutational space. *Nature Communications* 13, 3788.
+- Lin Z et al. (2023). Evolutionary-scale prediction of atomic-level protein structure with a language model. *Science* 379, 1123-1130.
 
 ## License
 
