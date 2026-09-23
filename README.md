@@ -1,4 +1,4 @@
-# MOLM: Multi-Objective Learning for Computational Antibody Sequence Co-Optimization
+﻿# MOLM: Multi-Objective Learning for Computational Antibody Sequence Co-Optimization
 
 Code and reproducibility notebooks for the manuscript:
 
@@ -10,18 +10,18 @@ Code and reproducibility notebooks for the manuscript:
 
 This repository studies computational co-optimization of emibetuzumab VH variants under two assay-derived objectives:
 
-- **target-binding proxy** — a binary training endpoint derived from the source library-sorting workflow, not a direct thermodynamic affinity measurement;
-- **OVA-binding proxy** — a binary training endpoint used as a limited off-target/nonspecific-binding proxy, not a comprehensive measure of specificity or polyspecificity.
+- **target-binding proxy** â€” a binary training endpoint derived from the source library-sorting workflow, not a direct thermodynamic affinity measurement;
+- **OVA-binding proxy** â€” a binary training endpoint used as a limited off-target/nonspecific-binding proxy, not a comprehensive measure of specificity or polyspecificity.
 
 The 4,000-sequence EMI dataset is used for model training. Continuous target- and OVA-binding measurements from ISO and IgG panels are used for external evaluation within the same emibetuzumab scaffold.
 
 The revised evaluation compares:
 
-- **Standard-MOLM** — conventional hard parameter sharing with task-specific towers;
-- **MOLM-ST** — independent same-loss control using the same focal + ranking + gap task objective;
-- **Routed-MOLM** — shared backbone with task-private adapters, conditional shared-gradient projection, and a low-weight dominance-aware ordering term;
-- **NN** — neural single-task baseline;
-- **LDA** — linear baseline.
+- **Standard-MOLM** â€” conventional hard parameter sharing with task-specific towers;
+- **MOLM-ST** â€” independent same-loss control using the same focal + ranking + gap task objective;
+- **Routed-MOLM** â€” shared backbone with task-private adapters, conditional shared-gradient projection, and a low-weight dominance-aware ordering term;
+- **NN** â€” neural single-task baseline;
+- **LDA** â€” linear baseline.
 
 Five optimization seeds are used throughout: `42, 123, 456, 789, 2024`. Seeds quantify optimization variability rather than biological replication.
 
@@ -93,8 +93,8 @@ These values are included for orientation; complete results and uncertainty esti
 
 | Evaluation | Example result |
 | --- | --- |
-| Standard-MOLM Mean-ESM2 → Site-ESM2, target-proxy mutation MCC | `0.610 -> 0.737` |
-| Standard-MOLM Mean-ESM2 → Site-ESM2, OVA-proxy mutation MCC | `0.665 -> 0.746` |
+| Standard-MOLM Mean-ESM2 â†’ Site-ESM2, target-proxy mutation MCC | `0.610 -> 0.737` |
+| Standard-MOLM Mean-ESM2 â†’ Site-ESM2, OVA-proxy mutation MCC | `0.665 -> 0.746` |
 | ISO Mean-ESM2 target-binding Spearman, Standard-MOLM | `0.884 +/- 0.005` |
 | ISO Mean-Fusion, K=20, Routed-MOLM Recall / HV / IGD | `0.307 / 0.664 / 0.0588` |
 | ISO Mean-Fusion, K=20, MOLM-ST Recall / HV / IGD | `0.293 / 0.659 / 0.0643` |
@@ -156,19 +156,35 @@ For the large extended experiment notebooks, the tested workflow uses a Kaggle *
 
 ## Basic usage
 
-For the original phase-based pipeline:
+The current analysis is provided as reproducibility notebooks in the [`notebooks/`](notebooks/) directory.
+
+### Environment
 
 ```bash
 conda create -n molm python=3.10
 conda activate molm
-pip install torch tensorflow scikit-learn scipy pandas numpy matplotlib fair-esm
-
-python run_multiseed.py
-python aggregate_multiseed.py
+pip install torch scikit-learn scipy pandas numpy matplotlib fair-esm jupyter
 ```
 
-For the current extended analysis, open the notebooks in numerical order under `notebooks/`. Each notebook documents its expected Kaggle inputs, pinned repository commit, seeds, representations, output tables, and reproducibility manifest.
+### Run the analysis
 
+Launch Jupyter:
+
+```bash
+jupyter notebook
+```
+
+Then open the notebooks in numerical order:
+
+1. `01_unified_experiment_suite.ipynb`
+2. `02_molm_st_mutation_holdout.ipynb`
+3. `03_molm_st_fixed_budget_pareto.ipynb`
+4. `04_component_architecture_ablation.ipynb`
+5. `05_publication_figure_generator.ipynb`
+
+Each notebook documents its required inputs, random seeds, representations, output tables, and analysis settings. See [`notebooks/README.md`](notebooks/README.md) for a description of each workflow.
+
+For the larger training and ablation experiments, the tested workflow uses a Kaggle T4 x2 accelerator with resumable intermediate outputs.
 ## Statistical notes
 
 - Optimization seeds are not treated as biological replicates.
@@ -193,3 +209,4 @@ A formal journal citation will be added after publication.
 ## License
 
 MIT License
+
